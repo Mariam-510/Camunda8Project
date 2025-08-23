@@ -11,3 +11,14 @@ Grpc.Core.RpcException: Status(StatusCode="NotFound", Detail="Command 'CREATE' r
 2025-08-23 00:09:56.173 +03:00 [WRN]  Completed request POST /api/Process/start/2251799813728961 with status 500 in 1347ms
 2025-08-23 11:52:53.620 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
 2025-08-23 12:04:14.020 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-23 12:46:20.786 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-23 13:45:28.519 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-23 13:45:29.018 +03:00 [WRN]  Completed request POST /api/Process/start/HrTask_Process with status 400 in 402ms
+2025-08-23 13:47:30.259 +03:00 [WRN]  Completed request POST /api/Process/deploy with status 400 in 226ms
+2025-08-23 13:49:47.127 +03:00 [WRN] CamundaProject.Application.Services.CamundaService NewDeploymentsQuery not available in this Zeebe client version. Using fallback implementation.
+2025-08-23 13:50:51.509 +03:00 [WRN] CamundaProject.Application.Services.CamundaService NewDeploymentsQuery not available in this Zeebe client version. Using fallback implementation.
+2025-08-23 13:50:51.512 +03:00 [WRN]  Completed request GET /api/Process/definitions/HrTask_Process with status 404 in 9ms
+2025-08-23 13:53:18.814 +03:00 [WRN] CamundaProject.Application.Services.CamundaService NewDeploymentsQuery not available in this Zeebe client version. Using fallback implementation.
+2025-08-23 13:54:42.469 +03:00 [WRN] CamundaProject.Application.Services.CamundaService NewDeploymentsQuery not available in this Zeebe client version. Using fallback implementation.
+2025-08-23 13:57:37.507 +03:00 [WRN] CamundaProject.Application.Services.CamundaService GetProcessInstancesAsync is not directly supported by Zeebe client API
+2025-08-23 14:05:04.154 +03:00 [WRN] CamundaProject.Application.Services.CamundaService GetActiveJobsAsync is not directly supported by Zeebe client API

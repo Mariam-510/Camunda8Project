@@ -1,14 +1,24 @@
 [
   {
     "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
-    "Method": "CancelProcessInstance",
-    "RelativePath": "api/Process/cancel/{processInstanceKey}",
-    "HttpMethod": "DELETE",
+    "Method": "GetProcessDefinitions",
+    "RelativePath": "api/Process/definitions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
+    "Method": "GetProcessDefinitionByKey",
+    "RelativePath": "api/Process/definitions/{key}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "processInstanceKey",
+        "Name": "key",
         "Type": "System.String",
         "IsRequired": true
       }
@@ -25,7 +35,111 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "CamundaProject.Core.Models.DeployProcessRequest",
+        "Type": "CamundaProject.Core.Models.RequestModels.DeployProcessRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
+    "Method": "GetDeployments",
+    "RelativePath": "api/Process/deployments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
+    "Method": "GetIncidents",
+    "RelativePath": "api/Process/incidents",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
+    "Method": "GetProcessInstances",
+    "RelativePath": "api/Process/instances",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
+    "Method": "CancelProcessInstance",
+    "RelativePath": "api/Process/instances/{processInstanceKey}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "processInstanceKey",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
+    "Method": "GetActiveJobs",
+    "RelativePath": "api/Process/jobs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jobType",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
+    "Method": "CompleteJob",
+    "RelativePath": "api/Process/jobs/{jobKey}/complete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jobKey",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "CamundaProject.Core.Models.RequestModels.CompleteJobRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
+    "Method": "FailJob",
+    "RelativePath": "api/Process/jobs/{jobKey}/fail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jobKey",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "CamundaProject.Core.Models.RequestModels.FailJobRequest",
         "IsRequired": true
       }
     ],
@@ -34,14 +148,14 @@
   {
     "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
     "Method": "PublishMessage",
-    "RelativePath": "api/Process/publish-message",
+    "RelativePath": "api/Process/messages/publish",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "request",
-        "Type": "CamundaProject.Core.Models.PublishMessageRequest",
+        "Type": "CamundaProject.Core.Models.RequestModels.PublishMessageRequest",
         "IsRequired": true
       }
     ],
@@ -72,6 +186,16 @@
     "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
     "Method": "TestConnection",
     "RelativePath": "api/Process/test-connection",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
+    "Method": "GetTopology",
+    "RelativePath": "api/Process/topology",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CamundaProject.Core.Models
+namespace CamundaProject.Core.Models.RequestModels
 {
-    public class PublishMessageResponse
+    public class PublishMessageRequest
     {
-        public string MessageKey { get; set; }
         public string MessageName { get; set; }
         public string CorrelationKey { get; set; }
+        public Dictionary<string, object> Variables { get; set; } = new Dictionary<string, object>();
     }
+
 }

@@ -34,3 +34,56 @@ Grpc.Core.RpcException: Status(StatusCode="NotFound", Detail="Command 'CREATE' r
 2025-08-23 12:05:27.847 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: Getway_Rest_Test_Process
 2025-08-23 12:05:28.200 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813731980
 2025-08-23 12:05:28.208 +03:00 [INF]  Completed request POST /api/Process/start/Getway_Rest_Test_Process with status 200 in 389ms
+2025-08-23 12:46:20.786 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-23 12:46:20.831 +03:00 [INF]  Starting request POST /api/Process/start/HrTask_Process
+2025-08-23 12:46:21.331 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: HrTask_Process
+2025-08-23 12:46:21.380 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: HrTask_Process
+2025-08-23 12:46:21.691 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813738790
+2025-08-23 12:46:21.706 +03:00 [INF]  Completed request POST /api/Process/start/HrTask_Process with status 200 in 874ms
+2025-08-23 13:45:28.519 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-23 13:45:28.617 +03:00 [INF]  Starting request POST /api/Process/start/HrTask_Process
+2025-08-23 13:45:29.018 +03:00 [WRN]  Completed request POST /api/Process/start/HrTask_Process with status 400 in 402ms
+2025-08-23 13:45:41.743 +03:00 [INF]  Starting request POST /api/Process/start/HrTask_Process
+2025-08-23 13:45:41.763 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: HrTask_Process
+2025-08-23 13:45:42.141 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: HrTask_Process
+2025-08-23 13:45:42.822 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813750411
+2025-08-23 13:45:42.831 +03:00 [INF]  Completed request POST /api/Process/start/HrTask_Process with status 200 in 1088ms
+2025-08-23 13:47:30.032 +03:00 [INF]  Starting request POST /api/Process/deploy
+2025-08-23 13:47:30.259 +03:00 [WRN]  Completed request POST /api/Process/deploy with status 400 in 226ms
+2025-08-23 13:48:34.935 +03:00 [INF]  Starting request POST /api/Process/deploy
+2025-08-23 13:48:34.952 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Deploying process definition from: E:\Bank Misr\Camunda\Diagrams\Random Diagrams\HrTask.bpmn
+2025-08-23 13:48:34.956 +03:00 [INF] CamundaProject.Application.Services.CamundaService Deploying process definition from: E:\Bank Misr\Camunda\Diagrams\Random Diagrams\HrTask.bpmn
+2025-08-23 13:48:35.897 +03:00 [INF] CamundaProject.Application.Services.CamundaService Deployed 1 process definitions successfully
+2025-08-23 13:48:35.901 +03:00 [INF]  Completed request POST /api/Process/deploy with status 200 in 966ms
+2025-08-23 13:49:47.122 +03:00 [INF]  Starting request GET /api/Process/definitions
+2025-08-23 13:49:47.127 +03:00 [WRN] CamundaProject.Application.Services.CamundaService NewDeploymentsQuery not available in this Zeebe client version. Using fallback implementation.
+2025-08-23 13:49:47.133 +03:00 [INF]  Completed request GET /api/Process/definitions with status 200 in 10ms
+2025-08-23 13:50:51.503 +03:00 [INF]  Starting request GET /api/Process/definitions/HrTask_Process
+2025-08-23 13:50:51.509 +03:00 [WRN] CamundaProject.Application.Services.CamundaService NewDeploymentsQuery not available in this Zeebe client version. Using fallback implementation.
+2025-08-23 13:50:51.512 +03:00 [WRN]  Completed request GET /api/Process/definitions/HrTask_Process with status 404 in 9ms
+2025-08-23 13:53:18.806 +03:00 [INF]  Starting request GET /api/Process/definitions
+2025-08-23 13:53:18.814 +03:00 [WRN] CamundaProject.Application.Services.CamundaService NewDeploymentsQuery not available in this Zeebe client version. Using fallback implementation.
+2025-08-23 13:53:18.819 +03:00 [INF]  Completed request GET /api/Process/definitions with status 200 in 13ms
+2025-08-23 13:54:42.463 +03:00 [INF]  Starting request GET /api/Process/deployments
+2025-08-23 13:54:42.469 +03:00 [WRN] CamundaProject.Application.Services.CamundaService NewDeploymentsQuery not available in this Zeebe client version. Using fallback implementation.
+2025-08-23 13:54:42.475 +03:00 [INF]  Completed request GET /api/Process/deployments with status 200 in 11ms
+2025-08-23 13:55:50.415 +03:00 [INF]  Starting request DELETE /api/Process/instances/2251799813750411
+2025-08-23 13:55:50.425 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Canceling process instance: 2251799813750411
+2025-08-23 13:55:50.427 +03:00 [INF] CamundaProject.Application.Services.CamundaService Canceling process instance: 2251799813750411
+2025-08-23 13:55:50.569 +03:00 [INF] CamundaProject.Application.Services.CamundaService Canceled process instance: 2251799813750411
+2025-08-23 13:55:50.572 +03:00 [INF]  Completed request DELETE /api/Process/instances/2251799813750411 with status 200 in 156ms
+2025-08-23 13:57:37.501 +03:00 [INF]  Starting request GET /api/Process/instances
+2025-08-23 13:57:37.507 +03:00 [WRN] CamundaProject.Application.Services.CamundaService GetProcessInstancesAsync is not directly supported by Zeebe client API
+2025-08-23 13:57:37.511 +03:00 [INF]  Completed request GET /api/Process/instances with status 200 in 9ms
+2025-08-23 14:05:04.144 +03:00 [INF]  Starting request GET /api/Process/jobs
+2025-08-23 14:05:04.154 +03:00 [WRN] CamundaProject.Application.Services.CamundaService GetActiveJobsAsync is not directly supported by Zeebe client API
+2025-08-23 14:05:04.158 +03:00 [INF]  Completed request GET /api/Process/jobs with status 200 in 14ms
+2025-08-23 14:07:52.758 +03:00 [INF]  Starting request POST /api/Process/messages/publish
+2025-08-23 14:07:52.773 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Publishing message: string
+2025-08-23 14:07:52.775 +03:00 [INF] CamundaProject.Application.Services.CamundaService Publishing message: string with correlation key: string
+2025-08-23 14:07:52.945 +03:00 [INF] CamundaProject.Application.Services.CamundaService Published message: string
+2025-08-23 14:07:52.948 +03:00 [INF]  Completed request POST /api/Process/messages/publish with status 200 in 189ms
+2025-08-23 14:08:44.115 +03:00 [INF]  Starting request GET /api/Process/topology
+2025-08-23 14:08:44.188 +03:00 [INF]  Completed request GET /api/Process/topology with status 200 in 72ms
+2025-08-23 14:08:53.068 +03:00 [INF]  Starting request GET /api/Process/test-connection
+2025-08-23 14:08:53.078 +03:00 [INF]  Completed request GET /api/Process/test-connection with status 200 in 10ms
