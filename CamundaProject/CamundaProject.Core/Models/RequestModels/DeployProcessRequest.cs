@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CamundaProject.Core.Models
+namespace CamundaProject.Core.Models.RequestModels
 {
     public class DeployProcessRequest
     {

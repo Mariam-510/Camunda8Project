@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NlT84WoGtyw=",
+  "dgSpecHash": "9a8SA6PFcrY=",
   "success": true,
-  "projectFilePath": "E:\\Bank Misr\\Camunda\\Projects\\CamundaProject\\CamundaProject.Application\\CamundaProject.Application.csproj",
+  "projectFilePath": "E:\\Bank Misr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Application\\CamundaProject.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\maria\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
     "C:\\Users\\maria\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",

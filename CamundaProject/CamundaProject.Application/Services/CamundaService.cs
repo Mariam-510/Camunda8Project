@@ -7,9 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using CamundaProject.Core.Interfaces.Services;
-using CamundaProject.Core.Models;
 using Zeebe.Client;
 using Zeebe.Client.Api.Responses;
+using CamundaProject.Core.Models.CamundaModels;
 
 namespace CamundaProject.Application.Services
 {
@@ -23,6 +23,10 @@ namespace CamundaProject.Application.Services
             _zeebeClient = zeebeClient;
             _logger = logger;
         }
+
+        //-------------------------------------------------------------------------------------
+        // Process Definition Operations (Zeebe compatible)
+        //-------------------------------------------------------------------------------------
 
         public async Task<string> StartProcessInstanceAsync(string processDefinitionKey, Dictionary<string, object> variables)
         {
@@ -56,7 +60,7 @@ namespace CamundaProject.Application.Services
                     .AddResourceFile(resourcePath)
                     .Send();
 
-                _logger.LogInformation("Deployed process definition successfully");
+                _logger.LogInformation("Deployed {Count} process definitions successfully", deployment.Processes.Count);
             }
             catch (Exception ex)
             {
@@ -64,6 +68,64 @@ namespace CamundaProject.Application.Services
                 throw;
             }
         }
+
+        // Empty
+        public async Task<List<ProcessDefinition>> GetProcessDefinitionsAsync()
+        {
+            try
+            {
+                // For older Zeebe versions, you need to use the Operate API or maintain your own deployment tracking
+                // This is a fallback implementation since direct deployment querying isn't available
+
+                _logger.LogWarning("NewDeploymentsQuery not available in this Zeebe client version. Using fallback implementation.");
+
+                // Alternative: If you've been tracking deployments yourself, return that data
+                // Otherwise, return empty list or implement Operate API integration
+
+                return new List<ProcessDefinition>();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error getting process definitions");
+                throw;
+            }
+        }
+
+        // Empty
+        public async Task<ProcessDefinition> GetProcessDefinitionByKeyAsync(string key)
+        {
+            try
+            {
+                var processDefinitions = await GetProcessDefinitionsAsync();
+                return processDefinitions.FirstOrDefault(pd => pd.BpmnProcessId == key);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error getting process definition by key: {Key}", key);
+                throw;
+            }
+        }
+
+        // Empty
+        public async Task<List<Deployment>> GetDeploymentsAsync()
+        {
+            try
+            {
+                // Fallback for older Zeebe versions
+                _logger.LogWarning("NewDeploymentsQuery not available in this Zeebe client version. Using fallback implementation.");
+
+                return new List<Deployment>();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error getting deployments");
+                throw;
+            }
+        }
+
+        //-------------------------------------------------------------------------------------
+        // Process Instance Operations (Zeebe compatible)
+        //-------------------------------------------------------------------------------------
 
         public async Task CancelProcessInstanceAsync(string processInstanceKey)
         {
@@ -82,6 +144,77 @@ namespace CamundaProject.Application.Services
                 throw;
             }
         }
+
+        // Empty
+        public async Task<List<ProcessInstance>> GetProcessInstancesAsync()
+        {
+            // IMPORTANT: Zeebe doesn't provide a direct API to query process instances
+            // This would require Operate API integration or maintaining your own tracking
+            _logger.LogWarning("GetProcessInstancesAsync is not directly supported by Zeebe client API");
+            return new List<ProcessInstance>();
+        }
+
+        //-------------------------------------------------------------------------------------
+        // Job Operations (Zeebe equivalent of tasks)
+        //-------------------------------------------------------------------------------------
+
+        // Empty
+        public async Task<List<Job>> GetActiveJobsAsync(string jobType = null)
+        {
+            try
+            {
+                // Zeebe doesn't provide a direct API to query jobs
+                // Jobs are typically handled by job workers that poll for available jobs
+                _logger.LogWarning("GetActiveJobsAsync is not directly supported by Zeebe client API");
+                return new List<Job>();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error getting active jobs");
+                throw;
+            }
+        }
+
+        // Empty
+        public async Task CompleteJobAsync(string jobKey, Dictionary<string, object> variables)
+        {
+            try
+            {
+                // This would be called from within a job worker, not from the client
+                _logger.LogWarning("CompleteJobAsync should be called from within a job worker implementation");
+
+                // Example of how a job worker would complete a job:
+                // await jobClient.NewCompleteJobCommand(job.Key)
+                //     .Variables(JsonConvert.SerializeObject(variables))
+                //     .Send();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error completing job: {JobKey}", jobKey);
+                throw;
+            }
+        }
+
+        // Empty
+        public async Task FailJobAsync(string jobKey, string errorMessage)
+        {
+            try
+            {
+                // This would be called from within a job worker
+                _logger.LogWarning("FailJobAsync should be called from within a job worker implementation");
+
+                // Example: await jobClient.NewFailCommand(job.Key).Retries(job.Retries - 1).ErrorMessage(errorMessage).Send();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error failing job: {JobKey}", jobKey);
+                throw;
+            }
+        }
+
+        //-------------------------------------------------------------------------------------
+        // Message Operations
+        //-------------------------------------------------------------------------------------
 
         public async Task PublishMessageAsync(string messageName, string correlationKey, Dictionary<string, object> variables)
         {
@@ -104,20 +237,47 @@ namespace CamundaProject.Application.Services
             }
         }
 
+        //-------------------------------------------------------------------------------------
+        // Incident Operations (Limited in Zeebe without Operate)
+        //-------------------------------------------------------------------------------------
+
+        // Empty
+        public async Task<List<Incident>> GetIncidentsAsync()
+        {
+            // Zeebe doesn't provide a direct API to query incidents
+            // This requires Operate API integration
+            _logger.LogWarning("GetIncidentsAsync is not directly supported by Zeebe client API");
+            return new List<Incident>();
+        }
+
+        //-------------------------------------------------------------------------------------
+        // Utility Operations
+        //-------------------------------------------------------------------------------------
+
         public async Task<string> GetTopologyAsync()
         {
             try
             {
                 var topology = await _zeebeClient.TopologyRequest().Send();
-
-                // In Zeebe 2.9.0, topology might not have the same structure
-                // Return a simple string representation
                 return $"Connected to Zeebe gateway. Brokers: {topology?.Brokers?.Count ?? 0}";
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error getting topology");
                 throw;
+            }
+        }
+
+        public async Task<bool> TestConnectionAsync()
+        {
+            try
+            {
+                await _zeebeClient.TopologyRequest().Send();
+                return true;
+            }
+            catch
+            {
+                return false;
             }
         }
     }

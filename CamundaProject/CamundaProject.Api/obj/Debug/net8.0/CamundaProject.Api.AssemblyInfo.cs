@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CamundaProject.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8962d1661a8834dff60a1e261e47c1b457e8e81b")]
 [assembly: System.Reflection.AssemblyProductAttribute("CamundaProject.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CamundaProject.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

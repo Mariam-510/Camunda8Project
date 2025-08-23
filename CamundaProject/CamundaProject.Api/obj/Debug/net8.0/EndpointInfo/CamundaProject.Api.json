@@ -80,7 +80,190 @@
         }
       }
     },
-    "/api/Process/publish-message": {
+    "/api/Process/definitions": {
+      "get": {
+        "tags": [
+          "Process"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Process/definitions/{key}": {
+      "get": {
+        "tags": [
+          "Process"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Process/deployments": {
+      "get": {
+        "tags": [
+          "Process"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Process/instances/{processInstanceKey}": {
+      "delete": {
+        "tags": [
+          "Process"
+        ],
+        "parameters": [
+          {
+            "name": "processInstanceKey",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Process/instances": {
+      "get": {
+        "tags": [
+          "Process"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Process/jobs": {
+      "get": {
+        "tags": [
+          "Process"
+        ],
+        "parameters": [
+          {
+            "name": "jobType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Process/jobs/{jobKey}/complete": {
+      "post": {
+        "tags": [
+          "Process"
+        ],
+        "parameters": [
+          {
+            "name": "jobKey",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CompleteJobRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CompleteJobRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CompleteJobRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Process/jobs/{jobKey}/fail": {
+      "post": {
+        "tags": [
+          "Process"
+        ],
+        "parameters": [
+          {
+            "name": "jobKey",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FailJobRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FailJobRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FailJobRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Process/messages/publish": {
       "post": {
         "tags": [
           "Process"
@@ -111,20 +294,22 @@
         }
       }
     },
-    "/api/Process/cancel/{processInstanceKey}": {
-      "delete": {
+    "/api/Process/incidents": {
+      "get": {
         "tags": [
           "Process"
         ],
-        "parameters": [
-          {
-            "name": "processInstanceKey",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "responses": {
+          "200": {
+            "description": "OK"
           }
+        }
+      }
+    },
+    "/api/Process/topology": {
+      "get": {
+        "tags": [
+          "Process"
         ],
         "responses": {
           "200": {
@@ -148,10 +333,31 @@
   },
   "components": {
     "schemas": {
+      "CompleteJobRequest": {
+        "type": "object",
+        "properties": {
+          "variables": {
+            "type": "object",
+            "additionalProperties": { },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "DeployProcessRequest": {
         "type": "object",
         "properties": {
           "resourcePath": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FailJobRequest": {
+        "type": "object",
+        "properties": {
+          "errorMessage": {
             "type": "string",
             "nullable": true
           }
