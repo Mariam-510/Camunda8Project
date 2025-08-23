@@ -1,0 +1,36 @@
+2025-08-23 00:09:54.772 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-23 00:09:54.825 +03:00 [INF]  Starting request POST /api/Process/start/2251799813728961
+2025-08-23 00:09:55.250 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: 2251799813728961
+2025-08-23 00:09:55.368 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: 2251799813728961
+2025-08-23 00:09:56.053 +03:00 [ERR] CamundaProject.Application.Services.CamundaService Error starting process instance for: 2251799813728961
+Grpc.Core.RpcException: Status(StatusCode="NotFound", Detail="Command 'CREATE' rejected with code 'NOT_FOUND': Expected to find process definition with process ID '2251799813728961', but none found")
+   at Zeebe.Client.Impl.Commands.CreateProcessInstanceCommand.Send(Nullable`1 timeout, CancellationToken token)
+   at CamundaProject.Application.Services.CamundaService.StartProcessInstanceAsync(String processDefinitionKey, Dictionary`2 variables) in E:\Bank Misr\Camunda\Projects\CamundaProject\CamundaProject.Application\Services\CamundaService.cs:line 33
+2025-08-23 00:09:56.158 +03:00 [ERR] CamundaProject.Api.Controllers.ProcessController Error starting process instance for: 2251799813728961
+Grpc.Core.RpcException: Status(StatusCode="NotFound", Detail="Command 'CREATE' rejected with code 'NOT_FOUND': Expected to find process definition with process ID '2251799813728961', but none found")
+   at Zeebe.Client.Impl.Commands.CreateProcessInstanceCommand.Send(Nullable`1 timeout, CancellationToken token)
+   at CamundaProject.Application.Services.CamundaService.StartProcessInstanceAsync(String processDefinitionKey, Dictionary`2 variables) in E:\Bank Misr\Camunda\Projects\CamundaProject\CamundaProject.Application\Services\CamundaService.cs:line 33
+   at CamundaProject.Api.Controllers.ProcessController.StartProcessInstance(String processDefinitionKey, Dictionary`2 variables) in E:\Bank Misr\Camunda\Projects\CamundaProject\CamundaProject.Api\Controllers\ProcessController.cs:line 31
+2025-08-23 00:09:56.173 +03:00 [WRN]  Completed request POST /api/Process/start/2251799813728961 with status 500 in 1347ms
+2025-08-23 11:52:53.620 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-23 11:52:53.799 +03:00 [INF]  Starting request POST /api/Process/start/HrTask_Process
+2025-08-23 11:52:54.990 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: HrTask_Process
+2025-08-23 11:52:55.495 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: HrTask_Process
+2025-08-23 11:52:57.240 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813729640
+2025-08-23 11:52:57.281 +03:00 [INF]  Completed request POST /api/Process/start/HrTask_Process with status 200 in 3483ms
+2025-08-23 11:55:38.408 +03:00 [INF]  Starting request POST /api/Process/start/Getway_Rest_Test_Process
+2025-08-23 11:55:38.454 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: Getway_Rest_Test_Process
+2025-08-23 11:55:38.458 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: Getway_Rest_Test_Process
+2025-08-23 11:55:39.863 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813730149
+2025-08-23 11:55:39.866 +03:00 [INF]  Completed request POST /api/Process/start/Getway_Rest_Test_Process with status 200 in 1457ms
+2025-08-23 12:04:14.020 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-23 12:04:14.122 +03:00 [INF]  Starting request POST /api/Process/start/HrTask_Process
+2025-08-23 12:04:14.382 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: HrTask_Process
+2025-08-23 12:04:14.405 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: HrTask_Process
+2025-08-23 12:04:14.882 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813731750
+2025-08-23 12:04:14.944 +03:00 [INF]  Completed request POST /api/Process/start/HrTask_Process with status 200 in 822ms
+2025-08-23 12:05:27.819 +03:00 [INF]  Starting request POST /api/Process/start/Getway_Rest_Test_Process
+2025-08-23 12:05:27.844 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: Getway_Rest_Test_Process
+2025-08-23 12:05:27.847 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: Getway_Rest_Test_Process
+2025-08-23 12:05:28.200 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813731980
+2025-08-23 12:05:28.208 +03:00 [INF]  Completed request POST /api/Process/start/Getway_Rest_Test_Process with status 200 in 389ms

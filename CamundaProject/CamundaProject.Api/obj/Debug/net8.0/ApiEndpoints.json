@@ -1,0 +1,81 @@
+[
+  {
+    "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
+    "Method": "CancelProcessInstance",
+    "RelativePath": "api/Process/cancel/{processInstanceKey}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "processInstanceKey",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
+    "Method": "DeployProcessDefinition",
+    "RelativePath": "api/Process/deploy",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CamundaProject.Core.Models.DeployProcessRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
+    "Method": "PublishMessage",
+    "RelativePath": "api/Process/publish-message",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CamundaProject.Core.Models.PublishMessageRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
+    "Method": "StartProcessInstance",
+    "RelativePath": "api/Process/start/{processDefinitionKey}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "processDefinitionKey",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "variables",
+        "Type": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
+    "Method": "TestConnection",
+    "RelativePath": "api/Process/test-connection",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

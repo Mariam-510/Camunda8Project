@@ -1,0 +1,13 @@
+2025-08-23 00:09:54.772 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-23 00:09:56.053 +03:00 [ERR] CamundaProject.Application.Services.CamundaService Error starting process instance for: 2251799813728961
+Grpc.Core.RpcException: Status(StatusCode="NotFound", Detail="Command 'CREATE' rejected with code 'NOT_FOUND': Expected to find process definition with process ID '2251799813728961', but none found")
+   at Zeebe.Client.Impl.Commands.CreateProcessInstanceCommand.Send(Nullable`1 timeout, CancellationToken token)
+   at CamundaProject.Application.Services.CamundaService.StartProcessInstanceAsync(String processDefinitionKey, Dictionary`2 variables) in E:\Bank Misr\Camunda\Projects\CamundaProject\CamundaProject.Application\Services\CamundaService.cs:line 33
+2025-08-23 00:09:56.158 +03:00 [ERR] CamundaProject.Api.Controllers.ProcessController Error starting process instance for: 2251799813728961
+Grpc.Core.RpcException: Status(StatusCode="NotFound", Detail="Command 'CREATE' rejected with code 'NOT_FOUND': Expected to find process definition with process ID '2251799813728961', but none found")
+   at Zeebe.Client.Impl.Commands.CreateProcessInstanceCommand.Send(Nullable`1 timeout, CancellationToken token)
+   at CamundaProject.Application.Services.CamundaService.StartProcessInstanceAsync(String processDefinitionKey, Dictionary`2 variables) in E:\Bank Misr\Camunda\Projects\CamundaProject\CamundaProject.Application\Services\CamundaService.cs:line 33
+   at CamundaProject.Api.Controllers.ProcessController.StartProcessInstance(String processDefinitionKey, Dictionary`2 variables) in E:\Bank Misr\Camunda\Projects\CamundaProject\CamundaProject.Api\Controllers\ProcessController.cs:line 31
+2025-08-23 00:09:56.173 +03:00 [WRN]  Completed request POST /api/Process/start/2251799813728961 with status 500 in 1347ms
+2025-08-23 11:52:53.620 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-23 12:04:14.020 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
