@@ -1,0 +1,25 @@
+2025-08-22 18:29:18.833 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-22 18:29:19.451 +03:00 [ERR] CamundaProject.Application.Services.CamundaService Error starting process instance by ID: HrTask_Process
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 403.
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at CamundaProject.Application.Services.CamundaService.PostAsync[T](String url, Object data) in E:\Bank Misr\Camunda\CamundaProject\CamundaProject.Application\Services\CamundaService.cs:line 237
+   at CamundaProject.Application.Services.CamundaService.StartProcessInstanceByIdAsync(String processDefinitionId, StartProcessInstanceRequest request) in E:\Bank Misr\Camunda\CamundaProject\CamundaProject.Application\Services\CamundaService.cs:line 46
+2025-08-22 18:29:19.559 +03:00 [ERR] CamundaProject.Api.Controllers.ProcessController Error starting process HrTask_Process
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 403.
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at CamundaProject.Application.Services.CamundaService.PostAsync[T](String url, Object data) in E:\Bank Misr\Camunda\CamundaProject\CamundaProject.Application\Services\CamundaService.cs:line 237
+   at CamundaProject.Application.Services.CamundaService.StartProcessInstanceByIdAsync(String processDefinitionId, StartProcessInstanceRequest request) in E:\Bank Misr\Camunda\CamundaProject\CamundaProject.Application\Services\CamundaService.cs:line 46
+   at CamundaProject.Api.Controllers.ProcessController.StartProcessById(String processDefinitionId, StartProcessRequest request) in E:\Bank Misr\Camunda\CamundaProject\CamundaProject.Api\Controllers\ProcessController.cs:line 86
+2025-08-22 18:29:19.578 +03:00 [WRN]  Completed request POST /api/Process/start-by-id/HrTask_Process with status 500 in 662ms
+2025-08-22 18:29:43.115 +03:00 [ERR] CamundaProject.Application.Services.CamundaService Error starting process instance by key: HrTask_Process
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 403.
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at CamundaProject.Application.Services.CamundaService.PostAsync[T](String url, Object data) in E:\Bank Misr\Camunda\CamundaProject\CamundaProject.Application\Services\CamundaService.cs:line 237
+   at CamundaProject.Application.Services.CamundaService.StartProcessInstanceByKeyAsync(String processDefinitionKey, StartProcessInstanceRequest request) in E:\Bank Misr\Camunda\CamundaProject\CamundaProject.Application\Services\CamundaService.cs:line 31
+2025-08-22 18:29:43.190 +03:00 [ERR] CamundaProject.Api.Controllers.ProcessController Error starting process HrTask_Process
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 403.
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at CamundaProject.Application.Services.CamundaService.PostAsync[T](String url, Object data) in E:\Bank Misr\Camunda\CamundaProject\CamundaProject.Application\Services\CamundaService.cs:line 237
+   at CamundaProject.Application.Services.CamundaService.StartProcessInstanceByKeyAsync(String processDefinitionKey, StartProcessInstanceRequest request) in E:\Bank Misr\Camunda\CamundaProject\CamundaProject.Application\Services\CamundaService.cs:line 31
+   at CamundaProject.Api.Controllers.ProcessController.StartProcessByKey(String processDefinitionKey, StartProcessRequest request) in E:\Bank Misr\Camunda\CamundaProject\CamundaProject.Api\Controllers\ProcessController.cs:line 42
+2025-08-22 18:29:43.196 +03:00 [WRN]  Completed request POST /api/Process/start/HrTask_Process with status 500 in 192ms
