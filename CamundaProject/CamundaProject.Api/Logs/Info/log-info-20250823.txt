@@ -87,3 +87,9 @@ Grpc.Core.RpcException: Status(StatusCode="NotFound", Detail="Command 'CREATE' r
 2025-08-23 14:08:44.188 +03:00 [INF]  Completed request GET /api/Process/topology with status 200 in 72ms
 2025-08-23 14:08:53.068 +03:00 [INF]  Starting request GET /api/Process/test-connection
 2025-08-23 14:08:53.078 +03:00 [INF]  Completed request GET /api/Process/test-connection with status 200 in 10ms
+2025-08-23 14:12:28.155 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-23 14:12:28.191 +03:00 [INF]  Starting request POST /api/Process/start/HrTask_Process
+2025-08-23 14:12:28.282 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: HrTask_Process
+2025-08-23 14:12:28.292 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: HrTask_Process
+2025-08-23 14:12:28.507 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813755704
+2025-08-23 14:12:28.520 +03:00 [INF]  Completed request POST /api/Process/start/HrTask_Process with status 200 in 328ms

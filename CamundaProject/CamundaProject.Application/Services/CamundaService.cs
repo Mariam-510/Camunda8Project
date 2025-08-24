@@ -1,15 +1,9 @@
-﻿using CamundaProject.Application.Services;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
-using CamundaProject.Core.Interfaces.Services;
-using Zeebe.Client;
-using Zeebe.Client.Api.Responses;
+﻿using CamundaProject.Core.Interfaces.Services;
 using CamundaProject.Core.Models.CamundaModels;
+using Microsoft.Extensions.Logging;
+//using Newtonsoft.Json;
+using System.Text.Json;
+using Zeebe.Client;
 
 namespace CamundaProject.Application.Services
 {
@@ -37,7 +31,7 @@ namespace CamundaProject.Application.Services
                 var processInstance = await _zeebeClient.NewCreateProcessInstanceCommand()
                     .BpmnProcessId(processDefinitionKey)
                     .LatestVersion()
-                    .Variables(JsonConvert.SerializeObject(variables))
+                    .Variables(JsonSerializer.Serialize(variables))
                     .Send();
 
                 _logger.LogInformation("Started process instance: {ProcessInstanceKey}", processInstance.ProcessInstanceKey);
@@ -225,7 +219,7 @@ namespace CamundaProject.Application.Services
                 await _zeebeClient.NewPublishMessageCommand()
                     .MessageName(messageName)
                     .CorrelationKey(correlationKey)
-                    .Variables(JsonConvert.SerializeObject(variables))
+                    .Variables(JsonSerializer.Serialize(variables))
                     .Send();
 
                 _logger.LogInformation("Published message: {MessageName}", messageName);

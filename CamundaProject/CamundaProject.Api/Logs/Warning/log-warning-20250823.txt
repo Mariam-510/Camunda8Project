@@ -22,3 +22,4 @@ Grpc.Core.RpcException: Status(StatusCode="NotFound", Detail="Command 'CREATE' r
 2025-08-23 13:54:42.469 +03:00 [WRN] CamundaProject.Application.Services.CamundaService NewDeploymentsQuery not available in this Zeebe client version. Using fallback implementation.
 2025-08-23 13:57:37.507 +03:00 [WRN] CamundaProject.Application.Services.CamundaService GetProcessInstancesAsync is not directly supported by Zeebe client API
 2025-08-23 14:05:04.154 +03:00 [WRN] CamundaProject.Application.Services.CamundaService GetActiveJobsAsync is not directly supported by Zeebe client API
+2025-08-23 14:12:28.155 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
