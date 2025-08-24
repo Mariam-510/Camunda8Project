@@ -1,0 +1,61 @@
+2025-08-24 09:28:12.561 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-24 09:28:12.603 +03:00 [INF]  Starting request POST /api/Process/start/HrTask_Process
+2025-08-24 09:28:13.349 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: HrTask_Process
+2025-08-24 09:28:13.484 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: HrTask_Process
+2025-08-24 09:28:14.423 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813765010
+2025-08-24 09:28:14.440 +03:00 [INF]  Completed request POST /api/Process/start/HrTask_Process with status 200 in 1837ms
+2025-08-24 09:29:25.303 +03:00 [INF]  Starting request POST /api/Process/start/HrTask_Process
+2025-08-24 09:29:25.311 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: HrTask_Process
+2025-08-24 09:29:25.313 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: HrTask_Process
+2025-08-24 09:29:25.454 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813765235
+2025-08-24 09:29:25.456 +03:00 [INF]  Completed request POST /api/Process/start/HrTask_Process with status 200 in 153ms
+2025-08-24 10:17:01.178 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-24 10:17:01.214 +03:00 [INF]  Starting request POST /api/Process/start/HrTask_Process
+2025-08-24 10:17:01.299 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: HrTask_Process
+2025-08-24 10:17:01.308 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: HrTask_Process
+2025-08-24 10:17:01.551 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813772039
+2025-08-24 10:17:01.564 +03:00 [INF]  Completed request POST /api/Process/start/HrTask_Process with status 200 in 350ms
+2025-08-24 10:23:54.815 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-24 10:23:54.851 +03:00 [INF]  Starting request POST /api/Process/start/HrTask_Process
+2025-08-24 10:23:54.944 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: HrTask_Process
+2025-08-24 10:23:54.956 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: HrTask_Process
+2025-08-24 10:23:55.399 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813773417
+2025-08-24 10:23:55.413 +03:00 [INF]  Completed request POST /api/Process/start/HrTask_Process with status 200 in 561ms
+2025-08-24 10:25:12.940 +03:00 [INF]  Starting request POST /api/Process/start/HrTask_Process
+2025-08-24 10:25:12.943 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: HrTask_Process
+2025-08-24 10:25:12.945 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: HrTask_Process
+2025-08-24 10:27:41.225 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-24 10:27:41.264 +03:00 [INF]  Starting request POST /api/Process/start/HrTask_Process
+2025-08-24 10:27:41.349 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: HrTask_Process
+2025-08-24 10:27:41.358 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: HrTask_Process
+2025-08-24 10:30:20.033 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-24 10:30:20.079 +03:00 [INF]  Starting request POST /api/Process/start/HrTask_Process
+2025-08-24 10:30:20.166 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: HrTask_Process
+2025-08-24 10:30:20.178 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: HrTask_Process
+2025-08-24 10:30:36.476 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813774772
+2025-08-24 10:30:36.489 +03:00 [INF]  Completed request POST /api/Process/start/HrTask_Process with status 200 in 16411ms
+2025-08-24 10:31:32.332 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-24 10:31:32.370 +03:00 [INF]  Starting request POST /api/Process/start/HrTask_Process
+2025-08-24 10:31:32.462 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: HrTask_Process
+2025-08-24 10:31:32.470 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: HrTask_Process
+2025-08-24 10:31:32.693 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813774986
+2025-08-24 10:31:32.706 +03:00 [INF]  Completed request POST /api/Process/start/HrTask_Process with status 200 in 336ms
+2025-08-24 10:35:14.112 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-24 10:35:14.148 +03:00 [INF]  Starting request POST /api/Process/start/HrTask_Process
+2025-08-24 10:35:14.236 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: HrTask_Process
+2025-08-24 10:35:14.239 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: HrTask_Process
+2025-08-24 10:35:14.413 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813775761
+2025-08-24 10:35:14.426 +03:00 [INF]  Completed request POST /api/Process/start/HrTask_Process with status 200 in 277ms
+2025-08-24 10:35:40.269 +03:00 [INF]  Starting request POST /api/Process/start/HrTask_Process
+2025-08-24 10:35:40.280 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: HrTask_Process
+2025-08-24 10:35:40.280 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: HrTask_Process
+2025-08-24 10:35:40.335 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813775853
+2025-08-24 10:35:40.337 +03:00 [INF]  Completed request POST /api/Process/start/HrTask_Process with status 200 in 67ms
+2025-08-24 10:46:28.113 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-24 10:46:28.151 +03:00 [INF]  Starting request POST /api/Process/start/Getway_Rest_Test_Process
+2025-08-24 10:46:28.443 +03:00 [WRN]  Completed request POST /api/Process/start/Getway_Rest_Test_Process with status 400 in 292ms
+2025-08-24 10:46:46.754 +03:00 [INF]  Starting request POST /api/Process/start/Getway_Rest_Test_Process
+2025-08-24 10:46:46.771 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: Getway_Rest_Test_Process
+2025-08-24 10:46:46.774 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: Getway_Rest_Test_Process
+2025-08-24 10:46:47.713 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813778132
+2025-08-24 10:46:47.724 +03:00 [INF]  Completed request POST /api/Process/start/Getway_Rest_Test_Process with status 200 in 969ms
