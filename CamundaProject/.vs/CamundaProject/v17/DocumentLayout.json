@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "E:\\Bank Misr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A48F1266-149C-462E-8531-3CD2136C7605}|CamundaProject.Application\\CamundaProject.Application.csproj|e:\\bank misr\\camunda\\projects\\camunda8project\\camundaproject\\camundaproject.application\\services\\camundaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A48F1266-149C-462E-8531-3CD2136C7605}|CamundaProject.Application\\CamundaProject.Application.csproj|solutionrelative:camundaproject.application\\services\\camundaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4A79BB4-5AA8-4E27-B834-50B566510F36}|CamundaProject.Core\\CamundaProject.Core.csproj|e:\\bank misr\\camunda\\projects\\camunda8project\\camundaproject\\camundaproject.core\\interfaces\\services\\icamundaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4A79BB4-5AA8-4E27-B834-50B566510F36}|CamundaProject.Core\\CamundaProject.Core.csproj|solutionrelative:camundaproject.core\\interfaces\\services\\icamundaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A48F1266-149C-462E-8531-3CD2136C7605}|CamundaProject.Application\\CamundaProject.Application.csproj|e:\\bank misr\\camunda\\projects\\camunda8project\\camundaproject\\camundaproject.application\\services\\zeebejobworkerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A48F1266-149C-462E-8531-3CD2136C7605}|CamundaProject.Application\\CamundaProject.Application.csproj|solutionrelative:camundaproject.application\\services\\zeebejobworkerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A48F1266-149C-462E-8531-3CD2136C7605}|CamundaProject.Application\\CamundaProject.Application.csproj|e:\\bank misr\\camunda\\projects\\camunda8project\\camundaproject\\camundaproject.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A48F1266-149C-462E-8531-3CD2136C7605}|CamundaProject.Application\\CamundaProject.Application.csproj|solutionrelative:camundaproject.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A48F1266-149C-462E-8531-3CD2136C7605}|CamundaProject.Application\\CamundaProject.Application.csproj|e:\\bank misr\\camunda\\projects\\camunda8project\\camundaproject\\camundaproject.application\\services\\jobtrackingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A48F1266-149C-462E-8531-3CD2136C7605}|CamundaProject.Application\\CamundaProject.Application.csproj|solutionrelative:camundaproject.application\\services\\jobtrackingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4A79BB4-5AA8-4E27-B834-50B566510F36}|CamundaProject.Core\\CamundaProject.Core.csproj|e:\\bank misr\\camunda\\projects\\camunda8project\\camundaproject\\camundaproject.core\\interfaces\\services\\ijobtrackingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4A79BB4-5AA8-4E27-B834-50B566510F36}|CamundaProject.Core\\CamundaProject.Core.csproj|solutionrelative:camundaproject.core\\interfaces\\services\\ijobtrackingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A48F1266-149C-462E-8531-3CD2136C7605}|CamundaProject.Application\\CamundaProject.Application.csproj|e:\\bank misr\\camunda\\projects\\camunda8project\\camundaproject\\camundaproject.application\\services\\camundaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A48F1266-149C-462E-8531-3CD2136C7605}|CamundaProject.Application\\CamundaProject.Application.csproj|solutionrelative:camundaproject.application\\services\\camundaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8C60B5FE-D85D-4893-8399-272D3BB57806}|CamundaProject.Api\\CamundaProject.Api.csproj|e:\\bank misr\\camunda\\projects\\camunda8project\\camundaproject\\camundaproject.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{8C60B5FE-D85D-4893-8399-272D3BB57806}|CamundaProject.Api\\CamundaProject.Api.csproj|solutionrelative:camundaproject.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C60B5FE-D85D-4893-8399-272D3BB57806}|CamundaProject.Api\\CamundaProject.Api.csproj|e:\\bank misr\\camunda\\projects\\camunda8project\\camundaproject\\camundaproject.api\\controllers\\jobscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C60B5FE-D85D-4893-8399-272D3BB57806}|CamundaProject.Api\\CamundaProject.Api.csproj|solutionrelative:camundaproject.api\\controllers\\jobscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8C60B5FE-D85D-4893-8399-272D3BB57806}|CamundaProject.Api\\CamundaProject.Api.csproj|e:\\bank misr\\camunda\\projects\\camunda8project\\camundaproject\\camundaproject.api\\controllers\\processcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,6 +37,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{8C60B5FE-D85D-4893-8399-272D3BB57806}|CamundaProject.Api\\CamundaProject.Api.csproj|e:\\bank misr\\camunda\\projects\\camunda8project\\camundaproject\\camundaproject.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8C60B5FE-D85D-4893-8399-272D3BB57806}|CamundaProject.Api\\CamundaProject.Api.csproj|solutionrelative:camundaproject.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4A79BB4-5AA8-4E27-B834-50B566510F36}|CamundaProject.Core\\CamundaProject.Core.csproj|e:\\bank misr\\camunda\\projects\\camunda8project\\camundaproject\\camundaproject.core\\interfaces\\services\\icamundaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4A79BB4-5AA8-4E27-B834-50B566510F36}|CamundaProject.Core\\CamundaProject.Core.csproj|solutionrelative:camundaproject.core\\interfaces\\services\\icamundaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,17 +50,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 269,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "DependencyInjection.cs",
               "DocumentMoniker": "E:\\Bank Misr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Application\\DependencyInjection.cs",
               "RelativeDocumentMoniker": "CamundaProject.Application\\DependencyInjection.cs",
               "ToolTip": "E:\\Bank Misr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Application\\DependencyInjection.cs",
               "RelativeToolTip": "CamundaProject.Application\\DependencyInjection.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAA2wCwAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAIwDUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-22T15:26:37.456Z",
               "IsPinned": true,
@@ -52,13 +68,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "appsettings.json",
               "DocumentMoniker": "E:\\Bank Misr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Api\\appsettings.json",
               "RelativeDocumentMoniker": "CamundaProject.Api\\appsettings.json",
               "ToolTip": "E:\\Bank Misr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Api\\appsettings.json",
               "RelativeToolTip": "CamundaProject.Api\\appsettings.json",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAAAEAAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAAAD4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-08-22T15:26:44.221Z",
               "IsPinned": true,
@@ -66,13 +82,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\Bank Misr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Api\\Program.cs",
               "RelativeDocumentMoniker": "CamundaProject.Api\\Program.cs",
               "ToolTip": "E:\\Bank Misr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Api\\Program.cs",
               "RelativeToolTip": "CamundaProject.Api\\Program.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwEsAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwEsAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-22T15:26:21.244Z",
               "IsPinned": true,
@@ -80,13 +96,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "ProcessController.cs",
               "DocumentMoniker": "E:\\Bank Misr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Api\\Controllers\\ProcessController.cs",
               "RelativeDocumentMoniker": "CamundaProject.Api\\Controllers\\ProcessController.cs",
               "ToolTip": "E:\\Bank Misr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Api\\Controllers\\ProcessController.cs",
               "RelativeToolTip": "CamundaProject.Api\\Controllers\\ProcessController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAADgvx0AAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAA1wJYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-22T21:05:03.597Z",
               "IsPinned": true,
@@ -94,13 +110,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "ICamundaService.cs",
               "DocumentMoniker": "E:\\Bank Misr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\Interfaces\\Services\\ICamundaService.cs",
               "RelativeDocumentMoniker": "CamundaProject.Core\\Interfaces\\Services\\ICamundaService.cs",
               "ToolTip": "E:\\Bank Misr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\Interfaces\\Services\\ICamundaService.cs",
               "RelativeToolTip": "CamundaProject.Core\\Interfaces\\Services\\ICamundaService.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAA2wDQAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABMAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-22T21:03:24.022Z",
               "IsPinned": true,
@@ -108,15 +124,71 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "CamundaService.cs",
               "DocumentMoniker": "E:\\Bank Misr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Application\\Services\\CamundaService.cs",
               "RelativeDocumentMoniker": "CamundaProject.Application\\Services\\CamundaService.cs",
               "ToolTip": "E:\\Bank Misr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Application\\Services\\CamundaService.cs",
               "RelativeToolTip": "CamundaProject.Application\\Services\\CamundaService.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAqwNoAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAgwE4AAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-22T20:50:10.018Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IJobTrackingService.cs",
+              "DocumentMoniker": "E:\\Bank Misr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\Interfaces\\Services\\IJobTrackingService.cs",
+              "RelativeDocumentMoniker": "CamundaProject.Core\\Interfaces\\Services\\IJobTrackingService.cs",
+              "ToolTip": "E:\\Bank Misr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\Interfaces\\Services\\IJobTrackingService.cs",
+              "RelativeToolTip": "CamundaProject.Core\\Interfaces\\Services\\IJobTrackingService.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAqwBAAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T08:57:02.623Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "JobTrackingService.cs",
+              "DocumentMoniker": "E:\\Bank Misr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Application\\Services\\JobTrackingService.cs",
+              "RelativeDocumentMoniker": "CamundaProject.Application\\Services\\JobTrackingService.cs",
+              "ToolTip": "E:\\Bank Misr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Application\\Services\\JobTrackingService.cs",
+              "RelativeToolTip": "CamundaProject.Application\\Services\\JobTrackingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T08:57:32.055Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ZeebeJobWorkerService.cs",
+              "DocumentMoniker": "E:\\Bank Misr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Application\\Services\\ZeebeJobWorkerService.cs",
+              "RelativeDocumentMoniker": "CamundaProject.Application\\Services\\ZeebeJobWorkerService.cs",
+              "ToolTip": "E:\\Bank Misr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Application\\Services\\ZeebeJobWorkerService.cs",
+              "RelativeToolTip": "CamundaProject.Application\\Services\\ZeebeJobWorkerService.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAYwDsAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T09:02:54.998Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "JobsController.cs",
+              "DocumentMoniker": "E:\\Bank Misr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Api\\Controllers\\JobsController.cs",
+              "RelativeDocumentMoniker": "CamundaProject.Api\\Controllers\\JobsController.cs",
+              "ToolTip": "E:\\Bank Misr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Api\\Controllers\\JobsController.cs",
+              "RelativeToolTip": "CamundaProject.Api\\Controllers\\JobsController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwAQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T09:04:09.758Z",
               "IsPinned": true,
               "EditorCaption": ""
             },

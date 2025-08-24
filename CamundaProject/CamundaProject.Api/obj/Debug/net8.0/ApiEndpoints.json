@@ -1,26 +1,84 @@
 [
   {
-    "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
-    "Method": "GetProcessDefinitions",
-    "RelativePath": "api/Process/definitions",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
-    "Method": "GetProcessDefinitionByKey",
-    "RelativePath": "api/Process/definitions/{key}",
+    "ContainingType": "CamundaProject.Api.Controllers.JobsController",
+    "Method": "GetJobs",
+    "RelativePath": "api/Jobs",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "key",
+        "Name": "processInstanceKey",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "jobType",
         "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CamundaProject.Api.Controllers.JobsController",
+    "Method": "GetJob",
+    "RelativePath": "api/Jobs/{jobKey}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jobKey",
+        "Type": "System.Int64",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CamundaProject.Api.Controllers.JobsController",
+    "Method": "CompleteJob",
+    "RelativePath": "api/Jobs/{jobKey}/complete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jobKey",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "CamundaProject.Core.Models.RequestModels.VariableRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CamundaProject.Api.Controllers.JobsController",
+    "Method": "FailJob",
+    "RelativePath": "api/Jobs/{jobKey}/fail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jobKey",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "errorMessage",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "retries",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -43,36 +101,6 @@
   },
   {
     "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
-    "Method": "GetDeployments",
-    "RelativePath": "api/Process/deployments",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
-    "Method": "GetIncidents",
-    "RelativePath": "api/Process/incidents",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
-    "Method": "GetProcessInstances",
-    "RelativePath": "api/Process/instances",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
     "Method": "CancelProcessInstance",
     "RelativePath": "api/Process/instances/{processInstanceKey}",
     "HttpMethod": "DELETE",
@@ -82,64 +110,6 @@
       {
         "Name": "processInstanceKey",
         "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
-    "Method": "GetActiveJobs",
-    "RelativePath": "api/Process/jobs",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "jobType",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
-    "Method": "CompleteJob",
-    "RelativePath": "api/Process/jobs/{jobKey}/complete",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "jobKey",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "request",
-        "Type": "CamundaProject.Core.Models.RequestModels.CompleteJobRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
-    "Method": "FailJob",
-    "RelativePath": "api/Process/jobs/{jobKey}/fail",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "jobKey",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "request",
-        "Type": "CamundaProject.Core.Models.RequestModels.FailJobRequest",
         "IsRequired": true
       }
     ],
@@ -175,8 +145,8 @@
         "IsRequired": true
       },
       {
-        "Name": "variables",
-        "Type": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Name": "variableRequest",
+        "Type": "CamundaProject.Core.Models.RequestModels.VariableRequest",
         "IsRequired": true
       }
     ],

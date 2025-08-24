@@ -10,7 +10,8 @@ namespace CamundaProject.Core.Models.RequestModels
     {
         public string MessageName { get; set; }
         public string CorrelationKey { get; set; }
-        public Dictionary<string, object> Variables { get; set; } = new Dictionary<string, object>();
+
+        public VariableRequest variableRequest = new VariableRequest();
     }
 
 }

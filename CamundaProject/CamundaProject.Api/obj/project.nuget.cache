@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Rzpo/yvyDsM=",
+  "dgSpecHash": "M+xZZ9Y1Rjg=",
   "success": true,
   "projectFilePath": "E:\\Bank Misr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Api\\CamundaProject.Api.csproj",
   "expectedPackageFiles": [
@@ -69,6 +69,7 @@
     "C:\\Users\\maria\\.nuget\\packages\\mimekit\\4.13.0\\mimekit.4.13.0.nupkg.sha512",
     "C:\\Users\\maria\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\maria\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\maria\\.nuget\\packages\\scalar.aspnetcore\\2.7.0\\scalar.aspnetcore.2.7.0.nupkg.sha512",
     "C:\\Users\\maria\\.nuget\\packages\\serilog\\4.2.0\\serilog.4.2.0.nupkg.sha512",
     "C:\\Users\\maria\\.nuget\\packages\\serilog.aspnetcore\\9.0.0\\serilog.aspnetcore.9.0.0.nupkg.sha512",
     "C:\\Users\\maria\\.nuget\\packages\\serilog.extensions.hosting\\9.0.0\\serilog.extensions.hosting.9.0.0.nupkg.sha512",

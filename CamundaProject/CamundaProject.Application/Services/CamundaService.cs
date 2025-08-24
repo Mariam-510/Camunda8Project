@@ -1,5 +1,6 @@
 ﻿using CamundaProject.Core.Interfaces.Services;
 using CamundaProject.Core.Models.CamundaModels;
+using CamundaProject.Core.Models.RequestModels;
 using Microsoft.Extensions.Logging;
 //using Newtonsoft.Json;
 using System.Text.Json;
@@ -11,10 +12,12 @@ namespace CamundaProject.Application.Services
     {
         private readonly IZeebeClient _zeebeClient;
         private readonly ILogger<CamundaService> _logger;
+        private readonly IJobTrackingService _jobTrackingService;
 
-        public CamundaService(IZeebeClient zeebeClient, ILogger<CamundaService> logger)
+        public CamundaService(IZeebeClient zeebeClient, IJobTrackingService jobTrackingService, ILogger<CamundaService> logger)
         {
             _zeebeClient = zeebeClient;
+            _jobTrackingService = jobTrackingService;
             _logger = logger;
         }
 
@@ -22,7 +25,7 @@ namespace CamundaProject.Application.Services
         // Process Definition Operations (Zeebe compatible)
         //-------------------------------------------------------------------------------------
 
-        public async Task<string> StartProcessInstanceAsync(string processDefinitionKey, Dictionary<string, object> variables)
+        public async Task<string> StartProcessInstanceAsync(string processDefinitionKey, VariableRequest variableRequest)
         {
             try
             {
@@ -31,7 +34,7 @@ namespace CamundaProject.Application.Services
                 var processInstance = await _zeebeClient.NewCreateProcessInstanceCommand()
                     .BpmnProcessId(processDefinitionKey)
                     .LatestVersion()
-                    .Variables(JsonSerializer.Serialize(variables))
+                    .Variables(JsonSerializer.Serialize(variableRequest.Variables))
                     .Send();
 
                 _logger.LogInformation("Started process instance: {ProcessInstanceKey}", processInstance.ProcessInstanceKey);
@@ -63,60 +66,6 @@ namespace CamundaProject.Application.Services
             }
         }
 
-        // Empty
-        public async Task<List<ProcessDefinition>> GetProcessDefinitionsAsync()
-        {
-            try
-            {
-                // For older Zeebe versions, you need to use the Operate API or maintain your own deployment tracking
-                // This is a fallback implementation since direct deployment querying isn't available
-
-                _logger.LogWarning("NewDeploymentsQuery not available in this Zeebe client version. Using fallback implementation.");
-
-                // Alternative: If you've been tracking deployments yourself, return that data
-                // Otherwise, return empty list or implement Operate API integration
-
-                return new List<ProcessDefinition>();
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error getting process definitions");
-                throw;
-            }
-        }
-
-        // Empty
-        public async Task<ProcessDefinition> GetProcessDefinitionByKeyAsync(string key)
-        {
-            try
-            {
-                var processDefinitions = await GetProcessDefinitionsAsync();
-                return processDefinitions.FirstOrDefault(pd => pd.BpmnProcessId == key);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error getting process definition by key: {Key}", key);
-                throw;
-            }
-        }
-
-        // Empty
-        public async Task<List<Deployment>> GetDeploymentsAsync()
-        {
-            try
-            {
-                // Fallback for older Zeebe versions
-                _logger.LogWarning("NewDeploymentsQuery not available in this Zeebe client version. Using fallback implementation.");
-
-                return new List<Deployment>();
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error getting deployments");
-                throw;
-            }
-        }
-
         //-------------------------------------------------------------------------------------
         // Process Instance Operations (Zeebe compatible)
         //-------------------------------------------------------------------------------------
@@ -139,78 +88,11 @@ namespace CamundaProject.Application.Services
             }
         }
 
-        // Empty
-        public async Task<List<ProcessInstance>> GetProcessInstancesAsync()
-        {
-            // IMPORTANT: Zeebe doesn't provide a direct API to query process instances
-            // This would require Operate API integration or maintaining your own tracking
-            _logger.LogWarning("GetProcessInstancesAsync is not directly supported by Zeebe client API");
-            return new List<ProcessInstance>();
-        }
-
-        //-------------------------------------------------------------------------------------
-        // Job Operations (Zeebe equivalent of tasks)
-        //-------------------------------------------------------------------------------------
-
-        // Empty
-        public async Task<List<Job>> GetActiveJobsAsync(string jobType = null)
-        {
-            try
-            {
-                // Zeebe doesn't provide a direct API to query jobs
-                // Jobs are typically handled by job workers that poll for available jobs
-                _logger.LogWarning("GetActiveJobsAsync is not directly supported by Zeebe client API");
-                return new List<Job>();
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error getting active jobs");
-                throw;
-            }
-        }
-
-        // Empty
-        public async Task CompleteJobAsync(string jobKey, Dictionary<string, object> variables)
-        {
-            try
-            {
-                // This would be called from within a job worker, not from the client
-                _logger.LogWarning("CompleteJobAsync should be called from within a job worker implementation");
-
-                // Example of how a job worker would complete a job:
-                // await jobClient.NewCompleteJobCommand(job.Key)
-                //     .Variables(JsonConvert.SerializeObject(variables))
-                //     .Send();
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error completing job: {JobKey}", jobKey);
-                throw;
-            }
-        }
-
-        // Empty
-        public async Task FailJobAsync(string jobKey, string errorMessage)
-        {
-            try
-            {
-                // This would be called from within a job worker
-                _logger.LogWarning("FailJobAsync should be called from within a job worker implementation");
-
-                // Example: await jobClient.NewFailCommand(job.Key).Retries(job.Retries - 1).ErrorMessage(errorMessage).Send();
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error failing job: {JobKey}", jobKey);
-                throw;
-            }
-        }
-
         //-------------------------------------------------------------------------------------
         // Message Operations
         //-------------------------------------------------------------------------------------
 
-        public async Task PublishMessageAsync(string messageName, string correlationKey, Dictionary<string, object> variables)
+        public async Task PublishMessageAsync(string messageName, string correlationKey, VariableRequest variableRequest)
         {
             try
             {
@@ -219,7 +101,7 @@ namespace CamundaProject.Application.Services
                 await _zeebeClient.NewPublishMessageCommand()
                     .MessageName(messageName)
                     .CorrelationKey(correlationKey)
-                    .Variables(JsonSerializer.Serialize(variables))
+                    .Variables(JsonSerializer.Serialize(variableRequest.Variables))
                     .Send();
 
                 _logger.LogInformation("Published message: {MessageName}", messageName);
@@ -229,19 +111,6 @@ namespace CamundaProject.Application.Services
                 _logger.LogError(ex, "Error publishing message: {MessageName}", messageName);
                 throw;
             }
-        }
-
-        //-------------------------------------------------------------------------------------
-        // Incident Operations (Limited in Zeebe without Operate)
-        //-------------------------------------------------------------------------------------
-
-        // Empty
-        public async Task<List<Incident>> GetIncidentsAsync()
-        {
-            // Zeebe doesn't provide a direct API to query incidents
-            // This requires Operate API integration
-            _logger.LogWarning("GetIncidentsAsync is not directly supported by Zeebe client API");
-            return new List<Incident>();
         }
 
         //-------------------------------------------------------------------------------------
@@ -273,6 +142,84 @@ namespace CamundaProject.Application.Services
             {
                 return false;
             }
+        }
+
+        //-------------------------------------------------------------------------------------
+        // Job Functions
+        //-------------------------------------------------------------------------------------
+
+        public async Task<JobCompletionResult> CompleteJobAsync(long jobKey, Dictionary<string, object> variables)
+        {
+            try
+            {
+                _logger.LogInformation("Completing job: {JobKey}", jobKey);
+
+                await _zeebeClient.NewCompleteJobCommand(jobKey)
+                    .Variables(JsonSerializer.Serialize(variables))
+                    .Send();
+
+                _jobTrackingService.UpdateJobStatus(jobKey, "Completed");
+                _jobTrackingService.RemoveJob(jobKey);
+
+                var job = _jobTrackingService.GetJob(jobKey) ?? new ActiveJob { ProcessInstanceKey = 0 };
+
+                return new JobCompletionResult
+                {
+                    Success = true,
+                    JobKey = jobKey,
+                    ProcessInstanceKey = job.ProcessInstanceKey,
+                    Message = "Job completed successfully"
+                };
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error completing job: {JobKey}", jobKey);
+                _jobTrackingService.UpdateJobStatus(jobKey, "Failed");
+
+                return new JobCompletionResult
+                {
+                    Success = false,
+                    JobKey = jobKey,
+                    ProcessInstanceKey = 0,
+                    Message = ex.Message
+                };
+            }
+        }
+
+        public async Task<bool> FailJobAsync(long jobKey, string errorMessage, int retries = 3)
+        {
+            try
+            {
+                _logger.LogInformation("Failing job: {JobKey}", jobKey);
+
+                await _zeebeClient.NewFailCommand(jobKey)
+                    .Retries(retries)
+                    .ErrorMessage(errorMessage)
+                    .Send();
+
+                _jobTrackingService.UpdateJobStatus(jobKey, "Failed");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error failing job: {JobKey}", jobKey);
+                return false;
+            }
+        }
+
+        public List<ActiveJob> GetActiveJobs(long? processInstanceKey = null, string jobType = null)
+        {
+            if (processInstanceKey.HasValue)
+            {
+                return _jobTrackingService.GetJobsByProcessInstance(processInstanceKey.Value);
+            }
+
+            if (!string.IsNullOrEmpty(jobType))
+            {
+                return _jobTrackingService.GetJobsByType(jobType);
+            }
+
+            return _jobTrackingService.GetAllJobs();
         }
     }
 }

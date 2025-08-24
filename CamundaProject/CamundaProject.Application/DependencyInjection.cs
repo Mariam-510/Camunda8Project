@@ -19,9 +19,6 @@ namespace CamundaProject.Application
         {
             services.AddAutoMapper(typeof(AutoMapperProfile));
 
-            // Update service registration to use interface
-            services.AddScoped<ICamundaService, CamundaService>();
-
             // Configure Zeebe Client for Camunda 8 (Zeebe Client 2.9.0)
             services.AddSingleton(provider =>
             {
@@ -47,6 +44,17 @@ namespace CamundaProject.Application
                 }
             });
 
+            // Update service registration to use interface
+            services.AddScoped<ICamundaService, CamundaService>();
+
+            // Add job tracking service
+            services.AddSingleton<IJobTrackingService, JobTrackingService>();
+
+            // Add hosted service for job workers
+            services.AddHostedService<ZeebeJobWorkerService>();
+
+            // Make sure CamundaService is registered with the new dependency
+            services.AddScoped<ICamundaService, CamundaService>();
 
             return services;
         }

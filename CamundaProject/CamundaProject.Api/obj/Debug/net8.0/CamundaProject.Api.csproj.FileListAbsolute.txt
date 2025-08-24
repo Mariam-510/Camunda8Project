@@ -591,3 +591,4 @@ E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Api\
 E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Api\obj\Debug\net8.0\CamundaProject.Api.pdb
 E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Api\obj\Debug\net8.0\CamundaProject.Api.genruntimeconfig.cache
 E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Api\obj\Debug\net8.0\ref\CamundaProject.Api.dll
+E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Api\bin\Debug\net8.0\Scalar.AspNetCore.dll

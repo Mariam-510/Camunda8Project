@@ -7,3 +7,36 @@
 2025-08-24 10:35:14.112 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
 2025-08-24 10:46:28.113 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
 2025-08-24 10:46:28.443 +03:00 [WRN]  Completed request POST /api/Process/start/Getway_Rest_Test_Process with status 400 in 292ms
+2025-08-24 11:38:40.427 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-24 11:38:40.456 +03:00 [WRN] CamundaProject.Api.Controllers.TasksController Direct task querying not available in Zeebe - use job workers instead
+2025-08-24 11:39:07.062 +03:00 [ERR] CamundaProject.Api.Controllers.TasksController Error completing user task job: 2251799813775853
+Grpc.Core.RpcException: Status(StatusCode="NotFound", Detail="Command 'COMPLETE' rejected with code 'NOT_FOUND': Expected to complete job with key '2251799813775853', but no such job was found")
+   at Zeebe.Client.Impl.Commands.CompleteJobCommand.Send(Nullable`1 timeout, CancellationToken token)
+   at CamundaProject.Api.Controllers.TasksController.CompleteUserTask(Int64 jobKey, CompleteTaskRequest request) in E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Api\Controllers\TasksController.cs:line 46
+2025-08-24 11:39:07.080 +03:00 [WRN]  Completed request POST /api/Tasks/complete/2251799813775853 with status 500 in 195ms
+2025-08-24 11:40:29.373 +03:00 [ERR] CamundaProject.Api.Controllers.TasksController Error completing user task job: 2251799813775860
+Grpc.Core.RpcException: Status(StatusCode="NotFound", Detail="Command 'COMPLETE' rejected with code 'NOT_FOUND': Expected to complete job with key '2251799813775860', but no such job was found")
+   at Zeebe.Client.Impl.Commands.CompleteJobCommand.Send(Nullable`1 timeout, CancellationToken token)
+   at CamundaProject.Api.Controllers.TasksController.CompleteUserTask(Int64 jobKey, CompleteTaskRequest request) in E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Api\Controllers\TasksController.cs:line 46
+2025-08-24 11:40:29.376 +03:00 [WRN]  Completed request POST /api/Tasks/complete/2251799813775860 with status 500 in 125ms
+2025-08-24 11:47:41.301 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-24 11:47:41.707 +03:00 [WRN]  Completed request POST /api/Process/start/Activity_0d0y9c6 with status 400 in 368ms
+2025-08-24 11:47:56.125 +03:00 [ERR] CamundaProject.Application.Services.CamundaService Error starting process instance for: Activity_0d0y9c6
+Grpc.Core.RpcException: Status(StatusCode="NotFound", Detail="Command 'CREATE' rejected with code 'NOT_FOUND': Expected to find process definition with process ID 'Activity_0d0y9c6', but none found")
+   at Zeebe.Client.Impl.Commands.CreateProcessInstanceCommand.Send(Nullable`1 timeout, CancellationToken token)
+   at CamundaProject.Application.Services.CamundaService.StartProcessInstanceAsync(String processDefinitionKey, VariableRequest variableRequest) in E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\CamundaService.cs:line 32
+2025-08-24 11:47:56.222 +03:00 [ERR] CamundaProject.Api.Controllers.ProcessController Error starting process instance for: Activity_0d0y9c6
+Grpc.Core.RpcException: Status(StatusCode="NotFound", Detail="Command 'CREATE' rejected with code 'NOT_FOUND': Expected to find process definition with process ID 'Activity_0d0y9c6', but none found")
+   at Zeebe.Client.Impl.Commands.CreateProcessInstanceCommand.Send(Nullable`1 timeout, CancellationToken token)
+   at CamundaProject.Application.Services.CamundaService.StartProcessInstanceAsync(String processDefinitionKey, VariableRequest variableRequest) in E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\CamundaService.cs:line 32
+   at CamundaProject.Api.Controllers.ProcessController.StartProcessInstance(String processDefinitionKey, VariableRequest variableRequest) in E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Api\Controllers\ProcessController.cs:line 36
+2025-08-24 11:47:56.231 +03:00 [WRN]  Completed request POST /api/Process/start/Activity_0d0y9c6 with status 500 in 461ms
+2025-08-24 12:06:45.708 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-24 12:06:45.772 +03:00 [WRN]  Completed request GET /api/Jobs with status 400 in 55ms
+2025-08-24 12:32:46.445 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-24 12:40:00.106 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-24 12:46:05.827 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-24 13:32:08.158 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-24 13:34:07.116 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-24 15:17:38.201 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-24 15:27:24.705 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.

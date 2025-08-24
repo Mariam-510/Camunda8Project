@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CamundaProject.Core.Models.RequestModels
 {
-    public class CompleteJobRequest
+    public class VariableRequest
     {
         public Dictionary<string, object> Variables { get; set; } = new Dictionary<string, object>();
     }
