@@ -93,6 +93,10 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "Scalar.AspNetCore": {
+              "target": "Package",
+              "version": "[2.7.0, )"
+            },
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -215,6 +219,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "Scalar.AspNetCore": {
+              "target": "Package",
+              "version": "[2.7.0, )"
             },
             "Serilog.AspNetCore": {
               "target": "Package",
@@ -342,6 +350,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "Scalar.AspNetCore": {
+              "target": "Package",
+              "version": "[2.7.0, )"
             },
             "Serilog.AspNetCore": {
               "target": "Package",
