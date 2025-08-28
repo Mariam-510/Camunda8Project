@@ -1,0 +1,31 @@
+2025-08-25 09:07:32.098 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-25 09:07:32.459 +03:00 [ERR] CamundaProject.Application.Services.CamundaService Error starting process instance for: HrTask_Process
+Grpc.Core.RpcException: Status(StatusCode="ResourceExhausted", Detail="Expected to execute the command on one of the partitions, but all failed; there are no more partitions available to retry. Please try again. If the error persists contact your zeebe operator")
+   at Zeebe.Client.Impl.Commands.CreateProcessInstanceCommand.Send(Nullable`1 timeout, CancellationToken token)
+   at CamundaProject.Application.Services.CamundaService.StartProcessInstanceAsync(String processDefinitionKey, VariableRequest variableRequest) in E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\CamundaService.cs:line 34
+2025-08-25 09:07:32.558 +03:00 [ERR] CamundaProject.Api.Controllers.ProcessController Error starting process instance for: HrTask_Process
+Grpc.Core.RpcException: Status(StatusCode="ResourceExhausted", Detail="Expected to execute the command on one of the partitions, but all failed; there are no more partitions available to retry. Please try again. If the error persists contact your zeebe operator")
+   at Zeebe.Client.Impl.Commands.CreateProcessInstanceCommand.Send(Nullable`1 timeout, CancellationToken token)
+   at CamundaProject.Application.Services.CamundaService.StartProcessInstanceAsync(String processDefinitionKey, VariableRequest variableRequest) in E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\CamundaService.cs:line 34
+   at CamundaProject.Api.Controllers.ProcessController.StartProcessInstance(String processDefinitionKey, VariableRequest variableRequest) in E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Api\Controllers\ProcessController.cs:line 36
+2025-08-25 09:07:32.577 +03:00 [WRN]  Completed request POST /api/Process/start/HrTask_Process with status 500 in 471ms
+2025-08-25 09:28:50.942 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-25 09:28:51.196 +03:00 [ERR] CamundaProject.Application.Services.CamundaService Error starting process instance for: HrTask_Process
+Grpc.Core.RpcException: Status(StatusCode="NotFound", Detail="Command 'CREATE' rejected with code 'NOT_FOUND': Expected to find process definition with process ID 'HrTask_Process', but none found")
+   at Zeebe.Client.Impl.Commands.CreateProcessInstanceCommand.Send(Nullable`1 timeout, CancellationToken token)
+   at CamundaProject.Application.Services.CamundaService.StartProcessInstanceAsync(String processDefinitionKey, VariableRequest variableRequest) in E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\CamundaService.cs:line 34
+2025-08-25 09:28:51.308 +03:00 [ERR] CamundaProject.Api.Controllers.ProcessController Error starting process instance for: HrTask_Process
+Grpc.Core.RpcException: Status(StatusCode="NotFound", Detail="Command 'CREATE' rejected with code 'NOT_FOUND': Expected to find process definition with process ID 'HrTask_Process', but none found")
+   at Zeebe.Client.Impl.Commands.CreateProcessInstanceCommand.Send(Nullable`1 timeout, CancellationToken token)
+   at CamundaProject.Application.Services.CamundaService.StartProcessInstanceAsync(String processDefinitionKey, VariableRequest variableRequest) in E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\CamundaService.cs:line 34
+   at CamundaProject.Api.Controllers.ProcessController.StartProcessInstance(String processDefinitionKey, VariableRequest variableRequest) in E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Api\Controllers\ProcessController.cs:line 36
+2025-08-25 09:28:51.322 +03:00 [WRN]  Completed request POST /api/Process/start/HrTask_Process with status 500 in 357ms
+2025-08-25 09:58:18.795 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-25 10:02:46.071 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-25 12:48:29.972 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-25 12:49:29.708 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-25 12:51:18.744 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-25 13:09:42.324 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-25 13:09:42.699 +03:00 [WRN]  Completed request GET /api/Jobs with status 400 in 332ms
+2025-08-25 13:30:06.126 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-25 13:31:11.042 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.

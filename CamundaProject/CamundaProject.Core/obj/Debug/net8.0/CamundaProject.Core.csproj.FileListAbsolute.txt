@@ -41,3 +41,18 @@ E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Core
 E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Core\obj\Debug\net8.0\CamundaProject.Core.pdb
 E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Core\obj\Debug\net8.0\CamundaProject.Core.genruntimeconfig.cache
 E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Core\obj\Debug\net8.0\ref\CamundaProject.Core.dll
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Core\bin\Debug\net8.0\CamundaProject.Core.deps.json
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Core\bin\Debug\net8.0\CamundaProject.Core.runtimeconfig.json
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Core\bin\Debug\net8.0\CamundaProject.Core.dll
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Core\bin\Debug\net8.0\CamundaProject.Core.pdb
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Core\obj\Debug\net8.0\CamundaProject.Core.csproj.AssemblyReference.cache
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Core\obj\Debug\net8.0\CamundaProject.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Core\obj\Debug\net8.0\CamundaProject.Core.AssemblyInfoInputs.cache
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Core\obj\Debug\net8.0\CamundaProject.Core.AssemblyInfo.cs
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Core\obj\Debug\net8.0\CamundaProject.Core.csproj.CoreCompileInputs.cache
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Core\obj\Debug\net8.0\CamundaProject.Core.sourcelink.json
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Core\obj\Debug\net8.0\CamundaProject.Core.dll
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Core\obj\Debug\net8.0\refint\CamundaProject.Core.dll
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Core\obj\Debug\net8.0\CamundaProject.Core.pdb
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Core\obj\Debug\net8.0\CamundaProject.Core.genruntimeconfig.cache
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Core\obj\Debug\net8.0\ref\CamundaProject.Core.dll

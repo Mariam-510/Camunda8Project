@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Bank Misr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj": {}
+    "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj": {}
   },
   "projects": {
-    "E:\\Bank Misr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj": {
+    "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Bank Misr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj",
+        "projectUniqueName": "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj",
         "projectName": "CamundaProject.Core",
-        "projectPath": "E:\\Bank Misr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj",
+        "projectPath": "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj",
         "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
-        "outputPath": "E:\\Bank Misr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\obj\\",
+        "outputPath": "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Installed Programs\\Microsoft\\Shared\\NuGetPackages"
@@ -53,6 +53,10 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[14.0.0, )"
+            },
+            "Confluent.Kafka": {
+              "target": "Package",
+              "version": "[2.11.1, )"
             },
             "MailKit": {
               "target": "Package",

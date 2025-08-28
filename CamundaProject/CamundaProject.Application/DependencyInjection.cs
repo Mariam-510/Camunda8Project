@@ -56,6 +56,16 @@ namespace CamundaProject.Application
             // Make sure CamundaService is registered with the new dependency
             services.AddScoped<ICamundaService, CamundaService>();
 
+            // Add HttpClient service
+            services.AddHttpClient<ICamundaRestService, CamundaRestService>(client =>
+            {
+                client.BaseAddress = new Uri(configuration["Camunda:BaseUrl"] ?? "http://localhost:8080");
+                client.Timeout = TimeSpan.FromSeconds(60);
+            });
+
+            // Register services
+            services.AddScoped<ICamundaRestService, CamundaRestService>();
+
             return services;
         }
     }

@@ -38,11 +38,9 @@ namespace CamundaProject.Application.Services
             // Create worker for user tasks (type should match your BPMN)
             _userTaskWorker = _zeebeClient.NewWorker()
                 .JobType("test_job") // This must match your BPMN task type
-                .Handler(HandleUserTaskJob)
+                .Handler(HandleTestTaskJob)
                 .MaxJobsActive(10)
                 //.Name("UserTaskWorker")
-                //.PollInterval(TimeSpan.FromSeconds(1))
-                //.Timeout(TimeSpan.FromMinutes(30))
                 .Name(Environment.MachineName)
                 .AutoCompletion()
                 .PollInterval(TimeSpan.FromSeconds(1))
@@ -53,31 +51,31 @@ namespace CamundaProject.Application.Services
             return Task.CompletedTask;
         }
 
-        private async Task HandleUserTaskJob(IJobClient jobClient, IJob job)
+        private async Task HandleTestTaskJob(IJobClient jobClient, IJob job)
         {
             try
             {
                 _logger.LogInformation("New user task job received: {JobKey}, Process: {ProcessInstanceKey}",
                     job.Key, job.ProcessInstanceKey);
 
-                //// Parse variables from the job
-                //var variables = string.IsNullOrEmpty(job.Variables)
-                //    ? new Dictionary<string, object>()
-                //    : JsonSerializer.Deserialize<Dictionary<string, object>>(job.Variables);
+                // Parse variables from the job
+                var variables = string.IsNullOrEmpty(job.Variables)
+                    ? new Dictionary<string, object>()
+                    : JsonSerializer.Deserialize<Dictionary<string, object>>(job.Variables);
 
-                //// Track the job so it can be completed via API
-                //var activeJob = new ActiveJob
-                //{
-                //    JobKey = job.Key,
-                //    ProcessInstanceKey = job.ProcessInstanceKey,
-                //    JobType = job.Type,
-                //    ElementId = job.ElementId,
-                //    Variables = variables,
-                //    CreatedAt = DateTime.UtcNow,
-                //    Status = "Active"
-                //};
+                // Track the job so it can be completed via API
+                var activeJob = new ActiveJob
+                {
+                    JobKey = job.Key,
+                    ProcessInstanceKey = job.ProcessInstanceKey,
+                    JobType = job.Type,
+                    ElementId = job.ElementId,
+                    Variables = variables,
+                    CreatedAt = DateTime.UtcNow,
+                    Status = "Active"
+                };
 
-                //_jobTrackingService.AddJob(activeJob);
+                _jobTrackingService.AddJob(activeJob);
 
                 _logger.LogInformation("User task job {JobKey} is waiting for completion via API", job.Key);
 

@@ -50,3 +50,21 @@ E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Infr
 E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Infrastructure\obj\Debug\net8.0\CamundaProject.Infrastructure.pdb
 E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Infrastructure\obj\Debug\net8.0\CamundaProject.Infrastructure.genruntimeconfig.cache
 E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Infrastructure\obj\Debug\net8.0\ref\CamundaProject.Infrastructure.dll
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Infrastructure\bin\Debug\net8.0\CamundaProject.Infrastructure.deps.json
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Infrastructure\bin\Debug\net8.0\CamundaProject.Infrastructure.runtimeconfig.json
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Infrastructure\bin\Debug\net8.0\CamundaProject.Infrastructure.dll
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Infrastructure\bin\Debug\net8.0\CamundaProject.Infrastructure.pdb
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Infrastructure\bin\Debug\net8.0\CamundaProject.Core.dll
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Infrastructure\bin\Debug\net8.0\CamundaProject.Core.pdb
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Infrastructure\obj\Debug\net8.0\CamundaProject.Infrastructure.csproj.AssemblyReference.cache
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Infrastructure\obj\Debug\net8.0\CamundaProject.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Infrastructure\obj\Debug\net8.0\CamundaProject.Infrastructure.AssemblyInfoInputs.cache
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Infrastructure\obj\Debug\net8.0\CamundaProject.Infrastructure.AssemblyInfo.cs
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Infrastructure\obj\Debug\net8.0\CamundaProject.Infrastructure.csproj.CoreCompileInputs.cache
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Infrastructure\obj\Debug\net8.0\CamundaProject.Infrastructure.sourcelink.json
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Infrastructure\obj\Debug\net8.0\CamundaP.8B9E4169.Up2Date
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Infrastructure\obj\Debug\net8.0\CamundaProject.Infrastructure.dll
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Infrastructure\obj\Debug\net8.0\refint\CamundaProject.Infrastructure.dll
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Infrastructure\obj\Debug\net8.0\CamundaProject.Infrastructure.pdb
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Infrastructure\obj\Debug\net8.0\CamundaProject.Infrastructure.genruntimeconfig.cache
+E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Infrastructure\obj\Debug\net8.0\ref\CamundaProject.Infrastructure.dll
