@@ -1,4 +1,4 @@
-﻿using CamundaProject.Core.Interfaces.Services;
+﻿using CamundaProject.Core.Interfaces.Services.Camounda;
 using CamundaProject.Core.Models.RestRequestModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -10,12 +10,12 @@ namespace CamundaProject.Api.Controllers
 
     public class RestProcessController : ControllerBase
     {
-        private readonly ICamundaRestService _camundaService;
+        private readonly ICamundaRestService _camundaRestService;
         private readonly ILogger<RestProcessController> _logger;
 
-        public RestProcessController(ICamundaRestService camundaService, ILogger<RestProcessController> logger)
+        public RestProcessController(ICamundaRestService camundaRestService, ILogger<RestProcessController> logger)
         {
-            _camundaService = camundaService;
+            _camundaRestService = camundaRestService;
             _logger = logger;
         }
 
@@ -42,7 +42,7 @@ namespace CamundaProject.Api.Controllers
                     Variables = variables ?? new Dictionary<string, object>()
                 };
 
-                var result = await _camundaService.StartProcessInstanceAsync(request);
+                var result = await _camundaRestService.StartProcessInstanceAsync(request);
                 return Ok(result);
             }
             catch (Exception ex)
@@ -79,7 +79,7 @@ namespace CamundaProject.Api.Controllers
                     Variables = variables ?? new Dictionary<string, object>()
                 };
 
-                var result = await _camundaService.StartProcessInstanceAsync(request);
+                var result = await _camundaRestService.StartProcessInstanceAsync(request);
                 return Ok(result);
             }
             catch (Exception ex)

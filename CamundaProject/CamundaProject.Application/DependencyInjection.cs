@@ -1,8 +1,10 @@
 ﻿using CamundaProject.Application.Mapping;
 using CamundaProject.Application.Services.Camunda;
+using CamundaProject.Application.Services.Email;
 using CamundaProject.Application.Services.Kafka;
 using CamundaProject.Application.Services.Zeebe;
-using CamundaProject.Core.Interfaces.Services;
+using CamundaProject.Core.Interfaces.Services.Camounda;
+using CamundaProject.Core.Interfaces.Services.Email;
 using Confluent.Kafka;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
@@ -23,7 +25,7 @@ namespace CamundaProject.Application
         {
             services.AddAutoMapper(typeof(AutoMapperProfile));
 
-            // Configure Zeebe Client for Camunda 8 (Zeebe Client 2.9.0)
+            // Configure Zeebe Client for Camunda 8
             services.AddSingleton(provider =>
             {
                 var configuration = provider.GetRequiredService<IConfiguration>();
@@ -59,20 +61,17 @@ namespace CamundaProject.Application
 
             services.AddScoped<ICamundaRestService, CamundaRestService>();
 
-            // Add hosted service for job workers
-            services.AddHostedService<ZeebeJobWorkerService>();
-
-            //services.AddHostedService<KafkaProducerJobWorkerService>();
-
-            //services.AddHostedService<KafkaConsumerService>();
+            services.AddSingleton<IEmailService, EmailService>();
 
             // Add Kafka producer configuration
             services.AddSingleton<IProducer<string, string>>(sp =>
             {
+                var configuration = sp.GetRequiredService<IConfiguration>();
+
                 var config = new ProducerConfig
                 {
-                    BootstrapServers = "localhost:9092", // Your Kafka bootstrap servers
-                    ClientId = "camunda-producer",
+                    BootstrapServers = configuration["Kafka:BootstrapServers"],
+                    ClientId = configuration["Kafka:ClientId"],
                     Acks = Acks.All,
                     MessageSendMaxRetries = 3,
                     RetryBackoffMs = 1000
@@ -85,16 +84,16 @@ namespace CamundaProject.Application
                     .Build();
             });
 
-            services.AddHostedService<KafkaJobWorkerService>();
-
-            // Kafka Consumer Configuration
+            // Add Kafka Consumer Configuration
             services.AddSingleton<IConsumer<string, string>>(sp =>
             {
+                var configuration = sp.GetRequiredService<IConfiguration>();
+
                 var config = new ConsumerConfig
                 {
-                    BootstrapServers = "localhost:9092",
-                    GroupId = "camunda-consumer-group", // Must match BPMN groupId
-                    AutoOffsetReset = AutoOffsetReset.Earliest, // Must match BPMN setting
+                    BootstrapServers = configuration["Kafka:BootstrapServers"],
+                    GroupId = configuration["Kafka:GroupId"],
+                    AutoOffsetReset = AutoOffsetReset.Earliest,
                     EnableAutoCommit = false,
                     EnableAutoOffsetStore = false
                 };
@@ -105,6 +104,11 @@ namespace CamundaProject.Application
                             .LogError("Kafka consumer error: {Reason}", e.Reason))
                     .Build();
             });
+
+            // Add hosted service for job workers
+            services.AddHostedService<ZeebeJobWorkerService>();
+
+            services.AddHostedService<KafkaJobWorkerService>();
 
             services.AddHostedService<KafkaResponseConsumerService>();
 
