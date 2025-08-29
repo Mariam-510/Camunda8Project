@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 using System.Text.Json;
 using Zeebe.Client;
 
-namespace CamundaProject.Application.Services
+namespace CamundaProject.Application.Services.Camunda
 {
     public class CamundaService : ICamundaService
     {

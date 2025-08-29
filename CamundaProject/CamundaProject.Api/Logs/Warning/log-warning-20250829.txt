@@ -1,1 +1,8 @@
 2025-08-29 12:21:05.994 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-29 15:50:56.179 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-29 15:58:42.605 +03:00 [WRN] CamundaProject.Application.Services.KafkaResponseConsumerService Invalid message format or missing requestId
+2025-08-29 15:59:25.837 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-29 15:59:26.558 +03:00 [WRN] CamundaProject.Application.Services.KafkaResponseConsumerService Invalid message format or missing requestId
+2025-08-29 16:04:09.560 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-29 16:04:44.807 +03:00 [WRN] CamundaProject.Application.Services.KafkaResponseConsumerService Invalid message format or missing requestId
+2025-08-29 16:12:28.547 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.

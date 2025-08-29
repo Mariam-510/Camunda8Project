@@ -6,7 +6,7 @@ using System.Net;
 using System.Text;
 using System.Text.Json;
 
-namespace CamundaProject.Application.Services
+namespace CamundaProject.Application.Services.Camunda
 {
     public class CamundaRestService : ICamundaRestService
     {
