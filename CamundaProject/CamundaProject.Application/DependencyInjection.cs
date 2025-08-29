@@ -63,53 +63,19 @@ namespace CamundaProject.Application
 
             services.AddSingleton<IEmailService, EmailService>();
 
-            // Add Kafka producer configuration
-            services.AddSingleton<IProducer<string, string>>(sp =>
+            // Add Kafka producers
+            services.AddSingleton<IProducer<string, string>>(provider =>
             {
-                var configuration = sp.GetRequiredService<IConfiguration>();
-
                 var config = new ProducerConfig
                 {
-                    BootstrapServers = configuration["Kafka:BootstrapServers"],
-                    ClientId = configuration["Kafka:ClientId"],
-                    Acks = Acks.All,
-                    MessageSendMaxRetries = 3,
-                    RetryBackoffMs = 1000
+                    BootstrapServers = configuration["Kafka:BootstrapServers"]
                 };
-
-                return new ProducerBuilder<string, string>(config)
-                    .SetErrorHandler((_, e) =>
-                        sp.GetService<ILogger<IProducer<string, string>>>()?
-                            .LogError("Kafka producer error: {Reason}", e.Reason))
-                    .Build();
+                return new ProducerBuilder<string, string>(config).Build();
             });
 
-            // Add Kafka Consumer Configuration
-            services.AddSingleton<IConsumer<string, string>>(sp =>
-            {
-                var configuration = sp.GetRequiredService<IConfiguration>();
-
-                var config = new ConsumerConfig
-                {
-                    BootstrapServers = configuration["Kafka:BootstrapServers"],
-                    GroupId = configuration["Kafka:GroupId"],
-                    AutoOffsetReset = AutoOffsetReset.Earliest,
-                    EnableAutoCommit = false,
-                    EnableAutoOffsetStore = false
-                };
-
-                return new ConsumerBuilder<string, string>(config)
-                    .SetErrorHandler((_, e) =>
-                        sp.GetService<ILogger<IConsumer<string, string>>>()?
-                            .LogError("Kafka consumer error: {Reason}", e.Reason))
-                    .Build();
-            });
-
-            // Add hosted service for job workers
-            services.AddHostedService<ZeebeJobWorkerService>();
-
+            // Add hosted services
             services.AddHostedService<KafkaJobWorkerService>();
-
+            services.AddHostedService<EmailProcessorService>();
             services.AddHostedService<KafkaResponseConsumerService>();
 
             return services;

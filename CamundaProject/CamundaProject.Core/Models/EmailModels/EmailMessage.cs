@@ -12,7 +12,7 @@ namespace CamundaProject.Core.Models.EmailModels
         public string To { get; set; } = string.Empty;
         public string Subject { get; set; } = string.Empty;
         public string Body { get; set; } = string.Empty;
-        public string Status { get; set; } = string.Empty;
-        public DateTime Timestamp { get; set; }
+        public string Status { get; set; } = "pending";
+        public DateTime Timestamp { get; set; } = DateTime.UtcNow;
     }
 }

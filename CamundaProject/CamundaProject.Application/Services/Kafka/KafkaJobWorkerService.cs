@@ -1,13 +1,12 @@
-﻿using CamundaProject.Core.Interfaces.Services;
+﻿// KafkaJobWorkerService.cs
+using CamundaProject.Core.Interfaces.Services;
 using Confluent.Kafka;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.Json;
+using System.Threading;
 using System.Threading.Tasks;
 using Zeebe.Client;
 using Zeebe.Client.Api.Responses;
@@ -24,7 +23,8 @@ namespace CamundaProject.Application.Services.Kafka
         private IJobWorker? _kafkaWorker;
         private IJobWorker? _successWorker;
         private IJobWorker? _errorWorker;
-        private readonly string _topic;
+        private readonly string _requestTopic;
+        private readonly string _responseTopic;
 
         public KafkaJobWorkerService(
             IZeebeClient zeebeClient,
@@ -35,7 +35,8 @@ namespace CamundaProject.Application.Services.Kafka
             _zeebeClient = zeebeClient;
             _logger = logger;
             _kafkaProducer = kafkaProducer;
-            _topic = configuration["Kafka:Topic"];
+            _requestTopic = configuration["Kafka:RequestTopic"];
+            _responseTopic = configuration["Kafka:ResponseTopic"];
         }
 
         public Task StartAsync(CancellationToken cancellationToken)
@@ -88,6 +89,7 @@ namespace CamundaProject.Application.Services.Kafka
             _kafkaWorker?.Dispose();
             _successWorker?.Dispose();
             _errorWorker?.Dispose();
+
             _logger.LogInformation("Zeebe job workers stopped");
             return Task.CompletedTask;
         }
@@ -103,10 +105,7 @@ namespace CamundaProject.Application.Services.Kafka
 
                 // Complete the job with the generated request ID
                 await client.NewCompleteJobCommand(job.Key)
-                    .Variables(JsonSerializer.Serialize(new
-                    {
-                        requestId
-                    }))
+                    .Variables(JsonSerializer.Serialize(new { requestId }))
                     .Send();
 
                 _logger.LogInformation("Generated request ID: {RequestId} for job {JobKey}", requestId, job.Key);
@@ -130,7 +129,6 @@ namespace CamundaProject.Application.Services.Kafka
                 // Extract variables from the job
                 var variables = job.Variables;
                 var jsonElement = JsonSerializer.Deserialize<JsonElement>(variables);
-
                 var requestId = jsonElement.GetProperty("requestId").GetString();
                 var to = jsonElement.GetProperty("to").GetString();
                 var subject = jsonElement.GetProperty("subject").GetString();
@@ -138,8 +136,6 @@ namespace CamundaProject.Application.Services.Kafka
 
                 if (string.IsNullOrEmpty(requestId))
                     throw new ArgumentException("Request ID is required");
-
-
                 if (string.IsNullOrEmpty(to))
                     throw new ArgumentException("To is required");
 
@@ -156,16 +152,26 @@ namespace CamundaProject.Application.Services.Kafka
 
                 var messageJson = JsonSerializer.Serialize(kafkaMessage);
 
-                // Publish to Kafka
-                var deliveryResult = await _kafkaProducer.ProduceAsync(
-                    _topic,
-                    new Message<string, string>
+                // Create message with headers for response routing
+                var message = new Message<string, string>
+                {
+                    Key = requestId,
+                    Value = messageJson,
+                    Headers = new Headers
                     {
-                        Key = requestId,
-                        Value = messageJson
-                    });
+                        { "replyTo", System.Text.Encoding.UTF8.GetBytes(_responseTopic) },
+                        { "correlationId", System.Text.Encoding.UTF8.GetBytes(requestId) }
+                    }
+                };
 
-                _logger.LogInformation("Message published to Kafka. Topic: {Topic}", _topic);
+                // Publish to Kafka REQUEST topic
+                var deliveryResult = await _kafkaProducer.ProduceAsync(
+                    _requestTopic,
+                    message
+                );
+
+                _logger.LogInformation("Message published to Kafka. Topic: {Topic}, Key: {Key}",
+                    _requestTopic, requestId);
 
                 await client.NewCompleteJobCommand(job.Key).Send();
             }
@@ -188,14 +194,10 @@ namespace CamundaProject.Application.Services.Kafka
                 // Extract response data from variables
                 var variables = job.Variables;
                 var jsonElement = JsonSerializer.Deserialize<JsonElement>(variables);
-
                 var requestId = jsonElement.TryGetProperty("requestId", out var requestIdProp)
-                    ? requestIdProp.GetString()
-                    : "unknown";
-
+                    ? requestIdProp.GetString() : "unknown";
                 var responseData = jsonElement.TryGetProperty("response", out var responseProp)
-                    ? responseProp.ToString()
-                    : "{}";
+                    ? responseProp.ToString() : "{}";
 
                 // Log success and perform any success-related operations
                 _logger.LogInformation("Request {RequestId} completed successfully. Response: {Response}",
@@ -204,9 +206,7 @@ namespace CamundaProject.Application.Services.Kafka
                 // You can add additional success handling logic here
                 // For example: update database, send notifications, etc.
 
-                await client.NewCompleteJobCommand(job.Key)
-                    .Send();
-
+                await client.NewCompleteJobCommand(job.Key).Send();
                 _logger.LogInformation("Success handler job {JobKey} completed", job.Key);
             }
             catch (Exception ex)
@@ -228,14 +228,10 @@ namespace CamundaProject.Application.Services.Kafka
                 // Extract error information from variables
                 var variables = job.Variables;
                 var jsonElement = JsonSerializer.Deserialize<JsonElement>(variables);
-
                 var requestId = jsonElement.TryGetProperty("requestId", out var requestIdProp)
-                    ? requestIdProp.GetString()
-                    : "unknown";
-
+                    ? requestIdProp.GetString() : "unknown";
                 var errorMessage = jsonElement.TryGetProperty("error", out var errorProp)
-                    ? errorProp.GetString()
-                    : "Unknown error occurred";
+                    ? errorProp.GetString() : "Unknown error occurred";
 
                 // Log error and perform error handling operations
                 _logger.LogError("Request {RequestId} failed with error: {ErrorMessage}",
@@ -244,19 +240,16 @@ namespace CamundaProject.Application.Services.Kafka
                 // You can add additional error handling logic here
                 // For example: send alerts, update error logs, trigger compensation, etc.
 
-                await client.NewCompleteJobCommand(job.Key)
-                    .Send();
-
+                await client.NewCompleteJobCommand(job.Key).Send();
                 _logger.LogInformation("Error handler job {JobKey} completed", job.Key);
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error in error handler job {JobKey}", job.Key);
                 // Even if error handling fails, we complete the job to avoid infinite loops
-                await client.NewCompleteJobCommand(job.Key)
-                    .Send();
+                await client.NewCompleteJobCommand(job.Key).Send();
             }
         }
-   
+    
     }
 }

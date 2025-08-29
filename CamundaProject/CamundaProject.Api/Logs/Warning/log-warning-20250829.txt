@@ -255,3 +255,63 @@ System.Text.Json.JsonException: The input does not contain any JSON tokens. Expe
    at CamundaProject.Api.Controllers.RestCamundaController.CompleteUserTask(String userTaskKey, CompleteUserTaskRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Api\Controllers\RestCamundaController.cs:line 109
 2025-08-29 19:31:18.007 +03:00 [WRN]  Completed request POST /api/RestCamunda/user-tasks/2251799813803618/complete with status 500 in 280ms
 2025-08-29 19:34:19.879 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-29 21:32:39.739 +03:00 [ERR] CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService Error processing response message
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Text.Json.JsonElement.GetProperty(String propertyName)
+   at CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService.ProcessKafkaMessage(Message`2 message) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Kafka\KafkaResponseConsumerService.cs:line 142
+2025-08-29 21:34:13.977 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-29 21:34:14.103 +03:00 [ERR] CamundaProject.Application.Services.Camunda.CamundaRestService Failed to start process instance. Status: "BadRequest", Response: {"type":"about:blank","title":"Bad Request","status":400,"detail":"For input string: \"KafkaRequestResponseProcess\"","instance":"/v2/process-instances"}
+2025-08-29 21:34:14.149 +03:00 [ERR] CamundaProject.Application.Services.Camunda.CamundaRestService HTTP request failed while starting process instance
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 400.
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at CamundaProject.Application.Services.Camunda.CamundaRestService.StartProcessInstanceAsync(StartProcessRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Camunda\CamundaRestService.cs:line 72
+2025-08-29 21:34:14.222 +03:00 [ERR] CamundaProject.Api.Controllers.RestCamundaController Error starting process instance by key: KafkaRequestResponseProcess
+System.Exception: Failed to start process instance: Response status code does not indicate success: 400.
+ ---> System.Net.Http.HttpRequestException: Response status code does not indicate success: 400.
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at CamundaProject.Application.Services.Camunda.CamundaRestService.StartProcessInstanceAsync(StartProcessRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Camunda\CamundaRestService.cs:line 72
+   --- End of inner exception stack trace ---
+   at CamundaProject.Application.Services.Camunda.CamundaRestService.StartProcessInstanceAsync(StartProcessRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Camunda\CamundaRestService.cs:line 86
+   at CamundaProject.Api.Controllers.RestCamundaController.StartProcessByKey(String processDefinitionKey, VariableRequest variableRequest) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Api\Controllers\RestCamundaController.cs:line 43
+2025-08-29 21:34:14.231 +03:00 [WRN]  Completed request POST /api/RestCamunda/start/by-key/KafkaRequestResponseProcess with status 500 in 250ms
+2025-08-29 21:35:15.634 +03:00 [ERR] CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService Error processing response message
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Text.Json.JsonElement.GetProperty(String propertyName)
+   at CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService.ProcessKafkaMessage(Message`2 message) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Kafka\KafkaResponseConsumerService.cs:line 142
+2025-08-29 22:30:43.903 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-29 22:31:34.394 +03:00 [ERR] CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService Error processing response message
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Text.Json.JsonElement.GetProperty(String propertyName)
+   at CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService.ProcessKafkaMessage(Message`2 message) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Kafka\KafkaResponseConsumerService.cs:line 138
+2025-08-29 22:37:15.941 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-29 22:37:59.460 +03:00 [WRN]  Completed request POST /api/RestCamunda/user-tasks/2251799813835877/complete with status 400 in 162ms
+2025-08-29 22:46:28.354 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-29 22:46:28.508 +03:00 [ERR] CamundaProject.Application.Services.Camunda.CamundaRestService Failed to start process instance. Status: "BadRequest", Response: {"type":"about:blank","title":"Bad Request","status":400,"detail":"For input string: \"KafkaRequestResponseProcess\"","instance":"/v2/process-instances"}
+2025-08-29 22:46:28.559 +03:00 [ERR] CamundaProject.Application.Services.Camunda.CamundaRestService HTTP request failed while starting process instance
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 400.
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at CamundaProject.Application.Services.Camunda.CamundaRestService.StartProcessInstanceAsync(StartProcessRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Camunda\CamundaRestService.cs:line 72
+2025-08-29 22:46:28.633 +03:00 [ERR] CamundaProject.Api.Controllers.RestCamundaController Error starting process instance by key: KafkaRequestResponseProcess
+System.Exception: Failed to start process instance: Response status code does not indicate success: 400.
+ ---> System.Net.Http.HttpRequestException: Response status code does not indicate success: 400.
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at CamundaProject.Application.Services.Camunda.CamundaRestService.StartProcessInstanceAsync(StartProcessRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Camunda\CamundaRestService.cs:line 72
+   --- End of inner exception stack trace ---
+   at CamundaProject.Application.Services.Camunda.CamundaRestService.StartProcessInstanceAsync(StartProcessRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Camunda\CamundaRestService.cs:line 86
+   at CamundaProject.Api.Controllers.RestCamundaController.StartProcessByKey(String processDefinitionKey, VariableRequest variableRequest) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Api\Controllers\RestCamundaController.cs:line 43
+2025-08-29 22:46:28.641 +03:00 [WRN]  Completed request POST /api/RestCamunda/start/by-key/KafkaRequestResponseProcess with status 500 in 280ms
+2025-08-29 22:46:39.361 +03:00 [ERR] CamundaProject.Application.Services.Camunda.CamundaRestService Failed to start process instance. Status: "BadRequest", Response: {"type":"about:blank","title":"Bad Request","status":400,"detail":"For input string: \"KafkaRequestResponseProcess\"","instance":"/v2/process-instances"}
+2025-08-29 22:46:39.383 +03:00 [ERR] CamundaProject.Application.Services.Camunda.CamundaRestService HTTP request failed while starting process instance
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 400.
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at CamundaProject.Application.Services.Camunda.CamundaRestService.StartProcessInstanceAsync(StartProcessRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Camunda\CamundaRestService.cs:line 72
+2025-08-29 22:46:39.423 +03:00 [ERR] CamundaProject.Api.Controllers.RestCamundaController Error starting process instance by key: KafkaRequestResponseProcess
+System.Exception: Failed to start process instance: Response status code does not indicate success: 400.
+ ---> System.Net.Http.HttpRequestException: Response status code does not indicate success: 400.
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at CamundaProject.Application.Services.Camunda.CamundaRestService.StartProcessInstanceAsync(StartProcessRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Camunda\CamundaRestService.cs:line 72
+   --- End of inner exception stack trace ---
+   at CamundaProject.Application.Services.Camunda.CamundaRestService.StartProcessInstanceAsync(StartProcessRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Camunda\CamundaRestService.cs:line 86
+   at CamundaProject.Api.Controllers.RestCamundaController.StartProcessByKey(String processDefinitionKey, VariableRequest variableRequest) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Api\Controllers\RestCamundaController.cs:line 43
+2025-08-29 22:46:39.427 +03:00 [WRN]  Completed request POST /api/RestCamunda/start/by-key/KafkaRequestResponseProcess with status 500 in 77ms
+2025-08-29 23:34:38.487 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.

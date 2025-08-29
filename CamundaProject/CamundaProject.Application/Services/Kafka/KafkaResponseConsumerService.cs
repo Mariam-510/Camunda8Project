@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Text;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
@@ -17,32 +18,33 @@ namespace CamundaProject.Application.Services.Kafka
         private readonly IZeebeClient _zeebeClient;
         private readonly IConsumer<string, string> _kafkaConsumer;
         private readonly ILogger<KafkaResponseConsumerService> _logger;
-        private readonly IEmailService _emailService;
         private Task? _consumingTask;
         private CancellationTokenSource? _cancellationTokenSource;
-        private readonly string _topic;
+        private readonly string _responseTopic;
 
         public KafkaResponseConsumerService(
             IZeebeClient zeebeClient,
-            IConsumer<string, string> kafkaConsumer,
             ILogger<KafkaResponseConsumerService> logger,
-            IConfiguration configuration,
-            IEmailService emailService)
+            IConfiguration configuration)
         {
             _zeebeClient = zeebeClient;
-            _kafkaConsumer = kafkaConsumer;
             _logger = logger;
-            _emailService = emailService;
-            _topic = configuration["Kafka:Topic"];
-        }
+            _responseTopic = configuration["Kafka:ResponseTopic"];
 
+            var config = new ConsumerConfig
+            {
+                BootstrapServers = configuration["Kafka:BootstrapServers"],
+                GroupId = configuration["Kafka:ConsumerGroupResponse"],
+                AutoOffsetReset = AutoOffsetReset.Earliest
+            };
+
+            _kafkaConsumer = new ConsumerBuilder<string, string>(config).Build();
+        }
         public Task StartAsync(CancellationToken cancellationToken)
         {
             _logger.LogInformation("Starting Kafka response consumer...");
-
             _cancellationTokenSource = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
             _consumingTask = Task.Run(ConsumeMessages, _cancellationTokenSource.Token);
-
             _logger.LogInformation("Kafka response consumer started");
             return Task.CompletedTask;
         }
@@ -50,7 +52,6 @@ namespace CamundaProject.Application.Services.Kafka
         public async Task StopAsync(CancellationToken cancellationToken)
         {
             _logger.LogInformation("Stopping Kafka response consumer...");
-
             _cancellationTokenSource?.Cancel();
 
             if (_consumingTask != null)
@@ -60,13 +61,12 @@ namespace CamundaProject.Application.Services.Kafka
 
             _kafkaConsumer.Close();
             _kafkaConsumer.Dispose();
-
             _logger.LogInformation("Kafka response consumer stopped");
         }
 
         private async Task ConsumeMessages()
         {
-            _kafkaConsumer.Subscribe(_topic); // Match your response topic from BPMN
+            _kafkaConsumer.Subscribe(_responseTopic);
 
             try
             {
@@ -81,8 +81,8 @@ namespace CamundaProject.Application.Services.Kafka
                             continue;
                         }
 
-                        _logger.LogInformation("Received message from Kafka. Key: {Key}, Topic: {Topic}, Partition: {Partition}, Offset: {Offset}",
-                            consumeResult.Message.Key, consumeResult.Topic, consumeResult.Partition, consumeResult.Offset);
+                        _logger.LogInformation("Received message from Kafka. Key: {Key}, Topic: {Topic}",
+                            consumeResult.Message.Key, consumeResult.Topic);
 
                         // Process the message and complete the Zeebe message event
                         await ProcessKafkaMessage(consumeResult.Message);
@@ -109,45 +109,61 @@ namespace CamundaProject.Application.Services.Kafka
         {
             try
             {
-                var emailMessage = JsonSerializer.Deserialize<EmailMessage>(message.Value);
+                var responseData = JsonSerializer.Deserialize<JsonElement>(message.Value);
+                var requestId = responseData.GetProperty("RequestId").GetString();
+                var status = responseData.GetProperty("Status").GetString();
 
-                if (emailMessage == null || string.IsNullOrEmpty(emailMessage.RequestId))
+                if (string.IsNullOrEmpty(requestId))
                 {
-                    _logger.LogWarning("Invalid email message format");
+                    _logger.LogWarning("Invalid response message format - missing RequestId");
                     return;
                 }
 
-                EmailModel emailModel = new EmailModel() {
-                To= emailMessage.To,
-                Subject = emailMessage.Subject,
-                Body = emailMessage.Body
-                 };
-
-            //Send email using your email service
-            await _emailService.SendEmailAsync(emailModel);
-
-            // Update status to sent
-            await _zeebeClient.NewPublishMessageCommand()
-                .MessageName("ResponseMessage")
-                .CorrelationKey(emailMessage.RequestId)
-                .Variables(JsonSerializer.Serialize(new
+                if (status == "success")
                 {
-                    response = new
-                    {
-                        status = "success",
-                        sentAt = DateTime.UtcNow,
-                    },
-                    requestId = emailMessage.RequestId
-                }))
-                .Send();
+                    // Update the process with success response
+                    await _zeebeClient.NewPublishMessageCommand()
+                        .MessageName("ResponseMessage")
+                        .CorrelationKey(requestId)
+                        .Variables(JsonSerializer.Serialize(new
+                        {
+                            response = new
+                            {
+                                status = "success",
+                                processedAt = DateTime.UtcNow
+                            },
+                            requestId = requestId
+                        }))
+                        .Send();
 
-                _logger.LogInformation("Email sent for request ID: {RequestId}", emailMessage.RequestId);
+                    _logger.LogInformation("Success response sent for request ID: {RequestId}", requestId);
+                }
+                else
+                {
+                    // Update the process with error response
+                    var errorMessage = responseData.GetProperty("ErrorMessage").GetString();
+
+                    await _zeebeClient.NewPublishMessageCommand()
+                        .MessageName("ResponseMessage")
+                        .CorrelationKey(requestId)
+                        .Variables(JsonSerializer.Serialize(new
+                        {
+                            error = new
+                            {
+                                message = errorMessage,
+                                timestamp = DateTime.UtcNow
+                            },
+                            requestId = requestId
+                        }))
+                        .Send();
+
+                    _logger.LogError("Error response sent for request ID: {RequestId}", requestId);
+                }
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error processing email message");
+                _logger.LogError(ex, "Error processing response message");
             }
         }
-
     }
 }
