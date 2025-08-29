@@ -117,35 +117,84 @@ namespace CamundaProject.Application.Services.Kafka
                     return;
                 }
 
-                EmailModel emailModel = new EmailModel() {
-                To= emailMessage.To,
-                Subject = emailMessage.Subject,
-                Body = emailMessage.Body
-                 };
-
-            //Send email using your email service
-            await _emailService.SendEmailAsync(emailModel);
-
-            // Update status to sent
-            await _zeebeClient.NewPublishMessageCommand()
-                .MessageName("ResponseMessage")
-                .CorrelationKey(emailMessage.RequestId)
-                .Variables(JsonSerializer.Serialize(new
+                EmailModel emailModel = new EmailModel()
                 {
-                    response = new
-                    {
-                        status = "success",
-                        sentAt = DateTime.UtcNow,
-                    },
-                    requestId = emailMessage.RequestId
-                }))
-                .Send();
+                    To = emailMessage.To,
+                    Subject = emailMessage.Subject,
+                    Body = emailMessage.Body
+                };
 
-                _logger.LogInformation("Email sent for request ID: {RequestId}", emailMessage.RequestId);
+                // Try sending email
+                bool success = await _emailService.SendEmailAsync(emailModel);
+
+                if (success)
+                {
+                    // ✅ success case
+                    await _zeebeClient.NewPublishMessageCommand()
+                        .MessageName("ResponseMessage")
+                        .CorrelationKey(emailMessage.RequestId)
+                        .Variables(JsonSerializer.Serialize(new
+                        {
+                            response = new
+                            {
+                                status = "success",
+                                sentAt = DateTime.UtcNow,
+                            },
+                            requestId = emailMessage.RequestId
+                        }))
+                        .Send();
+
+                    _logger.LogInformation("Email sent for request ID: {RequestId}", emailMessage.RequestId);
+                }
+                else
+                {
+                    // ❌ failure case
+                    await _zeebeClient.NewPublishMessageCommand()
+                        .MessageName("ResponseMessage")
+                        .CorrelationKey(emailMessage.RequestId)
+                        .Variables(JsonSerializer.Serialize(new
+                        {
+                            response = new
+                            {
+                                status = "error",
+                                errorMessage = "Failed to send email"
+                            },
+                            requestId = emailMessage.RequestId
+                        }))
+                        .Send();
+
+                    _logger.LogWarning("Failed to send email for request ID: {RequestId}", emailMessage.RequestId);
+                }
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error processing email message");
+
+                // ❌ exception case
+                try
+                {
+                    var emailMessage = JsonSerializer.Deserialize<EmailMessage>(message.Value);
+                    if (emailMessage != null && !string.IsNullOrEmpty(emailMessage.RequestId))
+                    {
+                        await _zeebeClient.NewPublishMessageCommand()
+                            .MessageName("ResponseMessage")
+                            .CorrelationKey(emailMessage.RequestId)
+                            .Variables(JsonSerializer.Serialize(new
+                            {
+                                response = new
+                                {
+                                    status = "error",
+                                    errorMessage = ex.Message
+                                },
+                                requestId = emailMessage.RequestId
+                            }))
+                            .Send();
+                    }
+                }
+                catch (Exception innerEx)
+                {
+                    _logger.LogError(innerEx, "Error sending error response");
+                }
             }
         }
 
