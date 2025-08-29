@@ -1,0 +1,74 @@
+2025-08-29 12:00:35.137 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Starting Zeebe job workers...
+2025-08-29 12:00:35.198 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Zeebe job workers started successfully
+2025-08-29 12:00:35.208 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer started, listening to topic: test-topic
+2025-08-29 12:03:09.340 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer started, listening to topic: test-topic
+2025-08-29 12:03:49.344 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer started, listening to topic: test-topic
+2025-08-29 12:04:17.794 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer started, listening to topic: test-topic
+2025-08-29 12:04:46.810 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer started, listening to topic: test-topic
+2025-08-29 12:05:49.520 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer started, listening to topic: test-topic
+2025-08-29 12:13:27.573 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer started, listening to topic: process-topic
+2025-08-29 12:13:27.790 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService ---------------------------
+2025-08-29 12:13:27.791 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService 📩 Received message: {"to":"someone@example.com","subject":"Test","message":"hello form kafka"}
+2025-08-29 12:13:27.792 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService ---------------------------
+2025-08-29 12:13:28.296 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService ---------------------------
+2025-08-29 12:13:28.298 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService 📩 Received message: {"to":"someone@example.com","subject":"Test","message":"hello form kafka"}
+2025-08-29 12:13:28.299 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService ---------------------------
+2025-08-29 12:13:35.920 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer started, listening to topic: process-topic
+2025-08-29 12:14:01.596 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer started, listening to topic: process-topic
+2025-08-29 12:15:08.451 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer started, listening to topic: process-topic
+2025-08-29 12:15:36.164 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer started, listening to topic: process-topic
+2025-08-29 12:15:45.907 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService ---------------------------
+2025-08-29 12:15:45.909 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService 📩 Received message: {"to":"someone@example.com","subject":"Test","message":"hello form kafka"}
+2025-08-29 12:15:45.909 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService ---------------------------
+2025-08-29 12:15:46.417 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService ---------------------------
+2025-08-29 12:15:46.419 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService 📩 Received message: {"to":"someone@example.com","subject":"Test","message":"hello form kafka"}
+2025-08-29 12:15:46.419 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService ---------------------------
+2025-08-29 12:16:03.217 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer started, listening to topic: process-topic
+2025-08-29 12:16:43.986 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer started, listening to topic: process-topic
+2025-08-29 12:18:56.801 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer starting...
+2025-08-29 12:18:56.854 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer started, listening to topic: process-topic
+2025-08-29 12:19:05.980 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer starting...
+2025-08-29 12:19:06.027 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer started, listening to topic: process-topic
+2025-08-29 12:19:44.869 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Starting Zeebe job workers...
+2025-08-29 12:19:44.923 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Zeebe job workers started successfully
+2025-08-29 12:19:44.925 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Starting Zeebe job workers...
+2025-08-29 12:19:44.926 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Zeebe job workers started successfully
+2025-08-29 12:19:44.927 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer starting...
+2025-08-29 12:19:44.934 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer started, listening to topic: process-topic
+2025-08-29 12:20:12.227 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Starting Zeebe job workers...
+2025-08-29 12:20:12.286 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Zeebe job workers started successfully
+2025-08-29 12:20:12.287 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Starting Zeebe job workers...
+2025-08-29 12:20:12.288 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Zeebe job workers started successfully
+2025-08-29 12:20:12.289 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer starting...
+2025-08-29 12:20:12.296 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer started, listening to topic: process-topic
+2025-08-29 12:21:05.994 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-29 12:21:06.004 +03:00 [INF]  Starting request POST /api/Process/start/kafka_process
+2025-08-29 12:21:06.087 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: kafka_process
+2025-08-29 12:21:06.089 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: kafka_process
+2025-08-29 12:21:06.324 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813730715
+2025-08-29 12:21:06.340 +03:00 [INF]  Completed request POST /api/Process/start/kafka_process with status 200 in 337ms
+2025-08-29 12:21:06.397 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService [CamundaWorker] Producing to 'process-topic' -> key='someone@example.com' value={"to":"someone@example.com","subject":"Test","message":"hello form kafka"}
+2025-08-29 12:21:07.226 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService ---------------------------
+2025-08-29 12:21:07.228 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService 📩 Received message: {"to":"someone@example.com","subject":"Test","message":"hello form kafka"}
+2025-08-29 12:21:07.229 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService ---------------------------
+2025-08-29 12:21:07.229 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService [CamundaWorker] Job 2251799813730723 completed for process 2251799813730715 (topic=process-topic, partition=[0], offset=2)
+2025-08-29 12:21:10.419 +03:00 [INF]  Starting request POST /api/Process/start/kafka_process
+2025-08-29 12:21:10.423 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: kafka_process
+2025-08-29 12:21:10.425 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: kafka_process
+2025-08-29 12:21:10.565 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813730757
+2025-08-29 12:21:10.567 +03:00 [INF]  Completed request POST /api/Process/start/kafka_process with status 200 in 147ms
+2025-08-29 12:21:10.629 +03:00 [INF]  Starting request POST /api/Process/start/kafka_process
+2025-08-29 12:21:10.633 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: kafka_process
+2025-08-29 12:21:10.635 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: kafka_process
+2025-08-29 12:21:10.651 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService [CamundaWorker] Producing to 'process-topic' -> key='someone@example.com' value={"to":"someone@example.com","subject":"Test","message":"hello form kafka"}
+2025-08-29 12:21:10.748 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813730768
+2025-08-29 12:21:10.750 +03:00 [INF]  Completed request POST /api/Process/start/kafka_process with status 200 in 121ms
+2025-08-29 12:21:11.179 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService [CamundaWorker] Job 2251799813730765 completed for process 2251799813730757 (topic=process-topic, partition=[0], offset=3)
+2025-08-29 12:21:11.179 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService ---------------------------
+2025-08-29 12:21:11.185 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService 📩 Received message: {"to":"someone@example.com","subject":"Test","message":"hello form kafka"}
+2025-08-29 12:21:11.187 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService ---------------------------
+2025-08-29 12:21:11.519 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService [CamundaWorker] Producing to 'process-topic' -> key='someone@example.com' value={"to":"someone@example.com","subject":"Test","message":"hello form kafka"}
+2025-08-29 12:21:11.606 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService [CamundaWorker] Job 2251799813730776 completed for process 2251799813730768 (topic=process-topic, partition=[0], offset=4)
+2025-08-29 12:21:11.701 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService ---------------------------
+2025-08-29 12:21:11.703 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService 📩 Received message: {"to":"someone@example.com","subject":"Test","message":"hello form kafka"}
+2025-08-29 12:21:11.706 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService ---------------------------

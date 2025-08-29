@@ -38,4 +38,8 @@
     <ProjectReference Include="..\CamundaProject.Infrastructure\CamundaProject.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
 </Project>
