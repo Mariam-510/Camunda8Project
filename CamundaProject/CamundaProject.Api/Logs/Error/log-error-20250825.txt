@@ -1,0 +1,18 @@
+2025-08-25 09:07:32.459 +03:00 [ERR] CamundaProject.Application.Services.CamundaService Error starting process instance for: HrTask_Process
+Grpc.Core.RpcException: Status(StatusCode="ResourceExhausted", Detail="Expected to execute the command on one of the partitions, but all failed; there are no more partitions available to retry. Please try again. If the error persists contact your zeebe operator")
+   at Zeebe.Client.Impl.Commands.CreateProcessInstanceCommand.Send(Nullable`1 timeout, CancellationToken token)
+   at CamundaProject.Application.Services.CamundaService.StartProcessInstanceAsync(String processDefinitionKey, VariableRequest variableRequest) in E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\CamundaService.cs:line 34
+2025-08-25 09:07:32.558 +03:00 [ERR] CamundaProject.Api.Controllers.ProcessController Error starting process instance for: HrTask_Process
+Grpc.Core.RpcException: Status(StatusCode="ResourceExhausted", Detail="Expected to execute the command on one of the partitions, but all failed; there are no more partitions available to retry. Please try again. If the error persists contact your zeebe operator")
+   at Zeebe.Client.Impl.Commands.CreateProcessInstanceCommand.Send(Nullable`1 timeout, CancellationToken token)
+   at CamundaProject.Application.Services.CamundaService.StartProcessInstanceAsync(String processDefinitionKey, VariableRequest variableRequest) in E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\CamundaService.cs:line 34
+   at CamundaProject.Api.Controllers.ProcessController.StartProcessInstance(String processDefinitionKey, VariableRequest variableRequest) in E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Api\Controllers\ProcessController.cs:line 36
+2025-08-25 09:28:51.196 +03:00 [ERR] CamundaProject.Application.Services.CamundaService Error starting process instance for: HrTask_Process
+Grpc.Core.RpcException: Status(StatusCode="NotFound", Detail="Command 'CREATE' rejected with code 'NOT_FOUND': Expected to find process definition with process ID 'HrTask_Process', but none found")
+   at Zeebe.Client.Impl.Commands.CreateProcessInstanceCommand.Send(Nullable`1 timeout, CancellationToken token)
+   at CamundaProject.Application.Services.CamundaService.StartProcessInstanceAsync(String processDefinitionKey, VariableRequest variableRequest) in E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\CamundaService.cs:line 34
+2025-08-25 09:28:51.308 +03:00 [ERR] CamundaProject.Api.Controllers.ProcessController Error starting process instance for: HrTask_Process
+Grpc.Core.RpcException: Status(StatusCode="NotFound", Detail="Command 'CREATE' rejected with code 'NOT_FOUND': Expected to find process definition with process ID 'HrTask_Process', but none found")
+   at Zeebe.Client.Impl.Commands.CreateProcessInstanceCommand.Send(Nullable`1 timeout, CancellationToken token)
+   at CamundaProject.Application.Services.CamundaService.StartProcessInstanceAsync(String processDefinitionKey, VariableRequest variableRequest) in E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\CamundaService.cs:line 34
+   at CamundaProject.Api.Controllers.ProcessController.StartProcessInstance(String processDefinitionKey, VariableRequest variableRequest) in E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Api\Controllers\ProcessController.cs:line 36

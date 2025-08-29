@@ -1,0 +1,154 @@
+2025-08-25 09:06:41.381 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Starting Zeebe job workers...
+2025-08-25 09:06:41.548 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Zeebe job workers started successfully
+2025-08-25 09:07:32.098 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-25 09:07:32.106 +03:00 [INF]  Starting request POST /api/Process/start/HrTask_Process
+2025-08-25 09:07:32.181 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: HrTask_Process
+2025-08-25 09:07:32.185 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: HrTask_Process
+2025-08-25 09:07:32.459 +03:00 [ERR] CamundaProject.Application.Services.CamundaService Error starting process instance for: HrTask_Process
+Grpc.Core.RpcException: Status(StatusCode="ResourceExhausted", Detail="Expected to execute the command on one of the partitions, but all failed; there are no more partitions available to retry. Please try again. If the error persists contact your zeebe operator")
+   at Zeebe.Client.Impl.Commands.CreateProcessInstanceCommand.Send(Nullable`1 timeout, CancellationToken token)
+   at CamundaProject.Application.Services.CamundaService.StartProcessInstanceAsync(String processDefinitionKey, VariableRequest variableRequest) in E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\CamundaService.cs:line 34
+2025-08-25 09:07:32.558 +03:00 [ERR] CamundaProject.Api.Controllers.ProcessController Error starting process instance for: HrTask_Process
+Grpc.Core.RpcException: Status(StatusCode="ResourceExhausted", Detail="Expected to execute the command on one of the partitions, but all failed; there are no more partitions available to retry. Please try again. If the error persists contact your zeebe operator")
+   at Zeebe.Client.Impl.Commands.CreateProcessInstanceCommand.Send(Nullable`1 timeout, CancellationToken token)
+   at CamundaProject.Application.Services.CamundaService.StartProcessInstanceAsync(String processDefinitionKey, VariableRequest variableRequest) in E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\CamundaService.cs:line 34
+   at CamundaProject.Api.Controllers.ProcessController.StartProcessInstance(String processDefinitionKey, VariableRequest variableRequest) in E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Api\Controllers\ProcessController.cs:line 36
+2025-08-25 09:07:32.577 +03:00 [WRN]  Completed request POST /api/Process/start/HrTask_Process with status 500 in 471ms
+2025-08-25 09:28:22.439 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Starting Zeebe job workers...
+2025-08-25 09:28:22.842 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Zeebe job workers started successfully
+2025-08-25 09:28:50.942 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-25 09:28:50.964 +03:00 [INF]  Starting request POST /api/Process/start/HrTask_Process
+2025-08-25 09:28:51.042 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: HrTask_Process
+2025-08-25 09:28:51.045 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: HrTask_Process
+2025-08-25 09:28:51.196 +03:00 [ERR] CamundaProject.Application.Services.CamundaService Error starting process instance for: HrTask_Process
+Grpc.Core.RpcException: Status(StatusCode="NotFound", Detail="Command 'CREATE' rejected with code 'NOT_FOUND': Expected to find process definition with process ID 'HrTask_Process', but none found")
+   at Zeebe.Client.Impl.Commands.CreateProcessInstanceCommand.Send(Nullable`1 timeout, CancellationToken token)
+   at CamundaProject.Application.Services.CamundaService.StartProcessInstanceAsync(String processDefinitionKey, VariableRequest variableRequest) in E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\CamundaService.cs:line 34
+2025-08-25 09:28:51.308 +03:00 [ERR] CamundaProject.Api.Controllers.ProcessController Error starting process instance for: HrTask_Process
+Grpc.Core.RpcException: Status(StatusCode="NotFound", Detail="Command 'CREATE' rejected with code 'NOT_FOUND': Expected to find process definition with process ID 'HrTask_Process', but none found")
+   at Zeebe.Client.Impl.Commands.CreateProcessInstanceCommand.Send(Nullable`1 timeout, CancellationToken token)
+   at CamundaProject.Application.Services.CamundaService.StartProcessInstanceAsync(String processDefinitionKey, VariableRequest variableRequest) in E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\CamundaService.cs:line 34
+   at CamundaProject.Api.Controllers.ProcessController.StartProcessInstance(String processDefinitionKey, VariableRequest variableRequest) in E:\Bank Misr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Api\Controllers\ProcessController.cs:line 36
+2025-08-25 09:28:51.322 +03:00 [WRN]  Completed request POST /api/Process/start/HrTask_Process with status 500 in 357ms
+2025-08-25 09:30:23.104 +03:00 [INF]  Starting request POST /api/Process/start/HrTask_Process
+2025-08-25 09:30:23.108 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: HrTask_Process
+2025-08-25 09:30:23.110 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: HrTask_Process
+2025-08-25 09:30:23.185 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813686414
+2025-08-25 09:30:23.192 +03:00 [INF]  Completed request POST /api/Process/start/HrTask_Process with status 200 in 87ms
+2025-08-25 09:30:23.216 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService New user task job received: 2251799813686422, Process: 2251799813686414
+2025-08-25 09:30:23.221 +03:00 [INF] CamundaProject.Application.Services.JobTrackingService Added job 2251799813686422 to tracking
+2025-08-25 09:30:23.223 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService User task job 2251799813686422 is waiting for completion via API
+2025-08-25 09:38:35.181 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService New user task job received: 2251799813688012, Process: 2251799813688007
+2025-08-25 09:38:35.187 +03:00 [INF] CamundaProject.Application.Services.JobTrackingService Added job 2251799813688012 to tracking
+2025-08-25 09:38:35.188 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService User task job 2251799813688012 is waiting for completion via API
+2025-08-25 09:53:21.821 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Starting Zeebe job workers...
+2025-08-25 09:53:21.967 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Zeebe job workers started successfully
+2025-08-25 09:56:14.481 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Starting Zeebe job workers...
+2025-08-25 09:56:14.529 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Zeebe job workers started successfully
+2025-08-25 09:58:18.795 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-25 09:58:18.802 +03:00 [INF]  Starting request POST /api/RestProcess/start/by-id/HrTask_Process
+2025-08-25 09:58:18.850 +03:00 [INF] CamundaProject.Api.Controllers.RestProcessController Starting process instance by ID: HrTask_Process, Version: null
+2025-08-25 09:58:18.855 +03:00 [INF] CamundaProject.Application.Services.CamundaRestService Starting process instance. ProcessDefinitionKey: null, ProcessDefinitionId: HrTask_Process
+2025-08-25 09:58:18.961 +03:00 [INF] CamundaProject.Application.Services.CamundaRestService Successfully started process instance. Response: {"processDefinitionId":"HrTask_Process","processDefinitionVersion":1,"tenantId":"<default>","variables":{},"processDefinitionKey":"2251799813686150","processInstanceKey":"2251799813691897"}
+2025-08-25 09:58:18.967 +03:00 [INF]  Completed request POST /api/RestProcess/start/by-id/HrTask_Process with status 200 in 164ms
+2025-08-25 09:58:19.010 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService New user task job received: 2251799813691905, Process: 2251799813691897
+2025-08-25 09:58:19.013 +03:00 [INF] CamundaProject.Application.Services.JobTrackingService Added job 2251799813691905 to tracking
+2025-08-25 09:58:19.014 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService User task job 2251799813691905 is waiting for completion via API
+2025-08-25 09:58:51.112 +03:00 [INF]  Starting request POST /api/RestProcess/start
+2025-08-25 09:58:51.132 +03:00 [INF] CamundaProject.Api.Controllers.RestProcessController Starting process instance. ProcessDefinitionKey: null, ProcessDefinitionId: HrTask_Process
+2025-08-25 09:58:51.132 +03:00 [INF] CamundaProject.Application.Services.CamundaRestService Starting process instance. ProcessDefinitionKey: null, ProcessDefinitionId: HrTask_Process
+2025-08-25 09:58:51.147 +03:00 [INF] CamundaProject.Application.Services.CamundaRestService Successfully started process instance. Response: {"processDefinitionId":"HrTask_Process","processDefinitionVersion":1,"tenantId":"<default>","variables":{},"processDefinitionKey":"2251799813686150","processInstanceKey":"2251799813692031"}
+2025-08-25 09:58:51.149 +03:00 [INF]  Completed request POST /api/RestProcess/start with status 200 in 36ms
+2025-08-25 09:58:51.182 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService New user task job received: 2251799813692039, Process: 2251799813692031
+2025-08-25 09:58:51.183 +03:00 [INF] CamundaProject.Application.Services.JobTrackingService Added job 2251799813692039 to tracking
+2025-08-25 09:58:51.184 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService User task job 2251799813692039 is waiting for completion via API
+2025-08-25 10:02:46.071 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-25 10:02:46.108 +03:00 [INF]  Starting request POST /api/RestProcess/start/by-id/HrTask_Process
+2025-08-25 10:02:46.158 +03:00 [INF] CamundaProject.Api.Controllers.RestProcessController Starting process instance by ID: HrTask_Process, Version: null
+2025-08-25 10:02:46.162 +03:00 [INF] CamundaProject.Application.Services.CamundaRestService Starting process instance. ProcessDefinitionKey: null, ProcessDefinitionId: HrTask_Process
+2025-08-25 10:02:46.232 +03:00 [INF] CamundaProject.Application.Services.CamundaRestService Successfully started process instance. Response: {"processDefinitionId":"HrTask_Process","processDefinitionVersion":1,"tenantId":"<default>","variables":{},"processDefinitionKey":"2251799813686150","processInstanceKey":"2251799813692832"}
+2025-08-25 10:02:46.237 +03:00 [INF]  Completed request POST /api/RestProcess/start/by-id/HrTask_Process with status 200 in 129ms
+2025-08-25 10:04:31.625 +03:00 [INF]  Starting request POST /api/RestProcess/start/by-id/HrTask_Process
+2025-08-25 10:04:31.632 +03:00 [INF] CamundaProject.Api.Controllers.RestProcessController Starting process instance by ID: HrTask_Process, Version: null
+2025-08-25 10:04:31.633 +03:00 [INF] CamundaProject.Application.Services.CamundaRestService Starting process instance. ProcessDefinitionKey: null, ProcessDefinitionId: HrTask_Process
+2025-08-25 10:04:31.794 +03:00 [INF] CamundaProject.Application.Services.CamundaRestService Successfully started process instance. Response: {"processDefinitionId":"HrTask_Process","processDefinitionVersion":1,"tenantId":"<default>","variables":{},"processDefinitionKey":"2251799813686150","processInstanceKey":"2251799813693230"}
+2025-08-25 10:04:31.796 +03:00 [INF]  Completed request POST /api/RestProcess/start/by-id/HrTask_Process with status 200 in 171ms
+2025-08-25 12:48:29.972 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-25 12:48:30.052 +03:00 [INF]  Starting request GET /api/Tasks/list
+2025-08-25 12:48:30.109 +03:00 [INF]  Completed request GET /api/Tasks/list with status 200 in 57ms
+2025-08-25 12:49:29.708 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-25 12:49:29.744 +03:00 [INF]  Starting request GET /api/Tasks/list
+2025-08-25 12:49:29.799 +03:00 [INF]  Completed request GET /api/Tasks/list with status 200 in 55ms
+2025-08-25 12:51:18.744 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-25 12:51:18.779 +03:00 [INF]  Starting request GET /api/Tasks/list
+2025-08-25 12:51:18.823 +03:00 [INF]  Completed request GET /api/Tasks/list with status 200 in 44ms
+2025-08-25 13:09:42.324 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-25 13:09:42.367 +03:00 [INF]  Starting request GET /api/Jobs
+2025-08-25 13:09:42.699 +03:00 [WRN]  Completed request GET /api/Jobs with status 400 in 332ms
+2025-08-25 13:11:10.056 +03:00 [INF]  Starting request POST /api/Process/start/HrTask_Process
+2025-08-25 13:11:10.087 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: HrTask_Process
+2025-08-25 13:11:10.089 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: HrTask_Process
+2025-08-25 13:11:10.353 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813728038
+2025-08-25 13:11:10.364 +03:00 [INF]  Completed request POST /api/Process/start/HrTask_Process with status 200 in 307ms
+2025-08-25 13:11:27.727 +03:00 [INF]  Starting request GET /api/Jobs
+2025-08-25 13:11:27.746 +03:00 [INF]  Completed request GET /api/Jobs with status 200 in 18ms
+2025-08-25 13:11:53.788 +03:00 [INF]  Starting request GET /api/Jobs
+2025-08-25 13:11:53.790 +03:00 [INF]  Completed request GET /api/Jobs with status 200 in 1ms
+2025-08-25 13:30:06.126 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-25 13:30:06.163 +03:00 [INF]  Starting request POST /api/Process/start/HrTask_Process
+2025-08-25 13:30:06.251 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: HrTask_Process
+2025-08-25 13:30:06.253 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: HrTask_Process
+2025-08-25 13:30:06.440 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813731849
+2025-08-25 13:30:06.452 +03:00 [INF]  Completed request POST /api/Process/start/HrTask_Process with status 200 in 289ms
+2025-08-25 13:30:09.611 +03:00 [INF]  Starting request POST /api/Process/start/HrTask_Process
+2025-08-25 13:30:09.614 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: HrTask_Process
+2025-08-25 13:30:09.614 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: HrTask_Process
+2025-08-25 13:30:09.649 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813731859
+2025-08-25 13:30:09.650 +03:00 [INF]  Completed request POST /api/Process/start/HrTask_Process with status 200 in 39ms
+2025-08-25 13:30:10.965 +03:00 [INF]  Starting request POST /api/Process/start/HrTask_Process
+2025-08-25 13:30:10.968 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: HrTask_Process
+2025-08-25 13:30:10.969 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: HrTask_Process
+2025-08-25 13:30:11.306 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813731884
+2025-08-25 13:30:11.309 +03:00 [INF]  Completed request POST /api/Process/start/HrTask_Process with status 200 in 344ms
+2025-08-25 13:30:55.513 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Starting Zeebe job workers...
+2025-08-25 13:30:55.606 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Zeebe job workers started successfully
+2025-08-25 13:30:55.990 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService New user task job received: 2251799813728046, Process: 2251799813728038
+2025-08-25 13:30:56.003 +03:00 [INF] CamundaProject.Application.Services.JobTrackingService Added job 2251799813728046 to tracking
+2025-08-25 13:30:56.004 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService User task job 2251799813728046 is waiting for completion via API
+2025-08-25 13:30:56.078 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService New user task job received: 2251799813730369, Process: 2251799813730364
+2025-08-25 13:30:56.079 +03:00 [INF] CamundaProject.Application.Services.JobTrackingService Added job 2251799813730369 to tracking
+2025-08-25 13:30:56.081 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService User task job 2251799813730369 is waiting for completion via API
+2025-08-25 13:30:56.164 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService New user task job received: 2251799813731857, Process: 2251799813731849
+2025-08-25 13:30:56.165 +03:00 [INF] CamundaProject.Application.Services.JobTrackingService Added job 2251799813731857 to tracking
+2025-08-25 13:30:56.166 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService User task job 2251799813731857 is waiting for completion via API
+2025-08-25 13:30:56.261 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService New user task job received: 2251799813731867, Process: 2251799813731859
+2025-08-25 13:30:56.262 +03:00 [INF] CamundaProject.Application.Services.JobTrackingService Added job 2251799813731867 to tracking
+2025-08-25 13:30:56.263 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService User task job 2251799813731867 is waiting for completion via API
+2025-08-25 13:30:56.438 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService New user task job received: 2251799813731892, Process: 2251799813731884
+2025-08-25 13:30:56.439 +03:00 [INF] CamundaProject.Application.Services.JobTrackingService Added job 2251799813731892 to tracking
+2025-08-25 13:30:56.440 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService User task job 2251799813731892 is waiting for completion via API
+2025-08-25 13:31:11.042 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-25 13:31:11.049 +03:00 [INF]  Starting request POST /api/Process/start/HrTask_Process
+2025-08-25 13:31:11.100 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: HrTask_Process
+2025-08-25 13:31:11.102 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: HrTask_Process
+2025-08-25 13:31:11.172 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813732092
+2025-08-25 13:31:11.189 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService New user task job received: 2251799813732100, Process: 2251799813732092
+2025-08-25 13:31:11.191 +03:00 [INF] CamundaProject.Application.Services.JobTrackingService Added job 2251799813732100 to tracking
+2025-08-25 13:31:11.191 +03:00 [INF]  Completed request POST /api/Process/start/HrTask_Process with status 200 in 142ms
+2025-08-25 13:31:11.191 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService User task job 2251799813732100 is waiting for completion via API
+2025-08-25 13:31:12.365 +03:00 [INF]  Starting request POST /api/Process/start/HrTask_Process
+2025-08-25 13:31:12.367 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: HrTask_Process
+2025-08-25 13:31:12.368 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: HrTask_Process
+2025-08-25 13:31:12.458 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813732110
+2025-08-25 13:31:12.463 +03:00 [INF]  Completed request POST /api/Process/start/HrTask_Process with status 200 in 97ms
+2025-08-25 13:31:12.605 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService New user task job received: 2251799813732118, Process: 2251799813732110
+2025-08-25 13:31:12.607 +03:00 [INF] CamundaProject.Application.Services.JobTrackingService Added job 2251799813732118 to tracking
+2025-08-25 13:31:12.608 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService User task job 2251799813732118 is waiting for completion via API
+2025-08-25 13:31:14.188 +03:00 [INF]  Starting request POST /api/Process/start/HrTask_Process
+2025-08-25 13:31:14.191 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: HrTask_Process
+2025-08-25 13:31:14.191 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: HrTask_Process
+2025-08-25 13:31:14.235 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813732138
+2025-08-25 13:31:14.237 +03:00 [INF]  Completed request POST /api/Process/start/HrTask_Process with status 200 in 49ms
+2025-08-25 13:31:14.317 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService New user task job received: 2251799813732146, Process: 2251799813732138
+2025-08-25 13:31:14.322 +03:00 [INF] CamundaProject.Application.Services.JobTrackingService Added job 2251799813732146 to tracking
+2025-08-25 13:31:14.325 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService User task job 2251799813732146 is waiting for completion via API
