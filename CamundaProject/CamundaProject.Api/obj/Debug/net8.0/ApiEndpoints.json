@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
+    "ContainingType": "CamundaProject.Api.Controllers.CamundaController",
     "Method": "DeployProcessDefinition",
-    "RelativePath": "api/Process/deploy",
+    "RelativePath": "api/Camunda/deploy",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -16,9 +16,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
+    "ContainingType": "CamundaProject.Api.Controllers.CamundaController",
     "Method": "CancelProcessInstance",
-    "RelativePath": "api/Process/instances/{processInstanceKey}",
+    "RelativePath": "api/Camunda/instances/{processInstanceKey}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -32,9 +32,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
+    "ContainingType": "CamundaProject.Api.Controllers.CamundaController",
     "Method": "PublishMessage",
-    "RelativePath": "api/Process/messages/publish",
+    "RelativePath": "api/Camunda/messages/publish",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -48,9 +48,76 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
+    "ContainingType": "CamundaProject.Api.Controllers.CamundaController",
     "Method": "StartProcessInstance",
-    "RelativePath": "api/Process/start/{processDefinitionKey}",
+    "RelativePath": "api/Camunda/start/{processDefinitionId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "processDefinitionId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "variableRequest",
+        "Type": "CamundaProject.Core.Models.RequestModels.VariableRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CamundaProject.Api.Controllers.CamundaController",
+    "Method": "TestConnection",
+    "RelativePath": "api/Camunda/test-connection",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CamundaProject.Api.Controllers.CamundaController",
+    "Method": "GetTopology",
+    "RelativePath": "api/Camunda/topology",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CamundaProject.Api.Controllers.RestCamundaController",
+    "Method": "StartProcessById",
+    "RelativePath": "api/RestCamunda/start/by-id/{processDefinitionId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "processDefinitionId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "variableRequest",
+        "Type": "CamundaProject.Core.Models.RequestModels.VariableRequest",
+        "IsRequired": true
+      },
+      {
+        "Name": "version",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CamundaProject.Api.Controllers.RestCamundaController",
+    "Method": "StartProcessByKey",
+    "RelativePath": "api/RestCamunda/start/by-key/{processDefinitionKey}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -69,110 +136,40 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
-    "Method": "TestConnection",
-    "RelativePath": "api/Process/test-connection",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CamundaProject.Api.Controllers.ProcessController",
-    "Method": "GetTopology",
-    "RelativePath": "api/Process/topology",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CamundaProject.Api.Controllers.RestProcessController",
-    "Method": "StartProcessById",
-    "RelativePath": "api/RestProcess/start/by-id/{processDefinitionId}",
+    "ContainingType": "CamundaProject.Api.Controllers.RestCamundaController",
+    "Method": "CompleteUserTask",
+    "RelativePath": "api/RestCamunda/user-tasks/{userTaskKey}/complete",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "processDefinitionId",
+        "Name": "userTaskKey",
         "Type": "System.String",
         "IsRequired": true
       },
       {
-        "Name": "version",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "variables",
-        "Type": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
+        "Name": "request",
+        "Type": "CamundaProject.Core.Models.RestRequestModels.CompleteUserTaskRequest",
+        "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 400
-      },
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 500
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "CamundaProject.Api.Controllers.RestProcessController",
-    "Method": "StartProcessByKey",
-    "RelativePath": "api/RestProcess/start/by-key/{processDefinitionKey}",
+    "ContainingType": "CamundaProject.Api.Controllers.RestCamundaController",
+    "Method": "SearchUserTasks",
+    "RelativePath": "api/RestCamunda/user-tasks/search",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "processDefinitionKey",
-        "Type": "System.String",
+        "Name": "request",
+        "Type": "CamundaProject.Core.Models.RestRequestModels.UserTaskSearchRequest",
         "IsRequired": true
-      },
-      {
-        "Name": "variables",
-        "Type": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 400
-      },
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 500
-      }
-    ]
+    "ReturnTypes": []
   }
 ]

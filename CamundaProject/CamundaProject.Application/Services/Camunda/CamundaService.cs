@@ -22,24 +22,25 @@ namespace CamundaProject.Application.Services.Camunda
         // Process Definition Operations (Zeebe compatible)
         //-------------------------------------------------------------------------------------
 
-        public async Task<string> StartProcessInstanceAsync(string processDefinitionKey, VariableRequest variableRequest)
+        public async Task<string> StartProcessInstanceAsync(string processDefinitionId, VariableRequest variableRequest)
         {
             try
             {
-                _logger.LogInformation("Starting process instance for: {ProcessDefinitionKey}", processDefinitionKey);
+                _logger.LogInformation("Starting process instance for: {processDefinitionId}", processDefinitionId);
 
                 var processInstance = await _zeebeClient.NewCreateProcessInstanceCommand()
-                    .BpmnProcessId(processDefinitionKey)
+                    .BpmnProcessId(processDefinitionId)
                     .LatestVersion()
                     .Variables(JsonSerializer.Serialize(variableRequest.Variables))
                     .Send();
 
                 _logger.LogInformation("Started process instance: {ProcessInstanceKey}", processInstance.ProcessInstanceKey);
+
                 return processInstance.ProcessInstanceKey.ToString();
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error starting process instance for: {ProcessDefinitionKey}", processDefinitionKey);
+                _logger.LogError(ex, "Error starting process instance for: {processDefinitionId}", processDefinitionId);
                 throw;
             }
         }

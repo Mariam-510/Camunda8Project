@@ -12,7 +12,7 @@ namespace CamundaProject.Core.Models.RestRequestModels
         public string? ProcessDefinitionKey { get; set; }
         public string? ProcessDefinitionId { get; set; }
         public int? Version { get; set; }
-        public Dictionary<string, object>? Variables { get; set; }
+        public VariableRequest VariableRequest { get; set; } = new VariableRequest();
     }
 
 }

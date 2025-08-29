@@ -13,7 +13,7 @@ namespace CamundaProject.Core.Interfaces.Services.Camounda
         // Process Definition Operations (Zeebe compatible)
         //-------------------------------------------------------------------------------------
         
-        Task<string> StartProcessInstanceAsync(string processDefinitionKey, VariableRequest variableRequest);
+        Task<string> StartProcessInstanceAsync(string processDefinitionId, VariableRequest variableRequest);
         Task DeployProcessDefinition(string resourcePath);
 
         //-------------------------------------------------------------------------------------

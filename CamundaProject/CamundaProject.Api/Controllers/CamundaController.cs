@@ -1,4 +1,5 @@
 ﻿using CamundaProject.Application.Services;
+using CamundaProject.Application.Services.Camunda;
 using CamundaProject.Core.Interfaces.Services.Camounda;
 using CamundaProject.Core.Models;
 using CamundaProject.Core.Models.RequestModels;
@@ -9,12 +10,12 @@ namespace CamundaProject.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProcessController : ControllerBase
+    public class CamundaController : ControllerBase
     {
         private readonly ICamundaService _camundaService;
-        private readonly ILogger<ProcessController> _logger;
+        private readonly ILogger<CamundaController> _logger;
 
-        public ProcessController(ICamundaService camundaService, ILogger<ProcessController> logger)
+        public CamundaController(ICamundaService camundaService, ILogger<CamundaController> logger)
         {
             _camundaService = camundaService;
             _logger = logger;
@@ -24,34 +25,35 @@ namespace CamundaProject.Api.Controllers
         // Process Definition Endpoints
         //-------------------------------------------------------------------------------------
 
-        [HttpPost("start/{processDefinitionKey}")]
+        [HttpPost("start/{processDefinitionId}")]
         public async Task<IActionResult> StartProcessInstance(
-            string processDefinitionKey,
+            string processDefinitionId,
             [FromBody] VariableRequest variableRequest)
         {
             try
             {
-                _logger.LogInformation("Starting process instance for: {ProcessDefinitionKey}", processDefinitionKey);
+                _logger.LogInformation("Starting process instance for: {processDefinitionId}", processDefinitionId);
 
                 var processInstanceKey = await _camundaService.StartProcessInstanceAsync(
-                    processDefinitionKey, variableRequest);
+                    processDefinitionId, variableRequest);
 
                 return Ok(new
                 {
                     Success = true,
                     ProcessInstanceKey = processInstanceKey,
-                    ProcessDefinitionKey = processDefinitionKey,
+                    ProcessDefinitionId = processDefinitionId,
                     Message = "Process instance started successfully"
                 });
+
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error starting process instance for: {ProcessDefinitionKey}", processDefinitionKey);
+                _logger.LogError(ex, "Error starting process instance for: {processDefinitionId}", processDefinitionId);
                 return StatusCode(500, new
                 {
                     Success = false,
                     Error = ex.Message,
-                    ProcessDefinitionKey = processDefinitionKey
+                    ProcessDefinitionId = processDefinitionId
                 });
             }
         }
