@@ -1,5 +1,4 @@
 ﻿using CamundaProject.Core.Interfaces.Services;
-using CamundaProject.Core.Models.RestCamundaModels;
 using CamundaProject.Core.Models.RestRequestModels;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;

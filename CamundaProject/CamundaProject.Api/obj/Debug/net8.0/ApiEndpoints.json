@@ -90,42 +90,6 @@
   },
   {
     "ContainingType": "CamundaProject.Api.Controllers.RestProcessController",
-    "Method": "StartProcessInstance",
-    "RelativePath": "api/RestProcess/start",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "CamundaProject.Core.Models.RestRequestModels.StartProcessRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 400
-      },
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 500
-      }
-    ]
-  },
-  {
-    "ContainingType": "CamundaProject.Api.Controllers.RestProcessController",
     "Method": "StartProcessById",
     "RelativePath": "api/RestProcess/start/by-id/{processDefinitionId}",
     "HttpMethod": "POST",

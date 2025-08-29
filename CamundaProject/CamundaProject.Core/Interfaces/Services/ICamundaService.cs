@@ -1,5 +1,4 @@
-﻿using CamundaProject.Core.Models.CamundaModels;
-using CamundaProject.Core.Models.RequestModels;
+﻿using CamundaProject.Core.Models.RequestModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
