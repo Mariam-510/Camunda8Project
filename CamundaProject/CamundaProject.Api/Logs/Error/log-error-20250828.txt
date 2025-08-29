@@ -1,5 +1,0 @@
-2025-08-28 10:16:31.389 +03:00 [ERR] CamundaProject.Application.Services.ZeebeJobWorkerService Error consuming Kafka message
-Confluent.Kafka.ConsumeException: Subscribed topic not available: camunda-job-completion: Broker: Unknown topic or partition
-   at Confluent.Kafka.Consumer`2.Consume(Int32 millisecondsTimeout)
-   at Confluent.Kafka.Consumer`2.Consume(CancellationToken cancellationToken)
-   at CamundaProject.Application.Services.ZeebeJobWorkerService.ConsumeKafkaMessages() in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\ZeebeJobWorkerService.cs:line 213

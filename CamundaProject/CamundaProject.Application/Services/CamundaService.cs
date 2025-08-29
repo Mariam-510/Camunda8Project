@@ -12,12 +12,10 @@ namespace CamundaProject.Application.Services
     {
         private readonly IZeebeClient _zeebeClient;
         private readonly ILogger<CamundaService> _logger;
-        private readonly IJobTrackingService _jobTrackingService;
 
-        public CamundaService(IZeebeClient zeebeClient, IJobTrackingService jobTrackingService, ILogger<CamundaService> logger)
+        public CamundaService(IZeebeClient zeebeClient, ILogger<CamundaService> logger)
         {
             _zeebeClient = zeebeClient;
-            _jobTrackingService = jobTrackingService;
             _logger = logger;
         }
 
@@ -142,84 +140,6 @@ namespace CamundaProject.Application.Services
             {
                 return false;
             }
-        }
-
-        //-------------------------------------------------------------------------------------
-        // Job Functions
-        //-------------------------------------------------------------------------------------
-
-        public async Task<JobCompletionResult> CompleteJobAsync(long jobKey, Dictionary<string, object> variables)
-        {
-            try
-            {
-                _logger.LogInformation("Completing job: {JobKey}", jobKey);
-
-                await _zeebeClient.NewCompleteJobCommand(jobKey)
-                    .Variables(JsonSerializer.Serialize(variables))
-                    .Send();
-
-                _jobTrackingService.UpdateJobStatus(jobKey, "Completed");
-                _jobTrackingService.RemoveJob(jobKey);
-
-                var job = _jobTrackingService.GetJob(jobKey) ?? new ActiveJob { ProcessInstanceKey = 0 };
-
-                return new JobCompletionResult
-                {
-                    Success = true,
-                    JobKey = jobKey,
-                    ProcessInstanceKey = job.ProcessInstanceKey,
-                    Message = "Job completed successfully"
-                };
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error completing job: {JobKey}", jobKey);
-                _jobTrackingService.UpdateJobStatus(jobKey, "Failed");
-
-                return new JobCompletionResult
-                {
-                    Success = false,
-                    JobKey = jobKey,
-                    ProcessInstanceKey = 0,
-                    Message = ex.Message
-                };
-            }
-        }
-
-        public async Task<bool> FailJobAsync(long jobKey, string errorMessage, int retries = 3)
-        {
-            try
-            {
-                _logger.LogInformation("Failing job: {JobKey}", jobKey);
-
-                await _zeebeClient.NewFailCommand(jobKey)
-                    .Retries(retries)
-                    .ErrorMessage(errorMessage)
-                    .Send();
-
-                _jobTrackingService.UpdateJobStatus(jobKey, "Failed");
-                return true;
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error failing job: {JobKey}", jobKey);
-                return false;
-            }
-        }
-
-        public List<ActiveJob> GetActiveJobs(long? processInstanceKey = null, string jobType = null)
-        {
-            if (processInstanceKey.HasValue)
-            {
-                return _jobTrackingService.GetJobsByProcessInstance(processInstanceKey.Value);
-            }
-
-            if (!string.IsNullOrEmpty(jobType))
-            {
-                return _jobTrackingService.GetJobsByType(jobType);
-            }
-
-            return _jobTrackingService.GetAllJobs();
         }
     }
 }

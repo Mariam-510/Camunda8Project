@@ -1,12 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "B3E+tFOASWyqMLZxy3opPZldC7nCJ8PJAW5ZWSa4pp8=",
-  "Source": "CamundaProject.Api",
-  "BasePath": "_content/CamundaProject.Api",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
-}
+{"Version":1,"Hash":"B3E+tFOASWyqMLZxy3opPZldC7nCJ8PJAW5ZWSa4pp8=","Source":"CamundaProject.Api","BasePath":"_content/CamundaProject.Api","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}

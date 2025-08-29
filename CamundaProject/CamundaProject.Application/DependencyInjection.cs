@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CamundaProject.Application.Mapping;
+﻿using CamundaProject.Application.Mapping;
 using CamundaProject.Application.Services;
 using CamundaProject.Core.Interfaces.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Zeebe.Client;
 
 namespace CamundaProject.Application
@@ -47,11 +48,10 @@ namespace CamundaProject.Application
             // Update service registration to use interface
             services.AddScoped<ICamundaService, CamundaService>();
 
-            // Add job tracking service
-            services.AddSingleton<IJobTrackingService, JobTrackingService>();
-
             // Add hosted service for job workers
             services.AddHostedService<ZeebeJobWorkerService>();
+
+            services.AddHostedService<KafkaProducerJobWorkerService>();
 
             // Make sure CamundaService is registered with the new dependency
             services.AddScoped<ICamundaService, CamundaService>();
@@ -65,6 +65,9 @@ namespace CamundaProject.Application
 
             // Register services
             services.AddScoped<ICamundaRestService, CamundaRestService>();
+
+
+            services.AddHostedService<KafkaConsumerService>();
 
             return services;
         }

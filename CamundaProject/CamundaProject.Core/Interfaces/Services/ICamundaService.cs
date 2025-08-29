@@ -35,14 +35,6 @@ namespace CamundaProject.Core.Interfaces.Services
 
         Task<string> GetTopologyAsync();
         Task<bool> TestConnectionAsync();
-
-        //-------------------------------------------------------------------------------------
-        // Job Functions
-        //-------------------------------------------------------------------------------------
-
-        Task<JobCompletionResult> CompleteJobAsync(long jobKey, Dictionary<string, object> variables);
-        Task<bool> FailJobAsync(long jobKey, string errorMessage, int retries = 3);
-        List<ActiveJob> GetActiveJobs(long? processInstanceKey = null, string jobType = null);
     }
 
 }
