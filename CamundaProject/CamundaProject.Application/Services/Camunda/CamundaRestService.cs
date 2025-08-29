@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using System.Net;
 using System.Text;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace CamundaProject.Application.Services.Camunda
 {
@@ -24,7 +25,7 @@ namespace CamundaProject.Application.Services.Camunda
             _baseUrl = configuration["Camunda:BaseUrl"] ?? "http://localhost:8080";
         }
 
-        public async Task<string> StartProcessInstanceAsync(StartProcessRequest request)
+        public async Task<object> StartProcessInstanceAsync(StartProcessRequest request)
         {
             if (request == null)
                 throw new ArgumentNullException(nameof(request));
@@ -49,7 +50,7 @@ namespace CamundaProject.Application.Services.Camunda
                     processDefinitionKey = request.ProcessDefinitionKey,
                     processDefinitionId = request.ProcessDefinitionId,
                     version = request.Version,
-                    variables = request.Variables ?? new Dictionary<string, object>()
+                    variables = request.VariableRequest.Variables
                 };
 
                 var jsonPayload = JsonSerializer.Serialize(payload, new JsonSerializerOptions
@@ -73,8 +74,11 @@ namespace CamundaProject.Application.Services.Camunda
 
                 var responseContent = await response.Content.ReadAsStringAsync();
                 _logger.LogInformation("Successfully started process instance. Response: {Response}", responseContent);
+               
+                var result = JsonSerializer.Deserialize<object>(responseContent);
 
-                return responseContent;
+                return result ?? new object();
+
             }
             catch (HttpRequestException ex)
             {
@@ -88,7 +92,90 @@ namespace CamundaProject.Application.Services.Camunda
             }
         }
 
+        public async Task<object> SearchUserTasksAsync(UserTaskSearchRequest request)
+        {
+            var endpoint = $"{_baseUrl}/v2/user-tasks/search";
+
+            try
+            {
+                _logger.LogInformation("Starting search user tasks.");
+
+                var jsonPayload = JsonSerializer.Serialize(request, new JsonSerializerOptions
+                {
+                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                    DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
+                    WriteIndented = false
+                });
+
+                var content = new StringContent(jsonPayload, Encoding.UTF8, "application/json");
+                var response = await _httpClient.PostAsync(endpoint, content);
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    var errorContent = await response.Content.ReadAsStringAsync();
+                    _logger.LogError("Failed to search user tasks. Status: {StatusCode}, Response: {Error}",
+                        response.StatusCode, errorContent);
+                    response.EnsureSuccessStatusCode();
+                }
+
+                var responseContent = await response.Content.ReadAsStringAsync();
+                _logger.LogInformation("Successfully search user tasks. Response: {Response}", responseContent);
+
+                var result = JsonSerializer.Deserialize<object>(responseContent);
+
+                return result ?? new object();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error searching user tasks");
+                throw;
+            }
+        }
+
+        public async Task<object> CompleteUserTaskAsync(string userTaskKey, CompleteUserTaskRequest request)
+        {
+            var endpoint = $"{_baseUrl}/v2/user-tasks/{userTaskKey}/completion";
+
+            try
+            {
+                _logger.LogInformation("Completing user task. Key: {UserTaskKey}", userTaskKey);
+
+                var jsonPayload = JsonSerializer.Serialize(request, new JsonSerializerOptions
+                {
+                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                    DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+                });
+
+                var content = new StringContent(jsonPayload, Encoding.UTF8, "application/json");
+                var response = await _httpClient.PostAsync(endpoint, content);
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    var errorContent = await response.Content.ReadAsStringAsync();
+                    _logger.LogError("Failed to complete user task. Status: {StatusCode}, Response: {Error}",
+                        response.StatusCode, errorContent);
+                    response.EnsureSuccessStatusCode();
+                }
+
+                if (response.StatusCode == HttpStatusCode.NoContent)
+                {
+                    _logger.LogInformation("Successfully completed user task {UserTaskKey}.", userTaskKey);
+                    return new { success = true, message = "Task completed successfully" };
+                }
+
+                var responseContent = await response.Content.ReadAsStringAsync();
+                _logger.LogInformation("Response after completing user task: {Response}", responseContent);
+
+                return string.IsNullOrWhiteSpace(responseContent)
+                    ? new { success = true }
+                    : JsonSerializer.Deserialize<object>(responseContent) ?? new { success = true };
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error completing user task {UserTaskKey}", userTaskKey);
+                throw;
+            }
+        }
+
     }
 }
-
-

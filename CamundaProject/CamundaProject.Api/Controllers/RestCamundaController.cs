@@ -1,4 +1,5 @@
 ﻿using CamundaProject.Core.Interfaces.Services.Camounda;
+using CamundaProject.Core.Models.RequestModels;
 using CamundaProject.Core.Models.RestRequestModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -8,24 +9,21 @@ namespace CamundaProject.Api.Controllers
     [Route("api/[controller]")]
     [ApiController]
 
-    public class RestProcessController : ControllerBase
+    public class RestCamundaController : ControllerBase
     {
         private readonly ICamundaRestService _camundaRestService;
-        private readonly ILogger<RestProcessController> _logger;
+        private readonly ILogger<RestCamundaController> _logger;
 
-        public RestProcessController(ICamundaRestService camundaRestService, ILogger<RestProcessController> logger)
+        public RestCamundaController(ICamundaRestService camundaRestService, ILogger<RestCamundaController> logger)
         {
             _camundaRestService = camundaRestService;
             _logger = logger;
         }
 
         [HttpPost("start/by-key/{processDefinitionKey}")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> StartProcessByKey(
             [FromRoute] string processDefinitionKey,
-            [FromBody] Dictionary<string, object>? variables = null)
+            [FromBody] VariableRequest variableRequest)
         {
             try
             {
@@ -39,7 +37,7 @@ namespace CamundaProject.Api.Controllers
                 var request = new StartProcessRequest
                 {
                     ProcessDefinitionKey = processDefinitionKey,
-                    Variables = variables ?? new Dictionary<string, object>()
+                    VariableRequest = variableRequest
                 };
 
                 var result = await _camundaRestService.StartProcessInstanceAsync(request);
@@ -54,13 +52,10 @@ namespace CamundaProject.Api.Controllers
 
 
         [HttpPost("start/by-id/{processDefinitionId}")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> StartProcessById(
             [FromRoute] string processDefinitionId,
-            [FromQuery] int? version = null,
-            [FromBody] Dictionary<string, object>? variables = null)
+            [FromBody] VariableRequest variableRequest,
+            [FromQuery] int? version = null)
         {
             try
             {
@@ -76,7 +71,7 @@ namespace CamundaProject.Api.Controllers
                 {
                     ProcessDefinitionId = processDefinitionId,
                     Version = version,
-                    Variables = variables ?? new Dictionary<string, object>()
+                    VariableRequest = variableRequest
                 };
 
                 var result = await _camundaRestService.StartProcessInstanceAsync(request);
@@ -86,6 +81,38 @@ namespace CamundaProject.Api.Controllers
             {
                 _logger.LogError(ex, "Error starting process instance by ID: {Id}", processDefinitionId);
                 return StatusCode(StatusCodes.Status500InternalServerError, $"Error starting process: {ex.Message}");
+            }
+        }
+
+        [HttpPost("user-tasks/search")]
+        public async Task<IActionResult> SearchUserTasks([FromBody] UserTaskSearchRequest request)
+        {
+            try
+            {
+                var result = await _camundaRestService.SearchUserTasksAsync(request);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error searching user tasks");
+                return StatusCode(500, $"Error searching user tasks: {ex.Message}");
+            }
+        }
+
+        [HttpPost("user-tasks/{userTaskKey}/complete")]
+        public async Task<IActionResult> CompleteUserTask(
+            [FromRoute] string userTaskKey,
+            [FromBody] CompleteUserTaskRequest request)
+        {
+            try
+            {
+                var result = await _camundaRestService.CompleteUserTaskAsync(userTaskKey, request);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error completing user task {UserTaskKey}", userTaskKey);
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Error completing user task: {ex.Message}");
             }
         }
 

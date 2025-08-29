@@ -5,14 +5,14 @@
     "version": "v1"
   },
   "paths": {
-    "/api/Process/start/{processDefinitionKey}": {
+    "/api/Camunda/start/{processDefinitionId}": {
       "post": {
         "tags": [
-          "Process"
+          "Camunda"
         ],
         "parameters": [
           {
-            "name": "processDefinitionKey",
+            "name": "processDefinitionId",
             "in": "path",
             "required": true,
             "schema": {
@@ -46,10 +46,10 @@
         }
       }
     },
-    "/api/Process/deploy": {
+    "/api/Camunda/deploy": {
       "post": {
         "tags": [
-          "Process"
+          "Camunda"
         ],
         "requestBody": {
           "content": {
@@ -77,10 +77,10 @@
         }
       }
     },
-    "/api/Process/instances/{processInstanceKey}": {
+    "/api/Camunda/instances/{processInstanceKey}": {
       "delete": {
         "tags": [
-          "Process"
+          "Camunda"
         ],
         "parameters": [
           {
@@ -99,10 +99,10 @@
         }
       }
     },
-    "/api/Process/messages/publish": {
+    "/api/Camunda/messages/publish": {
       "post": {
         "tags": [
-          "Process"
+          "Camunda"
         ],
         "requestBody": {
           "content": {
@@ -130,10 +130,10 @@
         }
       }
     },
-    "/api/Process/topology": {
+    "/api/Camunda/topology": {
       "get": {
         "tags": [
-          "Process"
+          "Camunda"
         ],
         "responses": {
           "200": {
@@ -142,10 +142,10 @@
         }
       }
     },
-    "/api/Process/test-connection": {
+    "/api/Camunda/test-connection": {
       "get": {
         "tags": [
-          "Process"
+          "Camunda"
         ],
         "responses": {
           "200": {
@@ -154,10 +154,10 @@
         }
       }
     },
-    "/api/RestProcess/start/by-key/{processDefinitionKey}": {
+    "/api/RestCamunda/start/by-key/{processDefinitionKey}": {
       "post": {
         "tags": [
-          "RestProcess"
+          "RestCamunda"
         ],
         "parameters": [
           {
@@ -173,20 +173,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object",
-                "additionalProperties": { }
+                "$ref": "#/components/schemas/VariableRequest"
               }
             },
             "text/json": {
               "schema": {
-                "type": "object",
-                "additionalProperties": { }
+                "$ref": "#/components/schemas/VariableRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "object",
-                "additionalProperties": { }
+                "$ref": "#/components/schemas/VariableRequest"
               }
             }
           }
@@ -194,37 +191,14 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error"
           }
         }
       }
     },
-    "/api/RestProcess/start/by-id/{processDefinitionId}": {
+    "/api/RestCamunda/start/by-id/{processDefinitionId}": {
       "post": {
         "tags": [
-          "RestProcess"
+          "RestCamunda"
         ],
         "parameters": [
           {
@@ -248,20 +222,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object",
-                "additionalProperties": { }
+                "$ref": "#/components/schemas/VariableRequest"
               }
             },
             "text/json": {
               "schema": {
-                "type": "object",
-                "additionalProperties": { }
+                "$ref": "#/components/schemas/VariableRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "object",
-                "additionalProperties": { }
+                "$ref": "#/components/schemas/VariableRequest"
               }
             }
           }
@@ -269,29 +240,78 @@
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
+          }
+        }
+      }
+    },
+    "/api/RestCamunda/user-tasks/search": {
+      "post": {
+        "tags": [
+          "RestCamunda"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserTaskSearchRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserTaskSearchRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserTaskSearchRequest"
               }
             }
-          },
-          "500": {
-            "description": "Internal Server Error"
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/RestCamunda/user-tasks/{userTaskKey}/complete": {
+      "post": {
+        "tags": [
+          "RestCamunda"
+        ],
+        "parameters": [
+          {
+            "name": "userTaskKey",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CompleteUserTaskRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CompleteUserTaskRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CompleteUserTaskRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -299,6 +319,21 @@
   },
   "components": {
     "schemas": {
+      "CompleteUserTaskRequest": {
+        "type": "object",
+        "properties": {
+          "variables": {
+            "type": "object",
+            "additionalProperties": { },
+            "nullable": true
+          },
+          "action": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "DeployProcessRequest": {
         "type": "object",
         "properties": {
@@ -309,32 +344,31 @@
         },
         "additionalProperties": false
       },
-      "ProblemDetails": {
+      "PageInfo": {
         "type": "object",
         "properties": {
-          "type": {
-            "type": "string",
-            "nullable": true
-          },
-          "title": {
-            "type": "string",
-            "nullable": true
-          },
-          "status": {
+          "from": {
             "type": "integer",
             "format": "int32",
             "nullable": true
           },
-          "detail": {
-            "type": "string",
+          "limit": {
+            "type": "integer",
+            "format": "int32",
             "nullable": true
           },
-          "instance": {
-            "type": "string",
+          "searchAfter": {
+            "type": "array",
+            "items": { },
+            "nullable": true
+          },
+          "searchBefore": {
+            "type": "array",
+            "items": { },
             "nullable": true
           }
         },
-        "additionalProperties": { }
+        "additionalProperties": false
       },
       "PublishMessageRequest": {
         "type": "object",
@@ -346,6 +380,85 @@
           "correlationKey": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SortField": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string",
+            "nullable": true
+          },
+          "order": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserTaskFilter": {
+        "type": "object",
+        "properties": {
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "assignee": {
+            "type": "string",
+            "nullable": true
+          },
+          "elementId": {
+            "type": "string",
+            "nullable": true
+          },
+          "candidateGroup": {
+            "type": "string",
+            "nullable": true
+          },
+          "candidateUser": {
+            "type": "string",
+            "nullable": true
+          },
+          "tenantIds": {
+            "type": "string",
+            "nullable": true
+          },
+          "processDefinitionId": {
+            "type": "string",
+            "nullable": true
+          },
+          "key": {
+            "type": "string",
+            "nullable": true
+          },
+          "processDefinitionKey": {
+            "type": "string",
+            "nullable": true
+          },
+          "processInstanceKey": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserTaskSearchRequest": {
+        "type": "object",
+        "properties": {
+          "filter": {
+            "$ref": "#/components/schemas/UserTaskFilter"
+          },
+          "sort": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SortField"
+            },
+            "nullable": true
+          },
+          "page": {
+            "$ref": "#/components/schemas/PageInfo"
           }
         },
         "additionalProperties": false

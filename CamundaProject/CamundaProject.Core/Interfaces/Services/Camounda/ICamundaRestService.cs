@@ -9,6 +9,9 @@ namespace CamundaProject.Core.Interfaces.Services.Camounda
 {
     public interface ICamundaRestService
     {
-        Task<string> StartProcessInstanceAsync(StartProcessRequest request);
+        Task<object> StartProcessInstanceAsync(StartProcessRequest request);
+        Task<object> SearchUserTasksAsync(UserTaskSearchRequest request);
+        Task<object> CompleteUserTaskAsync(string userTaskKey, CompleteUserTaskRequest request);
+
     }
 }
