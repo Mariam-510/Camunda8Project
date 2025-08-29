@@ -19,37 +19,6 @@ namespace CamundaProject.Api.Controllers
             _logger = logger;
         }
 
-        [HttpPost("start")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> StartProcessInstance([FromBody] StartProcessRequest request)
-        {
-            try
-            {
-                _logger.LogInformation("Starting process instance. ProcessDefinitionKey: {Key}, ProcessDefinitionId: {Id}",
-                    request?.ProcessDefinitionKey, request?.ProcessDefinitionId);
-
-                if (request == null)
-                {
-                    return BadRequest("Request body cannot be null");
-                }
-
-                var result = await _camundaService.StartProcessInstanceAsync(request);
-                return Ok(result);
-            }
-            catch (ArgumentException ex)
-            {
-                _logger.LogWarning(ex, "Invalid request parameters");
-                return BadRequest(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error starting process instance");
-                return StatusCode(StatusCodes.Status500InternalServerError, $"Error starting process: {ex.Message}");
-            }
-        }
-
         [HttpPost("start/by-key/{processDefinitionKey}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

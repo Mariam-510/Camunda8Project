@@ -1,5 +1,4 @@
 ﻿using CamundaProject.Core.Interfaces.Services;
-using CamundaProject.Core.Models.CamundaModels;
 using Confluent.Kafka;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;

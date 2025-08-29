@@ -1,5 +1,4 @@
 ﻿using CamundaProject.Core.Interfaces.Services;
-using CamundaProject.Core.Models.CamundaModels;
 using CamundaProject.Core.Models.RequestModels;
 using Microsoft.Extensions.Logging;
 //using Newtonsoft.Json;

@@ -72,3 +72,9 @@
 2025-08-29 12:21:11.701 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService ---------------------------
 2025-08-29 12:21:11.703 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService 📩 Received message: {"to":"someone@example.com","subject":"Test","message":"hello form kafka"}
 2025-08-29 12:21:11.706 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService ---------------------------
+2025-08-29 14:48:27.290 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Starting Zeebe job workers...
+2025-08-29 14:48:27.538 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Zeebe job workers started successfully
+2025-08-29 14:48:27.540 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Starting Zeebe job workers...
+2025-08-29 14:48:27.541 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Zeebe job workers started successfully
+2025-08-29 14:48:27.542 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer starting...
+2025-08-29 14:48:27.556 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer started, listening to topic: process-topic
