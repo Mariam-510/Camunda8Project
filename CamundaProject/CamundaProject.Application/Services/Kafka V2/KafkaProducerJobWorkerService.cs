@@ -1,4 +1,5 @@
-﻿using CamundaProject.Core.Interfaces.Services;
+﻿using CamundaProject.Application.Services.Zeebe;
+using CamundaProject.Core.Interfaces.Services;
 using Confluent.Kafka;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -30,7 +31,7 @@ namespace CamundaProject.Application.Services
 
         public Task StartAsync(CancellationToken cancellationToken)
         {
-            _logger.LogInformation("Starting Zeebe job workers...");
+            _logger.LogInformation("Starting Kafka Producer job workers...");
 
             _kafkaWorker = _zeebeClient.NewWorker()
                 .JobType("kafka-job")       // MUST match BPMN service task type
@@ -41,7 +42,7 @@ namespace CamundaProject.Application.Services
                 .Timeout(TimeSpan.FromSeconds(10))
                 .Open();
 
-            _logger.LogInformation("Zeebe job workers started successfully");
+            _logger.LogInformation("Kafka Producer job workers started successfully");
             return Task.CompletedTask;
         }
 

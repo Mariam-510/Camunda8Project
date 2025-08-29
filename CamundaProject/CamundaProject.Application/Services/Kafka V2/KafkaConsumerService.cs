@@ -10,7 +10,7 @@ namespace CamundaProject.Application.Services
     public class KafkaConsumerService : IHostedService
     {
         private readonly ILogger<KafkaConsumerService> _logger;
-        private readonly string _topic = "process-topic";
+        private readonly string _topic = "test-topic";
         private readonly IConsumer<Ignore, string> _consumer;
         private Task _executingTask;
         private CancellationTokenSource _cts;

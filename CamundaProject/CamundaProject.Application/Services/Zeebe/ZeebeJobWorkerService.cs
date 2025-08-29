@@ -12,7 +12,7 @@ using Zeebe.Client;
 using Zeebe.Client.Api.Responses;
 using Zeebe.Client.Api.Worker;
 
-namespace CamundaProject.Application.Services
+namespace CamundaProject.Application.Services.Zeebe
 {
     public class ZeebeJobWorkerService : IHostedService
     {

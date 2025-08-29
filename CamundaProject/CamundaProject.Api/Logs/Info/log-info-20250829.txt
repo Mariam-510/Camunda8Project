@@ -78,3 +78,119 @@
 2025-08-29 14:48:27.541 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Zeebe job workers started successfully
 2025-08-29 14:48:27.542 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer starting...
 2025-08-29 14:48:27.556 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer started, listening to topic: process-topic
+2025-08-29 15:50:18.925 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Starting Zeebe job workers...
+2025-08-29 15:50:19.035 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Zeebe job workers started successfully
+2025-08-29 15:50:19.037 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Starting Kafka Producer job workers...
+2025-08-29 15:50:19.037 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Kafka Producer job workers started successfully
+2025-08-29 15:50:19.038 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer starting...
+2025-08-29 15:50:19.039 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Starting Zeebe job workers...
+2025-08-29 15:50:19.040 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Zeebe job workers started successfully
+2025-08-29 15:50:19.066 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer started, listening to topic: process-topic
+2025-08-29 15:50:56.179 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-29 15:50:56.187 +03:00 [INF]  Starting request POST /api/Process/start/KafkaRequestResponseProcess
+2025-08-29 15:50:56.267 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: KafkaRequestResponseProcess
+2025-08-29 15:50:56.270 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: KafkaRequestResponseProcess
+2025-08-29 15:50:56.434 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813771743
+2025-08-29 15:50:56.452 +03:00 [INF]  Completed request POST /api/Process/start/KafkaRequestResponseProcess with status 200 in 264ms
+2025-08-29 15:50:56.531 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Generating request ID for job 2251799813771748
+2025-08-29 15:50:56.621 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Generated request ID: 088f5997-f523-4d98-84b6-ba42e6557e92 for job 2251799813771748
+2025-08-29 15:50:56.723 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Processing Kafka publish job 2251799813771755
+2025-08-29 15:50:57.170 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Message published to Kafka. Topic: test-topic, Partition: [0], Offset: 0
+2025-08-29 15:51:00.028 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Kafka publish job 2251799813771755 completed successfully
+2025-08-29 15:58:39.198 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Starting Zeebe job workers...
+2025-08-29 15:58:39.251 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Zeebe job workers started successfully
+2025-08-29 15:58:39.253 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Starting Kafka Producer job workers...
+2025-08-29 15:58:39.254 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Kafka Producer job workers started successfully
+2025-08-29 15:58:39.255 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer starting...
+2025-08-29 15:58:39.257 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Starting Zeebe job workers...
+2025-08-29 15:58:39.258 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Zeebe job workers started successfully
+2025-08-29 15:58:39.278 +03:00 [INF] CamundaProject.Application.Services.KafkaResponseConsumerService Starting Kafka response consumer...
+2025-08-29 15:58:39.286 +03:00 [INF] CamundaProject.Application.Services.KafkaResponseConsumerService Kafka response consumer started
+2025-08-29 15:58:39.293 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer started, listening to topic: process-topic
+2025-08-29 15:58:42.583 +03:00 [INF] CamundaProject.Application.Services.KafkaResponseConsumerService Received message from Kafka. Key: 088f5997-f523-4d98-84b6-ba42e6557e92, Topic: test-topic, Partition: [0], Offset: 0
+2025-08-29 15:58:42.605 +03:00 [WRN] CamundaProject.Application.Services.KafkaResponseConsumerService Invalid message format or missing requestId
+2025-08-29 15:59:25.837 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-29 15:59:25.842 +03:00 [INF]  Starting request POST /api/Process/start/KafkaRequestResponseProcess
+2025-08-29 15:59:25.898 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: KafkaRequestResponseProcess
+2025-08-29 15:59:25.900 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: KafkaRequestResponseProcess
+2025-08-29 15:59:26.148 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813773539
+2025-08-29 15:59:26.173 +03:00 [INF]  Completed request POST /api/Process/start/KafkaRequestResponseProcess with status 200 in 331ms
+2025-08-29 15:59:26.246 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Generating request ID for job 2251799813773544
+2025-08-29 15:59:26.330 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Generated request ID: c2269a4e-85f8-440d-95e3-21449e4b7755 for job 2251799813773544
+2025-08-29 15:59:26.442 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Processing Kafka publish job 2251799813773552
+2025-08-29 15:59:26.555 +03:00 [INF] CamundaProject.Application.Services.KafkaResponseConsumerService Received message from Kafka. Key: c2269a4e-85f8-440d-95e3-21449e4b7755, Topic: test-topic, Partition: [0], Offset: 1
+2025-08-29 15:59:26.557 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Message published to Kafka. Topic: test-topic, Partition: [0], Offset: 1
+2025-08-29 15:59:26.558 +03:00 [WRN] CamundaProject.Application.Services.KafkaResponseConsumerService Invalid message format or missing requestId
+2025-08-29 15:59:26.645 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Kafka publish job 2251799813773552 completed successfully
+2025-08-29 16:00:44.807 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Starting Zeebe job workers...
+2025-08-29 16:00:44.855 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Zeebe job workers started successfully
+2025-08-29 16:00:44.857 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Starting Kafka Producer job workers...
+2025-08-29 16:00:44.857 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Kafka Producer job workers started successfully
+2025-08-29 16:00:44.859 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer starting...
+2025-08-29 16:00:44.860 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Starting Zeebe job workers...
+2025-08-29 16:00:44.861 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Zeebe job workers started successfully
+2025-08-29 16:00:44.876 +03:00 [INF] CamundaProject.Application.Services.KafkaResponseConsumerService Starting Kafka response consumer...
+2025-08-29 16:00:44.881 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer started, listening to topic: process-topic
+2025-08-29 16:00:44.881 +03:00 [INF] CamundaProject.Application.Services.KafkaResponseConsumerService Kafka response consumer started
+2025-08-29 16:02:01.283 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Starting Zeebe job workers...
+2025-08-29 16:02:01.338 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Zeebe job workers started successfully
+2025-08-29 16:02:01.340 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Starting Kafka Producer job workers...
+2025-08-29 16:02:01.340 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Kafka Producer job workers started successfully
+2025-08-29 16:02:01.341 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer starting...
+2025-08-29 16:02:01.342 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Starting Zeebe job workers...
+2025-08-29 16:02:01.343 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Zeebe job workers started successfully
+2025-08-29 16:02:01.354 +03:00 [INF] CamundaProject.Application.Services.KafkaResponseConsumerService Starting Kafka response consumer...
+2025-08-29 16:02:01.364 +03:00 [INF] CamundaProject.Application.Services.KafkaResponseConsumerService Kafka response consumer started
+2025-08-29 16:02:01.372 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer started, listening to topic: process-topic
+2025-08-29 16:03:20.147 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Starting Zeebe job workers...
+2025-08-29 16:03:20.200 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Zeebe job workers started successfully
+2025-08-29 16:03:20.202 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Starting Kafka Producer job workers...
+2025-08-29 16:03:20.203 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Kafka Producer job workers started successfully
+2025-08-29 16:03:20.204 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer starting...
+2025-08-29 16:03:20.204 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Starting Zeebe job workers...
+2025-08-29 16:03:20.205 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Zeebe job workers started successfully
+2025-08-29 16:03:20.219 +03:00 [INF] CamundaProject.Application.Services.KafkaResponseConsumerService Starting Kafka response consumer...
+2025-08-29 16:03:20.224 +03:00 [INF] CamundaProject.Application.Services.KafkaResponseConsumerService Kafka response consumer started
+2025-08-29 16:03:20.235 +03:00 [INF] CamundaProject.Application.Services.KafkaConsumerService Kafka Consumer started, listening to topic: test-topic
+2025-08-29 16:03:51.843 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Starting Zeebe job workers...
+2025-08-29 16:03:51.895 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Zeebe job workers started successfully
+2025-08-29 16:03:51.896 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Starting Zeebe job workers...
+2025-08-29 16:03:51.897 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Zeebe job workers started successfully
+2025-08-29 16:03:51.907 +03:00 [INF] CamundaProject.Application.Services.KafkaResponseConsumerService Starting Kafka response consumer...
+2025-08-29 16:03:51.907 +03:00 [INF] CamundaProject.Application.Services.KafkaResponseConsumerService Kafka response consumer started
+2025-08-29 16:04:09.560 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-29 16:04:09.599 +03:00 [INF]  Starting request POST /api/Process/start/KafkaRequestResponseProcess
+2025-08-29 16:04:09.656 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: KafkaRequestResponseProcess
+2025-08-29 16:04:09.659 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: KafkaRequestResponseProcess
+2025-08-29 16:04:09.776 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813774577
+2025-08-29 16:04:09.789 +03:00 [INF]  Completed request POST /api/Process/start/KafkaRequestResponseProcess with status 200 in 190ms
+2025-08-29 16:04:09.891 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Generating request ID for job 2251799813774582
+2025-08-29 16:04:09.969 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Generated request ID: bab3ae45-4eb2-489d-8250-b4c189086b9c for job 2251799813774582
+2025-08-29 16:04:10.061 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Processing Kafka publish job 2251799813774589
+2025-08-29 16:04:10.212 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Message published to Kafka. Topic: test-topic, Partition: [0], Offset: 2
+2025-08-29 16:04:10.308 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Kafka publish job 2251799813774589 completed successfully
+2025-08-29 16:04:44.802 +03:00 [INF] CamundaProject.Application.Services.KafkaResponseConsumerService Received message from Kafka. Key: bab3ae45-4eb2-489d-8250-b4c189086b9c, Topic: test-topic, Partition: [0], Offset: 2
+2025-08-29 16:04:44.807 +03:00 [WRN] CamundaProject.Application.Services.KafkaResponseConsumerService Invalid message format or missing requestId
+2025-08-29 16:12:14.605 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Starting Zeebe job workers...
+2025-08-29 16:12:14.657 +03:00 [INF] CamundaProject.Application.Services.ZeebeJobWorkerService Zeebe job workers started successfully
+2025-08-29 16:12:14.658 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Starting Zeebe job workers...
+2025-08-29 16:12:14.660 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Zeebe job workers started successfully
+2025-08-29 16:12:14.670 +03:00 [INF] CamundaProject.Application.Services.KafkaResponseConsumerService Starting Kafka response consumer...
+2025-08-29 16:12:14.671 +03:00 [INF] CamundaProject.Application.Services.KafkaResponseConsumerService Kafka response consumer started
+2025-08-29 16:12:28.547 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-29 16:12:28.555 +03:00 [INF]  Starting request POST /api/Process/start/KafkaRequestResponseProcess
+2025-08-29 16:12:28.611 +03:00 [INF] CamundaProject.Api.Controllers.ProcessController Starting process instance for: KafkaRequestResponseProcess
+2025-08-29 16:12:28.614 +03:00 [INF] CamundaProject.Application.Services.CamundaService Starting process instance for: KafkaRequestResponseProcess
+2025-08-29 16:12:28.682 +03:00 [INF] CamundaProject.Application.Services.CamundaService Started process instance: 2251799813776332
+2025-08-29 16:12:28.697 +03:00 [INF]  Completed request POST /api/Process/start/KafkaRequestResponseProcess with status 200 in 142ms
+2025-08-29 16:12:28.702 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Generating request ID for job 2251799813776337
+2025-08-29 16:12:28.811 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Generated request ID: 067aea8f-99fd-4661-aa56-9265e50a4c3d for job 2251799813776337
+2025-08-29 16:12:28.937 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Processing Kafka publish job 2251799813776344
+2025-08-29 16:12:28.987 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Message published to Kafka. Topic: test-topic, Partition: [0], Offset: 3
+2025-08-29 16:12:28.987 +03:00 [INF] CamundaProject.Application.Services.KafkaResponseConsumerService Received message from Kafka. Key: 067aea8f-99fd-4661-aa56-9265e50a4c3d, Topic: test-topic, Partition: [0], Offset: 3
+2025-08-29 16:12:29.038 +03:00 [INF] CamundaProject.Application.Services.KafkaResponseConsumerService Processing response for requestId: 067aea8f-99fd-4661-aa56-9265e50a4c3d
+2025-08-29 16:12:29.092 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Kafka publish job 2251799813776344 completed successfully
+2025-08-29 16:12:29.809 +03:00 [INF] CamundaProject.Application.Services.KafkaResponseConsumerService Published message to Zeebe for requestId: 067aea8f-99fd-4661-aa56-9265e50a4c3d
+2025-08-29 16:12:29.988 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Processing success handler job 2251799813776359
+2025-08-29 16:12:29.991 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Request 067aea8f-99fd-4661-aa56-9265e50a4c3d completed successfully. Response: {"status":"success","data":{"processInstanceId":2251799813776332,"timestamp":"2025-08-29T13:12:28.9480041Z"},"timestamp":"2025-08-29T13:12:28.948117Z"}
+2025-08-29 16:12:30.625 +03:00 [INF] CamundaProject.Application.Services.KafkaJobWorkerService Success handler job 2251799813776359 completed
