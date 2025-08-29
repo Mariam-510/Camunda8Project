@@ -1,5 +1,5 @@
 ﻿using CamundaProject.Application.Services;
-using CamundaProject.Core.Interfaces.Services;
+using CamundaProject.Core.Interfaces.Services.Camounda;
 using CamundaProject.Core.Models;
 using CamundaProject.Core.Models.RequestModels;
 using Microsoft.AspNetCore.Http;

@@ -1,5 +1,6 @@
 ﻿using CamundaProject.Core.Interfaces.Services;
 using Confluent.Kafka;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
@@ -23,15 +24,18 @@ namespace CamundaProject.Application.Services.Kafka
         private IJobWorker? _kafkaWorker;
         private IJobWorker? _successWorker;
         private IJobWorker? _errorWorker;
+        private readonly string _topic;
 
         public KafkaJobWorkerService(
             IZeebeClient zeebeClient,
             ILogger<KafkaJobWorkerService> logger,
-            IProducer<string, string> kafkaProducer)
+            IProducer<string, string> kafkaProducer,
+            IConfiguration configuration)
         {
             _zeebeClient = zeebeClient;
             _logger = logger;
             _kafkaProducer = kafkaProducer;
+            _topic = configuration["Kafka:Topic"];
         }
 
         public Task StartAsync(CancellationToken cancellationToken)
@@ -125,23 +129,28 @@ namespace CamundaProject.Application.Services.Kafka
 
                 // Extract variables from the job
                 var variables = job.Variables;
-                var requestId = JsonSerializer.Deserialize<JsonElement>(variables).GetProperty("requestId").GetString();
+                var jsonElement = JsonSerializer.Deserialize<JsonElement>(variables);
+
+                var requestId = jsonElement.GetProperty("requestId").GetString();
+                var to = jsonElement.GetProperty("to").GetString();
+                var subject = jsonElement.GetProperty("subject").GetString();
+                var body = jsonElement.GetProperty("body").GetString();
 
                 if (string.IsNullOrEmpty(requestId))
-                {
                     throw new ArgumentException("Request ID is required");
-                }
 
-                // Prepare the Kafka message in the format the consumer expects
-                var kafkaMessage = new ResponseMessage
+
+                if (string.IsNullOrEmpty(to))
+                    throw new ArgumentException("To is required");
+
+                // Prepare Kafka message with email details
+                var kafkaMessage = new
                 {
                     RequestId = requestId,
-                    Status = "success", // or "processing" - this will be updated by the external system
-                    Data = new
-                    {
-                        processInstanceId = job.ProcessInstanceKey,
-                        timestamp = DateTime.UtcNow
-                    },
+                    To = to,
+                    Subject = subject,
+                    Body = body,
+                    Status = "pending",
                     Timestamp = DateTime.UtcNow
                 };
 
@@ -149,29 +158,16 @@ namespace CamundaProject.Application.Services.Kafka
 
                 // Publish to Kafka
                 var deliveryResult = await _kafkaProducer.ProduceAsync(
-                    "test-topic",
+                    _topic,
                     new Message<string, string>
                     {
                         Key = requestId,
                         Value = messageJson
                     });
 
-                _logger.LogInformation("Message published to Kafka. Topic: {Topic}, Partition: {Partition}, Offset: {Offset}",
-                    deliveryResult.Topic, deliveryResult.Partition, deliveryResult.Offset);
+                _logger.LogInformation("Message published to Kafka. Topic: {Topic}", _topic);
 
-                // Complete the job
-                await client.NewCompleteJobCommand(job.Key)
-                    .Send();
-
-                _logger.LogInformation("Kafka publish job {JobKey} completed successfully", job.Key);
-            }
-            catch (ProduceException<string, string> ex)
-            {
-                _logger.LogError(ex, "Kafka produce error for job {JobKey}", job.Key);
-                await client.NewFailCommand(job.Key)
-                    .Retries(job.Retries - 1)
-                    .ErrorMessage($"Kafka error: {ex.Error.Reason}")
-                    .Send();
+                await client.NewCompleteJobCommand(job.Key).Send();
             }
             catch (Exception ex)
             {
@@ -182,6 +178,7 @@ namespace CamundaProject.Application.Services.Kafka
                     .Send();
             }
         }
+
         private async Task HandleSuccessJobAsync(IJobClient client, IJob job)
         {
             try

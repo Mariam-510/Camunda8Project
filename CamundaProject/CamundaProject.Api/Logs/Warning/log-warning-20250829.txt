@@ -6,3 +6,20 @@
 2025-08-29 16:04:09.560 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
 2025-08-29 16:04:44.807 +03:00 [WRN] CamundaProject.Application.Services.KafkaResponseConsumerService Invalid message format or missing requestId
 2025-08-29 16:12:28.547 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-29 16:40:20.187 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-29 17:08:16.241 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-29 17:11:37.814 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-29 17:12:14.654 +03:00 [ERR] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Request eee0302b-499a-4688-80c6-157667fdaeeb failed with error: Unknown error occurred
+2025-08-29 17:15:24.151 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-29 17:17:55.692 +03:00 [ERR] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Error processing Kafka job 2251799813789560
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Text.Json.JsonElement.GetProperty(String propertyName)
+   at CamundaProject.Application.Services.Kafka.KafkaJobWorkerService.HandleKafkaJobAsync(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Kafka\KafkaJobWorkerService.cs:line 135
+2025-08-29 17:17:56.181 +03:00 [ERR] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Error processing Kafka job 2251799813789560
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Text.Json.JsonElement.GetProperty(String propertyName)
+   at CamundaProject.Application.Services.Kafka.KafkaJobWorkerService.HandleKafkaJobAsync(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Kafka\KafkaJobWorkerService.cs:line 135
+2025-08-29 17:17:56.389 +03:00 [ERR] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Error processing Kafka job 2251799813789560
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Text.Json.JsonElement.GetProperty(String propertyName)
+   at CamundaProject.Application.Services.Kafka.KafkaJobWorkerService.HandleKafkaJobAsync(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Kafka\KafkaJobWorkerService.cs:line 135

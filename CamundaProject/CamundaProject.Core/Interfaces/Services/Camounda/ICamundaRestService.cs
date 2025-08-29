@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CamundaProject.Core.Interfaces.Services
+namespace CamundaProject.Core.Interfaces.Services.Camounda
 {
     public interface ICamundaRestService
     {
