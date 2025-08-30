@@ -40,3 +40,118 @@ System.Collections.Generic.KeyNotFoundException: The given key was not present i
 System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
    at System.Text.Json.JsonElement.GetProperty(String propertyName)
    at CamundaProject.Application.Services.Kafka.KafkaJobWorkerService.HandleKafkaJobAsync(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Kafka\KafkaJobWorkerService.cs:line 135
+2025-08-30 18:55:13.987 +03:00 [ERR] CamundaProject.Application.Services.Camunda.CamundaRestService Failed to start process instance. Status: "NotFound", Response: {"type":"about:blank","title":"NOT_FOUND","status":404,"detail":"Command 'CREATE' rejected with code 'NOT_FOUND': Expected to find process definition with process ID 'Kafka Request-Response Process', but none found","instance":"/v2/process-instances"}
+2025-08-30 18:55:14.030 +03:00 [ERR] CamundaProject.Application.Services.Camunda.CamundaRestService HTTP request failed while starting process instance
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 404.
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at CamundaProject.Application.Services.Camunda.CamundaRestService.StartProcessInstanceAsync(StartProcessRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Camunda\CamundaRestService.cs:line 72
+2025-08-30 18:55:14.085 +03:00 [ERR] CamundaProject.Api.Controllers.RestCamundaController Error starting process instance by ID: Kafka Request-Response Process
+System.Exception: Failed to start process instance: Response status code does not indicate success: 404.
+ ---> System.Net.Http.HttpRequestException: Response status code does not indicate success: 404.
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at CamundaProject.Application.Services.Camunda.CamundaRestService.StartProcessInstanceAsync(StartProcessRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Camunda\CamundaRestService.cs:line 72
+   --- End of inner exception stack trace ---
+   at CamundaProject.Application.Services.Camunda.CamundaRestService.StartProcessInstanceAsync(StartProcessRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Camunda\CamundaRestService.cs:line 86
+   at CamundaProject.Api.Controllers.RestCamundaController.StartProcessById(String processDefinitionId, VariableRequest variableRequest, Nullable`1 version) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Api\Controllers\RestCamundaController.cs:line 77
+2025-08-30 18:55:14.869 +03:00 [ERR] CamundaProject.Application.Services.Camunda.CamundaRestService Failed to start process instance. Status: "NotFound", Response: {"type":"about:blank","title":"NOT_FOUND","status":404,"detail":"Command 'CREATE' rejected with code 'NOT_FOUND': Expected to find process definition with process ID 'Kafka Request-Response Process', but none found","instance":"/v2/process-instances"}
+2025-08-30 18:55:14.906 +03:00 [ERR] CamundaProject.Application.Services.Camunda.CamundaRestService HTTP request failed while starting process instance
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 404.
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at CamundaProject.Application.Services.Camunda.CamundaRestService.StartProcessInstanceAsync(StartProcessRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Camunda\CamundaRestService.cs:line 72
+2025-08-30 18:55:14.965 +03:00 [ERR] CamundaProject.Api.Controllers.RestCamundaController Error starting process instance by ID: Kafka Request-Response Process
+System.Exception: Failed to start process instance: Response status code does not indicate success: 404.
+ ---> System.Net.Http.HttpRequestException: Response status code does not indicate success: 404.
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at CamundaProject.Application.Services.Camunda.CamundaRestService.StartProcessInstanceAsync(StartProcessRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Camunda\CamundaRestService.cs:line 72
+   --- End of inner exception stack trace ---
+   at CamundaProject.Application.Services.Camunda.CamundaRestService.StartProcessInstanceAsync(StartProcessRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Camunda\CamundaRestService.cs:line 86
+   at CamundaProject.Api.Controllers.RestCamundaController.StartProcessById(String processDefinitionId, VariableRequest variableRequest, Nullable`1 version) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Api\Controllers\RestCamundaController.cs:line 77
+2025-08-30 18:55:15.719 +03:00 [ERR] CamundaProject.Application.Services.Camunda.CamundaRestService Failed to start process instance. Status: "NotFound", Response: {"type":"about:blank","title":"NOT_FOUND","status":404,"detail":"Command 'CREATE' rejected with code 'NOT_FOUND': Expected to find process definition with process ID 'Kafka Request-Response Process', but none found","instance":"/v2/process-instances"}
+2025-08-30 18:55:15.757 +03:00 [ERR] CamundaProject.Application.Services.Camunda.CamundaRestService HTTP request failed while starting process instance
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 404.
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at CamundaProject.Application.Services.Camunda.CamundaRestService.StartProcessInstanceAsync(StartProcessRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Camunda\CamundaRestService.cs:line 72
+2025-08-30 18:55:15.815 +03:00 [ERR] CamundaProject.Api.Controllers.RestCamundaController Error starting process instance by ID: Kafka Request-Response Process
+System.Exception: Failed to start process instance: Response status code does not indicate success: 404.
+ ---> System.Net.Http.HttpRequestException: Response status code does not indicate success: 404.
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at CamundaProject.Application.Services.Camunda.CamundaRestService.StartProcessInstanceAsync(StartProcessRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Camunda\CamundaRestService.cs:line 72
+   --- End of inner exception stack trace ---
+   at CamundaProject.Application.Services.Camunda.CamundaRestService.StartProcessInstanceAsync(StartProcessRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Camunda\CamundaRestService.cs:line 86
+   at CamundaProject.Api.Controllers.RestCamundaController.StartProcessById(String processDefinitionId, VariableRequest variableRequest, Nullable`1 version) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Api\Controllers\RestCamundaController.cs:line 77
+2025-08-30 18:55:16.364 +03:00 [ERR] CamundaProject.Application.Services.Camunda.CamundaRestService Failed to start process instance. Status: "NotFound", Response: {"type":"about:blank","title":"NOT_FOUND","status":404,"detail":"Command 'CREATE' rejected with code 'NOT_FOUND': Expected to find process definition with process ID 'Kafka Request-Response Process', but none found","instance":"/v2/process-instances"}
+2025-08-30 18:55:16.391 +03:00 [ERR] CamundaProject.Application.Services.Camunda.CamundaRestService HTTP request failed while starting process instance
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 404.
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at CamundaProject.Application.Services.Camunda.CamundaRestService.StartProcessInstanceAsync(StartProcessRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Camunda\CamundaRestService.cs:line 72
+2025-08-30 18:55:16.433 +03:00 [ERR] CamundaProject.Api.Controllers.RestCamundaController Error starting process instance by ID: Kafka Request-Response Process
+System.Exception: Failed to start process instance: Response status code does not indicate success: 404.
+ ---> System.Net.Http.HttpRequestException: Response status code does not indicate success: 404.
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at CamundaProject.Application.Services.Camunda.CamundaRestService.StartProcessInstanceAsync(StartProcessRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Camunda\CamundaRestService.cs:line 72
+   --- End of inner exception stack trace ---
+   at CamundaProject.Application.Services.Camunda.CamundaRestService.StartProcessInstanceAsync(StartProcessRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Camunda\CamundaRestService.cs:line 86
+   at CamundaProject.Api.Controllers.RestCamundaController.StartProcessById(String processDefinitionId, VariableRequest variableRequest, Nullable`1 version) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Api\Controllers\RestCamundaController.cs:line 77
+2025-08-30 18:58:41.807 +03:00 [ERR] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Error processing Kafka job 2251799813690100
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Text.Json.JsonElement.GetProperty(String propertyName)
+   at CamundaProject.Application.Services.Kafka.KafkaJobWorkerService.HandleKafkaJobAsync(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Kafka\KafkaJobWorkerService.cs:line 135
+2025-08-30 18:58:42.476 +03:00 [ERR] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Error processing Kafka job 2251799813690100
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Text.Json.JsonElement.GetProperty(String propertyName)
+   at CamundaProject.Application.Services.Kafka.KafkaJobWorkerService.HandleKafkaJobAsync(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Kafka\KafkaJobWorkerService.cs:line 135
+2025-08-30 18:58:42.688 +03:00 [ERR] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Error processing Kafka job 2251799813690100
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Text.Json.JsonElement.GetProperty(String propertyName)
+   at CamundaProject.Application.Services.Kafka.KafkaJobWorkerService.HandleKafkaJobAsync(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Kafka\KafkaJobWorkerService.cs:line 135
+2025-08-30 21:14:02.921 +03:00 [ERR] CamundaProject.Application.Services.Camunda.CamundaRestService Failed to start process instance. Status: "BadRequest", Response: {"type":"about:blank","title":"Bad Request","status":400,"detail":"For input string: \"KafkaRequestResponseProcess\"","instance":"/v2/process-instances"}
+2025-08-30 21:14:02.992 +03:00 [ERR] CamundaProject.Application.Services.Camunda.CamundaRestService HTTP request failed while starting process instance
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 400.
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at CamundaProject.Application.Services.Camunda.CamundaRestService.StartProcessInstanceAsync(StartProcessRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Camunda\CamundaRestService.cs:line 72
+2025-08-30 21:14:03.050 +03:00 [ERR] CamundaProject.Api.Controllers.RestCamundaController Error starting process instance by key: KafkaRequestResponseProcess
+System.Exception: Failed to start process instance: Response status code does not indicate success: 400.
+ ---> System.Net.Http.HttpRequestException: Response status code does not indicate success: 400.
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at CamundaProject.Application.Services.Camunda.CamundaRestService.StartProcessInstanceAsync(StartProcessRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Camunda\CamundaRestService.cs:line 72
+   --- End of inner exception stack trace ---
+   at CamundaProject.Application.Services.Camunda.CamundaRestService.StartProcessInstanceAsync(StartProcessRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Camunda\CamundaRestService.cs:line 86
+   at CamundaProject.Api.Controllers.RestCamundaController.StartProcessByKey(String processDefinitionKey, VariableRequest variableRequest) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Api\Controllers\RestCamundaController.cs:line 43
+2025-08-30 21:43:41.298 +03:00 [ERR] CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService Error processing email message
+System.Text.Json.JsonException: The JSON value could not be converted to System.DateTime. Path: $.Timestamp | LineNumber: 0 | BytePositionInLine: 162.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'True' as a string.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ExpectedString(JsonTokenType tokenType)
+   at System.Text.Json.Utf8JsonReader.TryGetDateTime(DateTime& value)
+   at System.Text.Json.Utf8JsonReader.GetDateTime()
+   at System.Text.Json.Serialization.Converters.DateTimeConverter.Read(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService.ProcessKafkaMessage(Message`2 message) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Kafka\KafkaResponseConsumerService.cs:line 112
+2025-08-30 21:43:41.417 +03:00 [ERR] CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService Error sending error response
+System.Text.Json.JsonException: The JSON value could not be converted to System.DateTime. Path: $.Timestamp | LineNumber: 0 | BytePositionInLine: 162.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'True' as a string.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ExpectedString(JsonTokenType tokenType)
+   at System.Text.Json.Utf8JsonReader.TryGetDateTime(DateTime& value)
+   at System.Text.Json.Utf8JsonReader.GetDateTime()
+   at System.Text.Json.Serialization.Converters.DateTimeConverter.Read(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService.ProcessKafkaMessage(Message`2 message) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Kafka\KafkaResponseConsumerService.cs:line 176
