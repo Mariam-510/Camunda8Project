@@ -618,3 +618,127 @@ System.Exception: Failed to start process instance: Response status code does no
 2025-08-30 21:15:30.977 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Processing success handler job 2251799813705590
 2025-08-30 21:15:30.982 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Request e97b5a6f-dce2-4566-b4a4-6794c74e7b0d completed successfully. Response: {"status":"success","sentAt":"2025-08-30T18:15:29.4210183Z"}
 2025-08-30 21:15:31.084 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Success handler job 2251799813705590 completed
+2025-08-30 21:38:54.134 +03:00 [INF] CamundaProject.Application.Services.Zeebe.ZeebeJobWorkerService Starting Zeebe job workers...
+2025-08-30 21:38:54.232 +03:00 [INF] CamundaProject.Application.Services.Zeebe.ZeebeJobWorkerService Zeebe job workers started successfully
+2025-08-30 21:38:54.233 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Starting Zeebe job workers...
+2025-08-30 21:38:54.234 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Zeebe job workers started successfully
+2025-08-30 21:38:54.247 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService Starting Kafka response consumer...
+2025-08-30 21:38:54.248 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService Kafka response consumer started
+2025-08-30 21:40:52.706 +03:00 [INF] CamundaProject.Application.Services.Zeebe.ZeebeJobWorkerService Starting Zeebe job workers...
+2025-08-30 21:40:52.757 +03:00 [INF] CamundaProject.Application.Services.Zeebe.ZeebeJobWorkerService Zeebe job workers started successfully
+2025-08-30 21:40:52.759 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Starting Zeebe job workers...
+2025-08-30 21:40:52.760 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Zeebe job workers started successfully
+2025-08-30 21:40:52.767 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService Starting Kafka response consumer...
+2025-08-30 21:40:52.769 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService Kafka response consumer started
+2025-08-30 21:41:18.214 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-30 21:41:18.249 +03:00 [INF]  Starting request POST /api/RestCamunda/start/by-id/KafkaRequestResponseProcess
+2025-08-30 21:41:18.318 +03:00 [INF] CamundaProject.Api.Controllers.RestCamundaController Starting process instance by ID: KafkaRequestResponseProcess, Version: null
+2025-08-30 21:41:18.323 +03:00 [INF] CamundaProject.Application.Services.Camunda.CamundaRestService Starting process instance. ProcessDefinitionKey: null, ProcessDefinitionId: KafkaRequestResponseProcess
+2025-08-30 21:41:18.396 +03:00 [INF] CamundaProject.Application.Services.Camunda.CamundaRestService Successfully started process instance. Response: {"processDefinitionId":"KafkaRequestResponseProcess","processDefinitionVersion":3,"tenantId":"<default>","variables":{},"processDefinitionKey":"2251799813710526","processInstanceKey":"2251799813710930"}
+2025-08-30 21:41:18.426 +03:00 [INF]  Completed request POST /api/RestCamunda/start/by-id/KafkaRequestResponseProcess with status 200 in 178ms
+2025-08-30 21:41:18.597 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Generating request ID for job 2251799813710935
+2025-08-30 21:41:18.684 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Generated request ID: 77cfe50d-904f-49dc-8dff-d073525fa5e9 for job 2251799813710935
+2025-08-30 21:41:45.674 +03:00 [INF]  Starting request POST /api/RestCamunda/user-tasks/search
+2025-08-30 21:41:45.692 +03:00 [INF] CamundaProject.Application.Services.Camunda.CamundaRestService Starting search user tasks.
+2025-08-30 21:41:45.712 +03:00 [INF] CamundaProject.Application.Services.Camunda.CamundaRestService Successfully search user tasks. Response: {"items":[{"name":"Enter Email Info","state":"CREATED","elementId":"Activity_05cxsx0","processDefinitionId":"KafkaRequestResponseProcess","creationDate":"2025-08-30T21:41:18.675+03:00","tenantId":"<default>","processDefinitionVersion":3,"customHeaders":{},"priority":50,"userTaskKey":"2251799813710942","elementInstanceKey":"2251799813710941","processDefinitionKey":"2251799813710526","processInstanceKey":"2251799813710930","formKey":"2251799813688348"}],"page":{"totalItems":1,"startCursor":"WzIyNTE3OTk4MTM3MTA5NDJd","endCursor":"WzIyNTE3OTk4MTM3MTA5NDJd"}}
+2025-08-30 21:41:45.714 +03:00 [INF]  Completed request POST /api/RestCamunda/user-tasks/search with status 200 in 39ms
+2025-08-30 21:42:08.131 +03:00 [INF]  Starting request POST /api/RestCamunda/user-tasks/2251799813710942/complete
+2025-08-30 21:42:08.141 +03:00 [INF] CamundaProject.Application.Services.Camunda.CamundaRestService Completing user task. Key: 2251799813710942
+2025-08-30 21:42:08.214 +03:00 [INF] CamundaProject.Application.Services.Camunda.CamundaRestService Successfully completed user task 2251799813710942.
+2025-08-30 21:42:08.217 +03:00 [INF]  Completed request POST /api/RestCamunda/user-tasks/2251799813710942/complete with status 200 in 86ms
+2025-08-30 21:42:08.244 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Processing Kafka publish job 2251799813711134
+2025-08-30 21:42:08.580 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService Received message from Kafka. Key: 77cfe50d-904f-49dc-8dff-d073525fa5e9, Topic: test-topic, Partition: [0], Offset: 6
+2025-08-30 21:42:08.609 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Message published to Kafka. Topic: test-topic
+2025-08-30 21:42:09.967 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Preparing email to mariam@example.com
+2025-08-30 21:42:10.815 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Connecting to SMTP server smtp.ethereal.email:587
+2025-08-30 21:42:13.783 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Sending email to mariam@example.com
+2025-08-30 21:42:14.520 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Email to mariam@example.com sent successfully
+2025-08-30 21:42:14.615 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService Email sent for request ID: 77cfe50d-904f-49dc-8dff-d073525fa5e9
+2025-08-30 21:42:14.681 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Processing success handler job 2251799813711188
+2025-08-30 21:42:14.684 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Request 77cfe50d-904f-49dc-8dff-d073525fa5e9 completed successfully. Response: {"status":"success","sentAt":"2025-08-30T18:42:14.5461519Z"}
+2025-08-30 21:42:14.851 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Success handler job 2251799813711188 completed
+2025-08-30 21:43:12.875 +03:00 [INF]  Starting request POST /api/RestCamunda/start/by-id/KafkaConnectorProcess
+2025-08-30 21:43:12.876 +03:00 [INF] CamundaProject.Api.Controllers.RestCamundaController Starting process instance by ID: KafkaConnectorProcess, Version: null
+2025-08-30 21:43:12.877 +03:00 [INF] CamundaProject.Application.Services.Camunda.CamundaRestService Starting process instance. ProcessDefinitionKey: null, ProcessDefinitionId: KafkaConnectorProcess
+2025-08-30 21:43:12.959 +03:00 [INF] CamundaProject.Application.Services.Camunda.CamundaRestService Successfully started process instance. Response: {"processDefinitionId":"KafkaConnectorProcess","processDefinitionVersion":2,"tenantId":"<default>","variables":{},"processDefinitionKey":"2251799813710659","processInstanceKey":"2251799813711385"}
+2025-08-30 21:43:12.964 +03:00 [INF]  Completed request POST /api/RestCamunda/start/by-id/KafkaConnectorProcess with status 200 in 89ms
+2025-08-30 21:43:12.990 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Generating request ID for job 2251799813711390
+2025-08-30 21:43:13.127 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Generated request ID: dae93828-1a36-4003-9884-6d2d01849842 for job 2251799813711390
+2025-08-30 21:43:19.397 +03:00 [INF]  Starting request POST /api/RestCamunda/user-tasks/search
+2025-08-30 21:43:19.449 +03:00 [INF] CamundaProject.Application.Services.Camunda.CamundaRestService Starting search user tasks.
+2025-08-30 21:43:19.478 +03:00 [INF] CamundaProject.Application.Services.Camunda.CamundaRestService Successfully search user tasks. Response: {"items":[{"name":"Enter Email Info","state":"CREATED","elementId":"Activity_05cxsx0","processDefinitionId":"KafkaConnectorProcess","creationDate":"2025-08-30T21:43:13.122+03:00","tenantId":"<default>","processDefinitionVersion":2,"customHeaders":{},"priority":50,"userTaskKey":"2251799813711397","elementInstanceKey":"2251799813711396","processDefinitionKey":"2251799813710659","processInstanceKey":"2251799813711385","formKey":"2251799813688348"}],"page":{"totalItems":1,"startCursor":"WzIyNTE3OTk4MTM3MTEzOTdd","endCursor":"WzIyNTE3OTk4MTM3MTEzOTdd"}}
+2025-08-30 21:43:19.479 +03:00 [INF]  Completed request POST /api/RestCamunda/user-tasks/search with status 200 in 81ms
+2025-08-30 21:43:40.591 +03:00 [INF]  Starting request POST /api/RestCamunda/user-tasks/2251799813711397/complete
+2025-08-30 21:43:40.626 +03:00 [INF] CamundaProject.Application.Services.Camunda.CamundaRestService Completing user task. Key: 2251799813711397
+2025-08-30 21:43:40.777 +03:00 [INF] CamundaProject.Application.Services.Camunda.CamundaRestService Successfully completed user task 2251799813711397.
+2025-08-30 21:43:40.825 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService Received message from Kafka. Key: dae93828-1a36-4003-9884-6d2d01849842, Topic: test-topic, Partition: [0], Offset: 7
+2025-08-30 21:43:40.836 +03:00 [INF]  Completed request POST /api/RestCamunda/user-tasks/2251799813711397/complete with status 200 in 244ms
+2025-08-30 21:43:41.298 +03:00 [ERR] CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService Error processing email message
+System.Text.Json.JsonException: The JSON value could not be converted to System.DateTime. Path: $.Timestamp | LineNumber: 0 | BytePositionInLine: 162.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'True' as a string.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ExpectedString(JsonTokenType tokenType)
+   at System.Text.Json.Utf8JsonReader.TryGetDateTime(DateTime& value)
+   at System.Text.Json.Utf8JsonReader.GetDateTime()
+   at System.Text.Json.Serialization.Converters.DateTimeConverter.Read(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService.ProcessKafkaMessage(Message`2 message) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Kafka\KafkaResponseConsumerService.cs:line 112
+2025-08-30 21:43:41.417 +03:00 [ERR] CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService Error sending error response
+System.Text.Json.JsonException: The JSON value could not be converted to System.DateTime. Path: $.Timestamp | LineNumber: 0 | BytePositionInLine: 162.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'True' as a string.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ExpectedString(JsonTokenType tokenType)
+   at System.Text.Json.Utf8JsonReader.TryGetDateTime(DateTime& value)
+   at System.Text.Json.Utf8JsonReader.GetDateTime()
+   at System.Text.Json.Serialization.Converters.DateTimeConverter.Read(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService.ProcessKafkaMessage(Message`2 message) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Kafka\KafkaResponseConsumerService.cs:line 176
+2025-08-30 21:44:42.391 +03:00 [INF] CamundaProject.Application.Services.Zeebe.ZeebeJobWorkerService Starting Zeebe job workers...
+2025-08-30 21:44:42.439 +03:00 [INF] CamundaProject.Application.Services.Zeebe.ZeebeJobWorkerService Zeebe job workers started successfully
+2025-08-30 21:44:42.440 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Starting Zeebe job workers...
+2025-08-30 21:44:42.441 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Zeebe job workers started successfully
+2025-08-30 21:44:42.450 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService Starting Kafka response consumer...
+2025-08-30 21:44:42.450 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService Kafka response consumer started
+2025-08-30 21:45:15.605 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-30 21:45:15.612 +03:00 [INF]  Starting request POST /api/RestCamunda/start/by-id/KafkaConnectorProcess
+2025-08-30 21:45:15.669 +03:00 [INF] CamundaProject.Api.Controllers.RestCamundaController Starting process instance by ID: KafkaConnectorProcess, Version: null
+2025-08-30 21:45:15.674 +03:00 [INF] CamundaProject.Application.Services.Camunda.CamundaRestService Starting process instance. ProcessDefinitionKey: null, ProcessDefinitionId: KafkaConnectorProcess
+2025-08-30 21:45:15.724 +03:00 [INF] CamundaProject.Application.Services.Camunda.CamundaRestService Successfully started process instance. Response: {"processDefinitionId":"KafkaConnectorProcess","processDefinitionVersion":3,"tenantId":"<default>","variables":{},"processDefinitionKey":"2251799813711763","processInstanceKey":"2251799813711861"}
+2025-08-30 21:45:15.744 +03:00 [INF]  Completed request POST /api/RestCamunda/start/by-id/KafkaConnectorProcess with status 200 in 132ms
+2025-08-30 21:45:15.766 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Generating request ID for job 2251799813711866
+2025-08-30 21:45:16.029 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Generated request ID: e5d9b9ac-3adb-411e-9cc0-d94db78a65ad for job 2251799813711866
+2025-08-30 21:45:44.757 +03:00 [INF]  Starting request POST /api/RestCamunda/user-tasks/search
+2025-08-30 21:45:44.772 +03:00 [INF] CamundaProject.Application.Services.Camunda.CamundaRestService Starting search user tasks.
+2025-08-30 21:45:44.939 +03:00 [INF] CamundaProject.Application.Services.Camunda.CamundaRestService Successfully search user tasks. Response: {"items":[{"name":"Enter Email Info","state":"CREATED","elementId":"Activity_05cxsx0","processDefinitionId":"KafkaConnectorProcess","creationDate":"2025-08-30T21:45:15.824+03:00","tenantId":"<default>","processDefinitionVersion":3,"customHeaders":{},"priority":50,"userTaskKey":"2251799813711873","elementInstanceKey":"2251799813711872","processDefinitionKey":"2251799813711763","processInstanceKey":"2251799813711861","formKey":"2251799813688348"}],"page":{"totalItems":1,"startCursor":"WzIyNTE3OTk4MTM3MTE4NzNd","endCursor":"WzIyNTE3OTk4MTM3MTE4NzNd"}}
+2025-08-30 21:45:44.941 +03:00 [INF]  Completed request POST /api/RestCamunda/user-tasks/search with status 200 in 183ms
+2025-08-30 21:46:06.423 +03:00 [INF]  Starting request POST /api/RestCamunda/user-tasks/2251799813711873/complete
+2025-08-30 21:46:06.432 +03:00 [INF] CamundaProject.Application.Services.Camunda.CamundaRestService Completing user task. Key: 2251799813711873
+2025-08-30 21:46:06.515 +03:00 [INF] CamundaProject.Application.Services.Camunda.CamundaRestService Successfully completed user task 2251799813711873.
+2025-08-30 21:46:06.521 +03:00 [INF]  Completed request POST /api/RestCamunda/user-tasks/2251799813711873/complete with status 200 in 98ms
+2025-08-30 21:46:06.589 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService Received message from Kafka. Key: e5d9b9ac-3adb-411e-9cc0-d94db78a65ad, Topic: test-topic, Partition: [0], Offset: 8
+2025-08-30 21:46:06.616 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Preparing email to username@example.com
+2025-08-30 21:46:06.843 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Connecting to SMTP server smtp.ethereal.email:587
+2025-08-30 21:46:08.401 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Sending email to username@example.com
+2025-08-30 21:46:09.110 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Email to username@example.com sent successfully
+2025-08-30 21:46:09.206 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService Email sent for request ID: e5d9b9ac-3adb-411e-9cc0-d94db78a65ad
+2025-08-30 21:46:09.280 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Processing success handler job 2251799813712083
+2025-08-30 21:46:09.299 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Request e5d9b9ac-3adb-411e-9cc0-d94db78a65ad completed successfully. Response: {"status":"success","sentAt":"2025-08-30T18:46:09.1131823Z"}
+2025-08-30 21:46:09.453 +03:00 [INF] CamundaProject.Application.Services.Kafka.KafkaJobWorkerService Success handler job 2251799813712083 completed

@@ -133,3 +133,43 @@ System.Exception: Failed to start process instance: Response status code does no
    at CamundaProject.Application.Services.Camunda.CamundaRestService.StartProcessInstanceAsync(StartProcessRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Camunda\CamundaRestService.cs:line 86
    at CamundaProject.Api.Controllers.RestCamundaController.StartProcessByKey(String processDefinitionKey, VariableRequest variableRequest) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Api\Controllers\RestCamundaController.cs:line 43
 2025-08-30 21:14:03.060 +03:00 [WRN]  Completed request POST /api/RestCamunda/start/by-key/KafkaRequestResponseProcess with status 500 in 322ms
+2025-08-30 21:41:18.214 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-30 21:43:41.298 +03:00 [ERR] CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService Error processing email message
+System.Text.Json.JsonException: The JSON value could not be converted to System.DateTime. Path: $.Timestamp | LineNumber: 0 | BytePositionInLine: 162.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'True' as a string.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ExpectedString(JsonTokenType tokenType)
+   at System.Text.Json.Utf8JsonReader.TryGetDateTime(DateTime& value)
+   at System.Text.Json.Utf8JsonReader.GetDateTime()
+   at System.Text.Json.Serialization.Converters.DateTimeConverter.Read(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService.ProcessKafkaMessage(Message`2 message) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Kafka\KafkaResponseConsumerService.cs:line 112
+2025-08-30 21:43:41.417 +03:00 [ERR] CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService Error sending error response
+System.Text.Json.JsonException: The JSON value could not be converted to System.DateTime. Path: $.Timestamp | LineNumber: 0 | BytePositionInLine: 162.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'True' as a string.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ExpectedString(JsonTokenType tokenType)
+   at System.Text.Json.Utf8JsonReader.TryGetDateTime(DateTime& value)
+   at System.Text.Json.Utf8JsonReader.GetDateTime()
+   at System.Text.Json.Serialization.Converters.DateTimeConverter.Read(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at CamundaProject.Application.Services.Kafka.KafkaResponseConsumerService.ProcessKafkaMessage(Message`2 message) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Kafka\KafkaResponseConsumerService.cs:line 176
+2025-08-30 21:45:15.605 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
