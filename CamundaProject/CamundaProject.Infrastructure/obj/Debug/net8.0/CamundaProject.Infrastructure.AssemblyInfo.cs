@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CamundaProject.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6fa67ce2ce23eea5ef3a36e8c4584d76cbaeb1c3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c03e9caef9063c0af72ed52369cc7ae988093be")]
 [assembly: System.Reflection.AssemblyProductAttribute("CamundaProject.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CamundaProject.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
