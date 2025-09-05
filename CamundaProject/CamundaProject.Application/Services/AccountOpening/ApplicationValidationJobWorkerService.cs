@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using CamundaProject.Core.Models.ClientModels;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
@@ -57,7 +58,7 @@ namespace CamundaProject.Application.Services.AccountOpening
                 var variables = JsonSerializer.Deserialize<JsonElement>(job.Variables);
 
                 // Extract application data
-                var applicationData = new ApplicationData
+                var applicationData = new ApplicationForm
                 {
                     ApplicationId = variables.GetProperty("applicationId").GetString() ?? "",
                     FullName = variables.GetProperty("FullName").GetString() ?? "",
@@ -97,7 +98,7 @@ namespace CamundaProject.Application.Services.AccountOpening
             }
         }
 
-        private EnhancedValidationResult ValidateApplication(ApplicationData application)
+        private EnhancedValidationResult ValidateApplication(ApplicationForm application)
         {
             var result = new EnhancedValidationResult();
             var now = DateTime.Now;
@@ -337,17 +338,8 @@ namespace CamundaProject.Application.Services.AccountOpening
         }
     }
 
-    // Supporting classes
-    public class ApplicationData
-    {
-        public string ApplicationId { get; set; }
-        public string FullName { get; set; }
-        public string NationalId { get; set; }
-        public string ClientAddress { get; set; }
-        public DateTime DateOfBirth { get; set; }
-        public decimal DepositAmount { get; set; }
-        public string NationalIdImage { get; set; }
-    }
+
+ 
 
     public class EnhancedValidationResult
     {
