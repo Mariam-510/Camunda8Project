@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2025-09-05 19:54:57.772 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account.
 System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.NationalId | LineNumber: 0 | BytePositionInLine: 64.
  ---> System.InvalidOperationException: Cannot get the value of a token type 'Number' as a string.
@@ -101,3 +102,131 @@ Grpc.Core.RpcException: Status(StatusCode="NotFound", Detail="Command 'FAIL' rej
 2025-09-05 21:03:33.726 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account. Retries left: 2
 2025-09-05 21:03:34.038 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account. Retries left: 1
 2025-09-05 21:03:34.041 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Core Banking system failed
+=======
+2025-09-05 19:27:05.982 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813894700
+System.InvalidOperationException: The requested operation requires an element of type 'String', but the target element has type 'Number'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetString(Int32 index, JsonTokenType expectedType)
+   at System.Text.Json.JsonElement.GetString()
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 19:27:06.287 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813894700
+System.InvalidOperationException: The requested operation requires an element of type 'String', but the target element has type 'Number'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetString(Int32 index, JsonTokenType expectedType)
+   at System.Text.Json.JsonElement.GetString()
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 19:27:06.605 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813894700
+System.InvalidOperationException: The requested operation requires an element of type 'String', but the target element has type 'Number'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetString(Int32 index, JsonTokenType expectedType)
+   at System.Text.Json.JsonElement.GetString()
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 19:30:23.809 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813895370
+System.InvalidOperationException: The requested operation requires an element of type 'String', but the target element has type 'Number'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetString(Int32 index, JsonTokenType expectedType)
+   at System.Text.Json.JsonElement.GetString()
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 19:30:24.045 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813895370
+System.InvalidOperationException: The requested operation requires an element of type 'String', but the target element has type 'Number'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetString(Int32 index, JsonTokenType expectedType)
+   at System.Text.Json.JsonElement.GetString()
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 19:30:24.173 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813895370
+System.InvalidOperationException: The requested operation requires an element of type 'String', but the target element has type 'Number'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetString(Int32 index, JsonTokenType expectedType)
+   at System.Text.Json.JsonElement.GetString()
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 20:24:41.913 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813896060
+System.InvalidOperationException: The requested operation requires an element of type 'String', but the target element has type 'Number'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetString(Int32 index, JsonTokenType expectedType)
+   at System.Text.Json.JsonElement.GetString()
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 20:24:42.116 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813896060
+System.InvalidOperationException: The requested operation requires an element of type 'String', but the target element has type 'Number'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetString(Int32 index, JsonTokenType expectedType)
+   at System.Text.Json.JsonElement.GetString()
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 20:24:42.254 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813896060
+System.InvalidOperationException: The requested operation requires an element of type 'String', but the target element has type 'Number'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetString(Int32 index, JsonTokenType expectedType)
+   at System.Text.Json.JsonElement.GetString()
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 20:32:44.208 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813897614
+System.InvalidOperationException: The requested operation requires an element of type 'String', but the target element has type 'Array'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetString(Int32 index, JsonTokenType expectedType)
+   at System.Text.Json.JsonElement.GetString()
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 20:32:44.312 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813897614
+System.InvalidOperationException: The requested operation requires an element of type 'String', but the target element has type 'Array'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetString(Int32 index, JsonTokenType expectedType)
+   at System.Text.Json.JsonElement.GetString()
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 20:32:44.457 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813897614
+System.InvalidOperationException: The requested operation requires an element of type 'String', but the target element has type 'Array'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetString(Int32 index, JsonTokenType expectedType)
+   at System.Text.Json.JsonElement.GetString()
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 20:47:33.420 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813900495
+System.InvalidOperationException: The requested operation requires an element of type 'Array', but the target element has type 'Null'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetArrayIndexElement(Int32 currentIndex, Int32 arrayIndex)
+   at System.Text.Json.JsonElement.get_Item(Int32 index)
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 20:47:33.530 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813900495
+System.InvalidOperationException: The requested operation requires an element of type 'Array', but the target element has type 'Null'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetArrayIndexElement(Int32 currentIndex, Int32 arrayIndex)
+   at System.Text.Json.JsonElement.get_Item(Int32 index)
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 20:47:33.658 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813900495
+System.InvalidOperationException: The requested operation requires an element of type 'Array', but the target element has type 'Null'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetArrayIndexElement(Int32 currentIndex, Int32 arrayIndex)
+   at System.Text.Json.JsonElement.get_Item(Int32 index)
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 21:09:49.338 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813905247
+System.InvalidOperationException: The requested operation requires an element of type 'Array', but the target element has type 'Null'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetArrayIndexElement(Int32 currentIndex, Int32 arrayIndex)
+   at System.Text.Json.JsonElement.get_Item(Int32 index)
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 21:09:49.449 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813905247
+System.InvalidOperationException: The requested operation requires an element of type 'Array', but the target element has type 'Null'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetArrayIndexElement(Int32 currentIndex, Int32 arrayIndex)
+   at System.Text.Json.JsonElement.get_Item(Int32 index)
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 21:09:49.593 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813905247
+System.InvalidOperationException: The requested operation requires an element of type 'Array', but the target element has type 'Null'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetArrayIndexElement(Int32 currentIndex, Int32 arrayIndex)
+   at System.Text.Json.JsonElement.get_Item(Int32 index)
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+>>>>>>> e9704c11078cd571c7d76c0d07e365dde970c103
