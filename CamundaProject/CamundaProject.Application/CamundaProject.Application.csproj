@@ -35,4 +35,8 @@
     <ProjectReference Include="..\CamundaProject.Infrastructure\CamundaProject.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\AccountOpening\" />
+  </ItemGroup>
+
 </Project>

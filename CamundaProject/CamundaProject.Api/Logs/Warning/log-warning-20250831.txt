@@ -1,0 +1,16 @@
+2025-08-31 09:53:59.684 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-31 09:59:38.204 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-31 10:08:37.633 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-31 10:09:16.820 +03:00 [ERR] CamundaProject.Application.Services.Camunda.CamundaRestService Failed to complete user task. Status: "NotFound", Response: {"type":"about:blank","title":"NOT_FOUND","status":404,"detail":"Command 'COMPLETE' rejected with code 'NOT_FOUND': Expected to complete user task with key '2251799813730542', but no such user task was found","instance":"/v2/user-tasks/2251799813730542/completion"}
+2025-08-31 10:09:17.012 +03:00 [ERR] CamundaProject.Application.Services.Camunda.CamundaRestService Error completing user task 2251799813730542
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 404.
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at CamundaProject.Application.Services.Camunda.CamundaRestService.CompleteUserTaskAsync(String userTaskKey, CompleteUserTaskRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Camunda\CamundaRestService.cs:line 157
+2025-08-31 10:09:17.201 +03:00 [ERR] CamundaProject.Api.Controllers.RestCamundaController Error completing user task 2251799813730542
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 404.
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at CamundaProject.Application.Services.Camunda.CamundaRestService.CompleteUserTaskAsync(String userTaskKey, CompleteUserTaskRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Camunda\CamundaRestService.cs:line 157
+   at CamundaProject.Api.Controllers.RestCamundaController.CompleteUserTask(String userTaskKey, CompleteUserTaskRequest request) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Api\Controllers\RestCamundaController.cs:line 109
+2025-08-31 10:09:17.209 +03:00 [WRN]  Completed request POST /api/RestCamunda/user-tasks/2251799813730542/complete with status 500 in 597ms
+2025-08-31 10:48:12.193 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-31 10:48:34.111 +03:00 [WRN]  Completed request POST /api/RestCamunda/user-tasks/search with status 400 in 541ms

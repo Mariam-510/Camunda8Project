@@ -110,7 +110,7 @@ namespace CamundaProject.Application
 
             services.AddHostedService<KafkaJobWorkerService>();
 
-            services.AddHostedService<KafkaResponseConsumerService>();
+            //services.AddHostedService<KafkaResponseConsumerService>();
 
             return services;
         }

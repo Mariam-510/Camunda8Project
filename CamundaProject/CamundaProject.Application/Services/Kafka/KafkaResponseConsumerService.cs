@@ -140,7 +140,7 @@ namespace CamundaProject.Application.Services.Kafka
                                 status = "success",
                                 sentAt = DateTime.UtcNow,
                             },
-                            requestId = emailMessage.RequestId
+                            //requestId = emailMessage.RequestId
                         }))
                         .Send();
 
