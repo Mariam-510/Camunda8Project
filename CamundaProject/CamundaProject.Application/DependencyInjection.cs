@@ -1,4 +1,5 @@
 ﻿using CamundaProject.Application.Mapping;
+using CamundaProject.Application.Services.AccountOpening;
 using CamundaProject.Application.Services.Camunda;
 using CamundaProject.Application.Services.Email;
 using CamundaProject.Application.Services.Kafka;
@@ -111,6 +112,10 @@ namespace CamundaProject.Application
             //services.AddHostedService<KafkaJobWorkerService>();
 
             //services.AddHostedService<KafkaResponseConsumerService>();
+
+            services.AddHostedService<GenerateApplicationIdJobWorkerService>();
+
+            services.AddHostedService<ApplicationValidationJobWorkerService>();
 
             return services;
         }

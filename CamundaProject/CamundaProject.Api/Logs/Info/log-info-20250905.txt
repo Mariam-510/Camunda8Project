@@ -1,0 +1,282 @@
+2025-09-05 19:24:40.004 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generate Application ID Job Worker started
+2025-09-05 19:24:40.055 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Application Validation Job Worker started
+2025-09-05 19:25:43.880 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generate Application ID Job Worker started
+2025-09-05 19:25:43.925 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Application Validation Job Worker started
+2025-09-05 19:25:44.173 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Handling job 2251799813894269
+2025-09-05 19:25:44.271 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generated application ID: 474961a6-1e56-4a00-8445-cc2a2da41867 for job 2251799813894269
+2025-09-05 19:27:05.789 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813894700
+2025-09-05 19:27:05.982 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813894700
+System.InvalidOperationException: The requested operation requires an element of type 'String', but the target element has type 'Number'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetString(Int32 index, JsonTokenType expectedType)
+   at System.Text.Json.JsonElement.GetString()
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 19:27:06.260 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813894700
+2025-09-05 19:27:06.287 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813894700
+System.InvalidOperationException: The requested operation requires an element of type 'String', but the target element has type 'Number'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetString(Int32 index, JsonTokenType expectedType)
+   at System.Text.Json.JsonElement.GetString()
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 19:27:06.581 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813894700
+2025-09-05 19:27:06.605 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813894700
+System.InvalidOperationException: The requested operation requires an element of type 'String', but the target element has type 'Number'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetString(Int32 index, JsonTokenType expectedType)
+   at System.Text.Json.JsonElement.GetString()
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 19:29:22.888 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generate Application ID Job Worker started
+2025-09-05 19:29:22.931 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Application Validation Job Worker started
+2025-09-05 19:29:34.396 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Handling job 2251799813895182
+2025-09-05 19:29:34.452 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generated application ID: ed59d669-8acf-4716-a7aa-c2f2085208ee for job 2251799813895182
+2025-09-05 19:30:23.770 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813895370
+2025-09-05 19:30:23.809 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813895370
+System.InvalidOperationException: The requested operation requires an element of type 'String', but the target element has type 'Number'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetString(Int32 index, JsonTokenType expectedType)
+   at System.Text.Json.JsonElement.GetString()
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 19:30:24.018 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813895370
+2025-09-05 19:30:24.045 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813895370
+System.InvalidOperationException: The requested operation requires an element of type 'String', but the target element has type 'Number'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetString(Int32 index, JsonTokenType expectedType)
+   at System.Text.Json.JsonElement.GetString()
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 19:30:24.152 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813895370
+2025-09-05 19:30:24.173 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813895370
+System.InvalidOperationException: The requested operation requires an element of type 'String', but the target element has type 'Number'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetString(Int32 index, JsonTokenType expectedType)
+   at System.Text.Json.JsonElement.GetString()
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 20:23:55.117 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generate Application ID Job Worker started
+2025-09-05 20:23:55.155 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Application Validation Job Worker started
+2025-09-05 20:24:08.745 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Handling job 2251799813895914
+2025-09-05 20:24:08.804 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generated application ID: e48ba7d6-efc5-4a03-aa9f-686c497659d2 for job 2251799813895914
+2025-09-05 20:24:41.873 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813896060
+2025-09-05 20:24:41.913 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813896060
+System.InvalidOperationException: The requested operation requires an element of type 'String', but the target element has type 'Number'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetString(Int32 index, JsonTokenType expectedType)
+   at System.Text.Json.JsonElement.GetString()
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 20:24:42.096 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813896060
+2025-09-05 20:24:42.116 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813896060
+System.InvalidOperationException: The requested operation requires an element of type 'String', but the target element has type 'Number'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetString(Int32 index, JsonTokenType expectedType)
+   at System.Text.Json.JsonElement.GetString()
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 20:24:42.233 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813896060
+2025-09-05 20:24:42.254 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813896060
+System.InvalidOperationException: The requested operation requires an element of type 'String', but the target element has type 'Number'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetString(Int32 index, JsonTokenType expectedType)
+   at System.Text.Json.JsonElement.GetString()
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 20:31:44.459 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generate Application ID Job Worker started
+2025-09-05 20:31:44.503 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Application Validation Job Worker started
+2025-09-05 20:31:48.665 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Handling job 2251799813897421
+2025-09-05 20:31:48.724 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generated application ID: 708ec44a-67f2-48c3-8603-7b5c5545e858 for job 2251799813897421
+2025-09-05 20:32:44.170 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813897614
+2025-09-05 20:32:44.208 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813897614
+System.InvalidOperationException: The requested operation requires an element of type 'String', but the target element has type 'Array'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetString(Int32 index, JsonTokenType expectedType)
+   at System.Text.Json.JsonElement.GetString()
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 20:32:44.292 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813897614
+2025-09-05 20:32:44.312 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813897614
+System.InvalidOperationException: The requested operation requires an element of type 'String', but the target element has type 'Array'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetString(Int32 index, JsonTokenType expectedType)
+   at System.Text.Json.JsonElement.GetString()
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 20:32:44.434 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813897614
+2025-09-05 20:32:44.457 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813897614
+System.InvalidOperationException: The requested operation requires an element of type 'String', but the target element has type 'Array'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetString(Int32 index, JsonTokenType expectedType)
+   at System.Text.Json.JsonElement.GetString()
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 20:46:38.984 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generate Application ID Job Worker started
+2025-09-05 20:46:39.024 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Application Validation Job Worker started
+2025-09-05 20:47:03.714 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Handling job 2251799813900365
+2025-09-05 20:47:03.754 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generated application ID: 7c83f906-c583-48f0-84de-a891ae5bc75f for job 2251799813900365
+2025-09-05 20:47:33.364 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813900495
+2025-09-05 20:47:33.420 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813900495
+System.InvalidOperationException: The requested operation requires an element of type 'Array', but the target element has type 'Null'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetArrayIndexElement(Int32 currentIndex, Int32 arrayIndex)
+   at System.Text.Json.JsonElement.get_Item(Int32 index)
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 20:47:33.512 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813900495
+2025-09-05 20:47:33.530 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813900495
+System.InvalidOperationException: The requested operation requires an element of type 'Array', but the target element has type 'Null'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetArrayIndexElement(Int32 currentIndex, Int32 arrayIndex)
+   at System.Text.Json.JsonElement.get_Item(Int32 index)
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 20:47:33.640 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813900495
+2025-09-05 20:47:33.658 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813900495
+System.InvalidOperationException: The requested operation requires an element of type 'Array', but the target element has type 'Null'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetArrayIndexElement(Int32 currentIndex, Int32 arrayIndex)
+   at System.Text.Json.JsonElement.get_Item(Int32 index)
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 20:47:57.245 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Handling job 2251799813900594
+2025-09-05 20:47:57.292 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generated application ID: 129f81cd-4fbf-42c7-b095-17932b46bd84 for job 2251799813900594
+2025-09-05 20:48:31.608 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813900746
+2025-09-05 20:48:33.528 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application 129f81cd-4fbf-42c7-b095-17932b46bd84. IsValid: True
+2025-09-05 20:59:48.342 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generate Application ID Job Worker started
+2025-09-05 20:59:48.383 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Application Validation Job Worker started
+2025-09-05 20:59:48.564 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Handling job 2251799813902928
+2025-09-05 20:59:48.621 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generated application ID: 0296c52e-8c04-4c33-8376-6620d75a1ec8 for job 2251799813902928
+2025-09-05 21:00:22.502 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813903143
+2025-09-05 21:00:22.565 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application 0296c52e-8c04-4c33-8376-6620d75a1ec8. IsValid: False
+2025-09-05 21:07:50.549 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generate Application ID Job Worker started
+2025-09-05 21:07:50.587 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Application Validation Job Worker started
+2025-09-05 21:07:50.756 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Handling job 2251799813904647
+2025-09-05 21:07:50.821 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generated application ID: c573cfda-fc63-4060-a931-7d4c5b9fcfef for job 2251799813904647
+2025-09-05 21:08:19.065 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813904884
+2025-09-05 21:08:19.476 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application c573cfda-fc63-4060-a931-7d4c5b9fcfef. IsValid: False
+2025-09-05 21:09:04.523 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813905055
+2025-09-05 21:09:04.586 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application c573cfda-fc63-4060-a931-7d4c5b9fcfef. IsValid: False
+2025-09-05 21:09:49.296 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813905247
+2025-09-05 21:09:49.338 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813905247
+System.InvalidOperationException: The requested operation requires an element of type 'Array', but the target element has type 'Null'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetArrayIndexElement(Int32 currentIndex, Int32 arrayIndex)
+   at System.Text.Json.JsonElement.get_Item(Int32 index)
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 21:09:49.417 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813905247
+2025-09-05 21:09:49.449 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813905247
+System.InvalidOperationException: The requested operation requires an element of type 'Array', but the target element has type 'Null'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetArrayIndexElement(Int32 currentIndex, Int32 arrayIndex)
+   at System.Text.Json.JsonElement.get_Item(Int32 index)
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 21:09:49.575 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813905247
+2025-09-05 21:09:49.593 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Failed to handle validation job 2251799813905247
+System.InvalidOperationException: The requested operation requires an element of type 'Array', but the target element has type 'Null'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.CheckExpectedType(JsonTokenType expected, JsonTokenType actual)
+   at System.Text.Json.JsonDocument.GetArrayIndexElement(Int32 currentIndex, Int32 arrayIndex)
+   at System.Text.Json.JsonElement.get_Item(Int32 index)
+   at CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService.HandleValidationJob(IJobClient client, IJob job) in E:\BankMisr\Camunda\Projects\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\ApplicationValidationJobWorkerService.cs:line 60
+2025-09-05 21:10:42.690 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Handling job 2251799813905460
+2025-09-05 21:10:42.749 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generated application ID: 93fa1286-08bc-48e9-ab65-2135a50fee89 for job 2251799813905460
+2025-09-05 21:11:10.954 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813905580
+2025-09-05 21:11:11.096 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application 93fa1286-08bc-48e9-ab65-2135a50fee89. IsValid: False
+2025-09-05 21:11:27.745 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813905652
+2025-09-05 21:11:27.828 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application 93fa1286-08bc-48e9-ab65-2135a50fee89. IsValid: False
+2025-09-05 21:11:56.867 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813905773
+2025-09-05 21:11:56.928 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application 93fa1286-08bc-48e9-ab65-2135a50fee89. IsValid: False
+2025-09-05 21:12:28.065 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813905896
+2025-09-05 21:12:28.145 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application 93fa1286-08bc-48e9-ab65-2135a50fee89. IsValid: False
+2025-09-05 21:13:06.804 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813906033
+2025-09-05 21:13:06.883 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application 93fa1286-08bc-48e9-ab65-2135a50fee89. IsValid: False
+2025-09-05 21:23:00.289 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generate Application ID Job Worker started
+2025-09-05 21:23:00.352 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Application Validation Job Worker started
+2025-09-05 21:26:19.359 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Handling job 2251799813908625
+2025-09-05 21:26:19.431 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generated application ID: 45d5a0bf-d541-4e55-a56f-46c27dc3ca23 for job 2251799813908625
+2025-09-05 21:26:44.544 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813908721
+2025-09-05 21:26:44.888 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application 45d5a0bf-d541-4e55-a56f-46c27dc3ca23. IsValid: False
+2025-09-05 21:27:16.484 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813908856
+2025-09-05 21:27:16.561 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application 45d5a0bf-d541-4e55-a56f-46c27dc3ca23. IsValid: False
+2025-09-05 21:34:44.340 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Handling job 2251799813910412
+2025-09-05 21:34:44.404 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generated application ID: 0c447e9c-1796-45a1-8d68-c24f21bec813 for job 2251799813910412
+2025-09-05 21:35:16.952 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813910539
+2025-09-05 21:35:17.013 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application 0c447e9c-1796-45a1-8d68-c24f21bec813. IsValid: False
+2025-09-05 21:41:22.469 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Handling job 2251799813911829
+2025-09-05 21:41:22.679 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generated application ID: 5b7efd23-e1d3-42ff-a324-4fc014059c5a for job 2251799813911829
+2025-09-05 21:41:58.634 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813911974
+2025-09-05 21:41:58.742 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application 5b7efd23-e1d3-42ff-a324-4fc014059c5a. IsValid: False
+2025-09-05 22:00:22.295 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Handling job 2251799813915719
+2025-09-05 22:00:22.411 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generated application ID: 9057cca3-ac9d-4a98-9b25-9f06223bc34f for job 2251799813915719
+2025-09-05 22:02:38.403 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generate Application ID Job Worker started
+2025-09-05 22:02:38.462 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Application Validation Job Worker started
+2025-09-05 22:02:38.649 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Handling job 2251799813916063
+2025-09-05 22:02:38.714 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generated application ID: c0a61fcb-3266-4cfc-83dc-737f01acc80a for job 2251799813916063
+2025-09-05 22:03:19.898 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813916347
+2025-09-05 22:03:19.957 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application c0a61fcb-3266-4cfc-83dc-737f01acc80a. IsValid: False
+2025-09-05 22:06:17.760 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Handling job 2251799813917002
+2025-09-05 22:06:17.832 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generated application ID: a44c9da1-87f1-4497-bc2c-65de3031f497 for job 2251799813917002
+2025-09-05 22:06:45.006 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813917125
+2025-09-05 22:06:45.079 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application a44c9da1-87f1-4497-bc2c-65de3031f497. IsValid: False
+2025-09-05 22:20:40.268 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generate Application ID Job Worker started
+2025-09-05 22:20:40.314 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Application Validation Job Worker started
+2025-09-05 22:20:48.057 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Handling job 2251799813920129
+2025-09-05 22:20:48.173 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generated application ID: 7419de91-71a5-4e92-8cde-9c7ced63b14c for job 2251799813920129
+2025-09-05 22:21:23.124 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813920265
+2025-09-05 22:21:23.269 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application 7419de91-71a5-4e92-8cde-9c7ced63b14c. IsValid: False
+2025-09-05 22:22:03.883 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813920417
+2025-09-05 22:22:03.953 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application 7419de91-71a5-4e92-8cde-9c7ced63b14c. IsValid: False
+2025-09-05 22:23:27.873 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generate Application ID Job Worker started
+2025-09-05 22:23:27.910 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Application Validation Job Worker started
+2025-09-05 22:23:32.623 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Handling job 2251799813920726
+2025-09-05 22:23:32.662 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generated application ID: 29ecdf4c-9889-4b42-a7d6-f525c8fe1dae for job 2251799813920726
+2025-09-05 22:24:01.645 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813920851
+2025-09-05 22:24:01.708 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application 29ecdf4c-9889-4b42-a7d6-f525c8fe1dae. IsValid: True
+2025-09-05 22:32:27.687 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generate Application ID Job Worker started
+2025-09-05 22:32:27.769 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Application Validation Job Worker started
+2025-09-05 22:32:28.035 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Handling job 2251799813922455
+2025-09-05 22:32:28.082 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generated application ID: 4a9ed420-1ece-438b-8814-6ebda20022b8 for job 2251799813922455
+2025-09-05 22:33:13.099 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813922684
+2025-09-05 22:33:13.186 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application 4a9ed420-1ece-438b-8814-6ebda20022b8. IsValid: False
+2025-09-05 22:34:44.939 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generate Application ID Job Worker started
+2025-09-05 22:34:44.984 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Application Validation Job Worker started
+2025-09-05 22:34:58.450 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813923059
+2025-09-05 22:34:58.561 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application 4a9ed420-1ece-438b-8814-6ebda20022b8. IsValid: False
+2025-09-05 22:35:34.240 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generate Application ID Job Worker started
+2025-09-05 22:35:34.277 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Application Validation Job Worker started
+2025-09-05 22:35:46.899 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813923251
+2025-09-05 22:35:46.974 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application 4a9ed420-1ece-438b-8814-6ebda20022b8. IsValid: False
+2025-09-05 22:36:26.940 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813923411
+2025-09-05 22:36:27.018 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application 4a9ed420-1ece-438b-8814-6ebda20022b8. IsValid: True
+2025-09-05 22:37:24.972 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Handling job 2251799813923634
+2025-09-05 22:37:25.061 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generated application ID: aafd11c6-460a-4ea5-bdd5-486e3196d040 for job 2251799813923634
+2025-09-05 22:38:00.157 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813923768
+2025-09-05 22:38:00.228 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application aafd11c6-460a-4ea5-bdd5-486e3196d040. IsValid: True
+2025-09-05 22:56:23.019 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Handling job 2251799813927764
+2025-09-05 22:56:23.077 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generated application ID: 0df0c70d-2582-4118-899a-c80678d560d1 for job 2251799813927764
+2025-09-05 22:56:47.100 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813927860
+2025-09-05 22:56:47.184 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application 0df0c70d-2582-4118-899a-c80678d560d1. IsValid: False
+2025-09-05 22:57:20.541 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813927985
+2025-09-05 22:57:20.582 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application 0df0c70d-2582-4118-899a-c80678d560d1. IsValid: True
+2025-09-05 22:58:24.186 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Handling job 2251799813928218
+2025-09-05 22:58:24.265 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generated application ID: 4e744f9d-1a1b-48e3-a7aa-c5c08bd0cbe4 for job 2251799813928218
+2025-09-05 22:59:13.438 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813928419
+2025-09-05 22:59:13.534 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application 4e744f9d-1a1b-48e3-a7aa-c5c08bd0cbe4. IsValid: True
+2025-09-05 23:01:00.886 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Handling job 2251799813928848
+2025-09-05 23:01:00.965 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generated application ID: 49c8dbd9-1be1-4782-8065-71f70b3a90d6 for job 2251799813928848
+2025-09-05 23:01:28.416 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813928942
+2025-09-05 23:01:28.499 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application 49c8dbd9-1be1-4782-8065-71f70b3a90d6. IsValid: True
+2025-09-05 23:03:29.014 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Handling job 2251799813929371
+2025-09-05 23:03:29.106 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generated application ID: 58649623-c20a-434d-8ce3-4f92bb9272c7 for job 2251799813929371
+2025-09-05 23:03:53.995 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813929464
+2025-09-05 23:03:54.067 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application 58649623-c20a-434d-8ce3-4f92bb9272c7. IsValid: False
+2025-09-05 23:08:03.281 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Handling job 2251799813930309
+2025-09-05 23:08:03.510 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.GenerateApplicationIdJobWorkerService Generated application ID: aeb7d37b-c6ca-4acc-a764-2907d9d2f589 for job 2251799813930309
+2025-09-05 23:08:22.787 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813930383
+2025-09-05 23:08:22.847 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application aeb7d37b-c6ca-4acc-a764-2907d9d2f589. IsValid: False
+2025-09-05 23:08:48.911 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Handling validation job 2251799813930495
+2025-09-05 23:08:48.993 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.ApplicationValidationJobWorkerService Validation completed for application aeb7d37b-c6ca-4acc-a764-2907d9d2f589. IsValid: True
