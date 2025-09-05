@@ -106,9 +106,9 @@ namespace CamundaProject.Application
             });
 
             // Add hosted service for job workers
-            services.AddHostedService<ZeebeJobWorkerService>();
+            //services.AddHostedService<ZeebeJobWorkerService>();
 
-            services.AddHostedService<KafkaJobWorkerService>();
+            //services.AddHostedService<KafkaJobWorkerService>();
 
             //services.AddHostedService<KafkaResponseConsumerService>();
 
