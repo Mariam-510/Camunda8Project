@@ -1,0 +1,145 @@
+2025-09-05 18:12:12.690 +03:00 [WRN] Microsoft.EntityFrameworkCore.Model.Validation No store type was specified for the decimal property 'Balance' on entity type 'BankAccount'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-09-05 19:49:36.244 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService CreateBankAccountWorker started and listening for jobs.
+2025-09-05 19:49:39.350 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService --------------------------------------------------------------------------------------------------------
+2025-09-05 19:49:39.358 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Bank account created successfully: ACCT-00F167FD for Client: Mostafa
+2025-09-05 19:49:39.360 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService --------------------------------------------------------------------------------------------------------
+2025-09-05 19:50:24.188 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService CreateBankAccountWorker started and listening for jobs.
+2025-09-05 19:54:57.772 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account.
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.NationalId | LineNumber: 0 | BytePositionInLine: 64.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'Number' as a string.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ExpectedString(JsonTokenType tokenType)
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.Serialization.Converters.StringConverter.Read(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService.HandleJob(IJobClient client, IJob job) in E:\BM\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\CreateBankAccountWorkerService.cs:line 65
+2025-09-05 19:54:58.169 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account.
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.NationalId | LineNumber: 0 | BytePositionInLine: 64.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'Number' as a string.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ExpectedString(JsonTokenType tokenType)
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.Serialization.Converters.StringConverter.Read(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService.HandleJob(IJobClient client, IJob job) in E:\BM\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\CreateBankAccountWorkerService.cs:line 65
+2025-09-05 19:54:58.781 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account.
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.NationalId | LineNumber: 0 | BytePositionInLine: 64.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'Number' as a string.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ExpectedString(JsonTokenType tokenType)
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.Serialization.Converters.StringConverter.Read(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService.HandleJob(IJobClient client, IJob job) in E:\BM\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\CreateBankAccountWorkerService.cs:line 65
+2025-09-05 19:55:54.318 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService CreateBankAccountWorker started and listening for jobs.
+2025-09-05 19:56:36.662 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService CreateBankAccountWorker started and listening for jobs.
+2025-09-05 19:57:12.756 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService --------------------------------------------------------------------------------------------------------
+2025-09-05 19:57:12.758 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Bank account created successfully: ACCT-FD707168 for Client: Omar
+2025-09-05 19:57:12.760 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService --------------------------------------------------------------------------------------------------------
+2025-09-05 19:58:17.949 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService CreateBankAccountWorker started and listening for jobs.
+2025-09-05 20:00:17.938 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account.
+2025-09-05 20:00:20.072 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account.
+2025-09-05 20:00:21.030 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account.
+2025-09-05 20:06:15.137 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService CreateBankAccountWorker started and listening for jobs.
+2025-09-05 20:06:26.631 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account.
+2025-09-05 20:06:26.997 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account.
+2025-09-05 20:06:27.298 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account.
+2025-09-05 20:09:00.641 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService CreateBankAccountWorker started and listening for jobs.
+2025-09-05 20:09:30.506 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account.
+2025-09-05 20:09:31.035 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account.
+2025-09-05 20:09:32.003 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account.
+2025-09-05 20:10:50.618 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService CreateBankAccountWorker started and listening for jobs.
+2025-09-05 20:11:07.672 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account. 3
+2025-09-05 20:11:08.221 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account. 2
+2025-09-05 20:11:08.668 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account. 1
+2025-09-05 20:32:56.823 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService CreateBankAccountWorker started and listening for jobs.
+2025-09-05 20:40:01.742 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService CreateBankAccountWorker started and listening for jobs.
+2025-09-05 20:42:26.878 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService CreateBankAccountWorker started and listening for jobs.
+2025-09-05 20:43:16.835 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService CreateBankAccountWorker started and listening for jobs.
+2025-09-05 20:44:46.392 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService CreateBankAccountWorker started and listening for jobs.
+2025-09-05 20:46:18.020 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account. Retries left: 3
+2025-09-05 20:46:19.119 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account.
+Grpc.Core.RpcException: Status(StatusCode="NotFound", Detail="Command 'COMPLETE' rejected with code 'NOT_FOUND': Expected to complete job with key '2251799814833852', but no such job was found")
+   at Zeebe.Client.Impl.Commands.CompleteJobCommand.Send(Nullable`1 timeout, CancellationToken token)
+   at CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService.HandleJob(IJobClient client, IJob job) in E:\BM\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\CreateBankAccountWorkerService.cs:line 104
+2025-09-05 20:46:19.815 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account. Retries left: 2
+2025-09-05 20:46:19.876 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account.
+Grpc.Core.RpcException: Status(StatusCode="NotFound", Detail="Command 'FAIL' rejected with code 'NOT_FOUND': Expected to fail job with key '2251799814833852', but no such job was found")
+   at Zeebe.Client.Impl.Commands.FailJobCommand.Send(Nullable`1 timeout, CancellationToken token)
+   at CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService.HandleJob(IJobClient client, IJob job) in E:\BM\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\CreateBankAccountWorkerService.cs:line 76
+2025-09-05 20:49:25.199 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService CreateBankAccountWorker started and listening for jobs.
+2025-09-05 20:49:40.611 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService --------------------------------------------------------------------------------------------------------
+2025-09-05 20:49:40.612 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Bank account created successfully: ACCT-8798A4F6 for Client: Omar
+2025-09-05 20:49:40.614 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService --------------------------------------------------------------------------------------------------------
+2025-09-05 20:50:12.507 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService CreateBankAccountWorker started and listening for jobs.
+2025-09-05 20:51:03.973 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account. Retries left: 3
+2025-09-05 20:51:04.407 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account.
+Grpc.Core.RpcException: Status(StatusCode="NotFound", Detail="Command 'COMPLETE' rejected with code 'NOT_FOUND': Expected to complete job with key '2251799814834793', but no such job was found")
+   at Zeebe.Client.Impl.Commands.CompleteJobCommand.Send(Nullable`1 timeout, CancellationToken token)
+   at CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService.HandleJob(IJobClient client, IJob job) in E:\BM\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\CreateBankAccountWorkerService.cs:line 106
+2025-09-05 20:51:04.887 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account. Retries left: 2
+2025-09-05 20:51:04.957 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account.
+Grpc.Core.RpcException: Status(StatusCode="NotFound", Detail="Command 'FAIL' rejected with code 'NOT_FOUND': Expected to fail job with key '2251799814834793', but no such job was found")
+   at Zeebe.Client.Impl.Commands.FailJobCommand.Send(Nullable`1 timeout, CancellationToken token)
+   at CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService.HandleJob(IJobClient client, IJob job) in E:\BM\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\CreateBankAccountWorkerService.cs:line 76
+2025-09-05 20:52:55.523 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService CreateBankAccountWorker started and listening for jobs.
+2025-09-05 20:53:20.738 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService --------------------------------------------------------------------------------------------------------
+2025-09-05 20:53:20.740 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Bank account created successfully: ACCT-4D5D8585 for Client: Omar
+2025-09-05 20:53:20.742 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService --------------------------------------------------------------------------------------------------------
+2025-09-05 20:53:35.233 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService CreateBankAccountWorker started and listening for jobs.
+2025-09-05 20:53:57.727 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account. Retries left: 3
+2025-09-05 20:53:58.666 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService --------------------------------------------------------------------------------------------------------
+2025-09-05 20:53:58.667 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Bank account created successfully: ACCT-BA7DE5A8 for Client: Omar
+2025-09-05 20:53:58.669 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService --------------------------------------------------------------------------------------------------------
+2025-09-05 20:53:58.934 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account. Retries left: 2
+2025-09-05 20:53:59.822 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account.
+Grpc.Core.RpcException: Status(StatusCode="NotFound", Detail="Command 'FAIL' rejected with code 'NOT_FOUND': Expected to fail job with key '2251799814835371', but no such job was found")
+   at Zeebe.Client.Impl.Commands.FailJobCommand.Send(Nullable`1 timeout, CancellationToken token)
+   at CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService.HandleJob(IJobClient client, IJob job) in E:\BM\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\CreateBankAccountWorkerService.cs:line 76
+2025-09-05 20:55:40.421 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService CreateBankAccountWorker started and listening for jobs.
+2025-09-05 20:56:42.953 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService CreateBankAccountWorker started and listening for jobs.
+2025-09-05 20:56:56.157 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account. Retries left: 3
+2025-09-05 20:56:56.410 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService --------------------------------------------------------------------------------------------------------
+2025-09-05 20:56:56.412 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Bank account created successfully: ACCT-0A9B6F21 for Client: Omar
+2025-09-05 20:56:56.413 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService --------------------------------------------------------------------------------------------------------
+2025-09-05 20:56:56.679 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account. Retries left: 2
+2025-09-05 20:56:56.799 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account.
+Grpc.Core.RpcException: Status(StatusCode="NotFound", Detail="Command 'FAIL' rejected with code 'NOT_FOUND': Expected to fail job with key '2251799814835953', but no such job was found")
+   at Zeebe.Client.Impl.Commands.FailJobCommand.Send(Nullable`1 timeout, CancellationToken token)
+   at CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService.HandleJob(IJobClient client, IJob job) in E:\BM\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\CreateBankAccountWorkerService.cs:line 75
+2025-09-05 21:00:20.337 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService CreateBankAccountWorker started and listening for jobs.
+2025-09-05 21:01:04.953 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account. Retries left: 3
+2025-09-05 21:01:36.758 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService --------------------------------------------------------------------------------------------------------
+2025-09-05 21:02:29.840 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService CreateBankAccountWorker started and listening for jobs.
+2025-09-05 21:03:32.718 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account. Retries left: 3
+2025-09-05 21:03:33.726 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account. Retries left: 2
+2025-09-05 21:03:34.038 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Error creating bank account. Retries left: 1
+2025-09-05 21:03:34.041 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.CreateBankAccountWorkerService Core Banking system failed
+2025-09-05 23:39:00.986 +03:00 [WRN] Microsoft.AspNetCore.Server.Kestrel As of ""2025-09-05T20:38:02.0738744+00:00"", the heartbeat has been running for ""00:00:01.0547191"" which is longer than ""00:00:01"". This could be caused by thread pool starvation.
