@@ -1,0 +1,85 @@
+{
+  "components": [
+    {
+      "content": "<h1>Application Form</h1>",
+      "type": "html",
+      "layout": {
+        "row": "Row_0z0xiob",
+        "columns": null
+      },
+      "id": "Field_0e651l1"
+    },
+    {
+      "label": "Client Full Name",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0q0gebh",
+        "columns": null
+      },
+      "id": "Field_0s4pmvk",
+      "key": "FullName"
+    },
+    {
+      "label": "Client National ID",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_00llqqe",
+        "columns": null
+      },
+      "id": "Field_0n45khh",
+      "key": "NationalId"
+    },
+    {
+      "label": "Client Address",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1y524sv",
+        "columns": null
+      },
+      "id": "Field_1q5x87u",
+      "key": "ClientAddress"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Client Date of birth",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0xdals2",
+        "columns": null
+      },
+      "id": "Field_0d158wf",
+      "key": "DateOfBirth"
+    },
+    {
+      "label": "Initial Deposit Amount",
+      "type": "number",
+      "layout": {
+        "row": "Row_0fw3zn7",
+        "columns": null
+      },
+      "id": "Field_0jjsuak",
+      "key": "DepositAmount",
+      "defaultValue": 3000
+    },
+    {
+      "label": "National Id Image",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_0inl0la",
+        "columns": null
+      },
+      "id": "Field_0c4f349",
+      "key": "NationalIdImage",
+      "properties": {}
+    }
+  ],
+  "type": "default",
+  "id": "Application_Form",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.36.1"
+  },
+  "schemaVersion": 18
+}
