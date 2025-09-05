@@ -68,6 +68,7 @@
     <bpmn:userTask id="Activity_0592ayd" name="Request Vaild Information">
       <bpmn:extensionElements>
         <zeebe:userTask />
+        <zeebe:formDefinition formId="Request_Vaild_Information_Form" />
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_02bg2uq</bpmn:incoming>
       <bpmn:outgoing>Flow_0oiq5x3</bpmn:outgoing>
@@ -75,6 +76,7 @@
     <bpmn:userTask id="Activity_12ao7g6" name="Initiate KYC Check">
       <bpmn:extensionElements>
         <zeebe:userTask />
+        <zeebe:formDefinition formId="Initiate_KYC_Check_Form" />
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_1tpvrvz</bpmn:incoming>
       <bpmn:outgoing>Flow_0jsjbwz</bpmn:outgoing>
@@ -147,10 +149,10 @@
     <bpmn:sequenceFlow id="Flow_032ow5r" sourceRef="Activity_0hrjjpk" targetRef="Event_0ex9ggl" />
     <bpmn:sequenceFlow id="Flow_0jsjbwz" sourceRef="Activity_12ao7g6" targetRef="Gateway_0h1u25b" />
     <bpmn:sequenceFlow id="Flow_0herp7z" name="Yes" sourceRef="Gateway_0h1u25b" targetRef="Activity_10tnm9r">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=IsApproved</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=IsApproved = "true"</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_00p1ghm" name="No" sourceRef="Gateway_0h1u25b" targetRef="Activity_0vbwcnf">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=not(IsApproved)
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=IsApproved = "false"
 </bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_0keqd9d" name="Waits 2 minutes" sourceRef="Event_0fdko2d" targetRef="Activity_10tnm9r" />
@@ -184,16 +186,16 @@
         <dc:Bounds x="160" y="80" width="1280" height="860" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_0wvwrnr_di" bpmnElement="Lane_0wvwrnr" isHorizontal="true">
-        <dc:Bounds x="190" y="80" width="1250" height="300" />
+      <bpmndi:BPMNShape id="Lane_0zs99bf_di" bpmnElement="Lane_0zs99bf" isHorizontal="true">
+        <dc:Bounds x="190" y="620" width="1250" height="320" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_1ia0inb_di" bpmnElement="Lane_1ia0inb" isHorizontal="true">
         <dc:Bounds x="190" y="380" width="1250" height="240" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_0zs99bf_di" bpmnElement="Lane_0zs99bf" isHorizontal="true">
-        <dc:Bounds x="190" y="620" width="1250" height="320" />
+      <bpmndi:BPMNShape id="Lane_0wvwrnr_di" bpmnElement="Lane_0wvwrnr" isHorizontal="true">
+        <dc:Bounds x="190" y="80" width="1250" height="300" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="StartEvent_1_di" bpmnElement="StartEvent_1">
