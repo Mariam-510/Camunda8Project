@@ -1,4 +1,5 @@
 ﻿using CamundaProject.Application.Mapping;
+using CamundaProject.Application.Services.AccountOpening;
 using CamundaProject.Application.Services.Camunda;
 using CamundaProject.Application.Services.Email;
 using CamundaProject.Application.Services.Kafka;
@@ -111,6 +112,16 @@ namespace CamundaProject.Application
             //services.AddHostedService<KafkaJobWorkerService>();
 
             //services.AddHostedService<KafkaResponseConsumerService>();
+
+            // In your DependencyInjection.cs file
+            //services.AddSingleton<SendEmailJobWorker>();
+            //services.AddSingleton<EmailSentSuccessfullyJobWorker>();
+            //services.AddSingleton<EmailDeliveryFailedJobWorker>();
+
+            services.AddHostedService<SendEmailJobWorker>();
+            services.AddHostedService<EmailSentSuccessfullyJobWorker>();
+            services.AddHostedService<EmailDeliveryFailedJobWorker>();
+            services.AddHostedService<SendEmailResponseConsumerService>();
 
             return services;
         }

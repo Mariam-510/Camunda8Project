@@ -1,0 +1,16 @@
+2025-09-06 00:44:43.852 +03:00 [ERR] CamundaProject.Application.Services.Email.EmailService Error occurred while sending email to shahd@example.com
+MailKit.Security.AuthenticationException: 535: Authentication failed
+ ---> MailKit.Net.Smtp.SmtpCommandException: Authentication failed
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at CamundaProject.Application.Services.Email.EmailService.SendEmailAsync(EmailModel request) in E:\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Email\EmailService.cs:line 41
+2025-09-06 00:44:44.535 +03:00 [WRN] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Failed to send email for request ID: APP-6666
+2025-09-06 00:44:44.733 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.EmailDeliveryFailedJobWorker Request APP-6666 failed with error: Unknown error occurred
+2025-09-06 11:20:36.591 +03:00 [ERR] CamundaProject.Application.Services.Email.EmailService Error occurred while sending email to shahd@example.com
+MailKit.Security.AuthenticationException: 535: Authentication failed
+ ---> MailKit.Net.Smtp.SmtpCommandException: Authentication failed
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at CamundaProject.Application.Services.Email.EmailService.SendEmailAsync(EmailModel request) in E:\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Email\EmailService.cs:line 41
+2025-09-06 11:20:37.048 +03:00 [WRN] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Failed to send email for request ID: APP-5555
+2025-09-06 11:20:37.516 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.EmailDeliveryFailedJobWorker Request APP-5555 failed with error: Unknown error occurred

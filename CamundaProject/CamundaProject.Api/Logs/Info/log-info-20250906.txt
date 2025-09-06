@@ -1,0 +1,91 @@
+2025-09-06 00:05:50.575 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-06 00:05:50.820 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-06 00:05:50.822 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-06 00:05:50.823 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-06 00:19:45.440 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-06 00:19:45.584 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-06 00:19:45.585 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-06 00:19:45.586 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-06 00:35:13.316 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Processing Kafka publish job 2251799813793589
+2025-09-06 00:35:13.373 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Message published to Kafka. Topic: account-opening-topic
+2025-09-06 00:35:13.383 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Received message from Kafka. Key: APP-6666, Topic: account-opening-topic, Partition: [0], Offset: 12
+2025-09-06 00:35:13.960 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Preparing email to shahd@example.com
+2025-09-06 00:35:14.019 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Connecting to SMTP server smtp.ethereal.email:587
+2025-09-06 00:35:15.523 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Sending email to shahd@example.com
+2025-09-06 00:35:16.157 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Email to shahd@example.com sent successfully
+2025-09-06 00:35:18.935 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Email sent for request ID: APP-6666
+2025-09-06 00:35:19.392 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Processing success handler job 2251799813793628
+2025-09-06 00:35:19.393 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Application APP-6666 completed successfully. Response: {"IsDelivered":true,"sentAt":"2025-09-05T21:35:16.1606027Z"}
+2025-09-06 00:35:19.644 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Success handler job 2251799813793628 completed
+2025-09-06 00:43:59.290 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-06 00:43:59.365 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-06 00:43:59.367 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-06 00:43:59.368 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-06 00:44:38.912 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Processing Kafka publish job 2251799813795574
+2025-09-06 00:44:38.969 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Message published to Kafka. Topic: account-opening-topic
+2025-09-06 00:44:42.347 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Received message from Kafka. Key: APP-6666, Topic: account-opening-topic, Partition: [0], Offset: 13
+2025-09-06 00:44:42.375 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Preparing email to shahd@example.com
+2025-09-06 00:44:42.434 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Connecting to SMTP server smtp.ethereal.email:587
+2025-09-06 00:44:43.852 +03:00 [ERR] CamundaProject.Application.Services.Email.EmailService Error occurred while sending email to shahd@example.com
+MailKit.Security.AuthenticationException: 535: Authentication failed
+ ---> MailKit.Net.Smtp.SmtpCommandException: Authentication failed
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at CamundaProject.Application.Services.Email.EmailService.SendEmailAsync(EmailModel request) in E:\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Email\EmailService.cs:line 41
+2025-09-06 00:44:44.535 +03:00 [WRN] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Failed to send email for request ID: APP-6666
+2025-09-06 00:44:44.731 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailDeliveryFailedJobWorker Processing error handler job 2251799813795605
+2025-09-06 00:44:44.733 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.EmailDeliveryFailedJobWorker Request APP-6666 failed with error: Unknown error occurred
+2025-09-06 00:44:45.160 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailDeliveryFailedJobWorker Error handler job 2251799813795605 completed
+2025-09-06 11:18:04.908 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Starting Send Email job worker...
+2025-09-06 11:18:04.974 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Send Email job worker started successfully
+2025-09-06 11:18:04.992 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Starting Email Success job worker...
+2025-09-06 11:18:04.998 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Email Success job worker started successfully
+2025-09-06 11:18:05.001 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailDeliveryFailedJobWorker Starting Email Failed job worker...
+2025-09-06 11:18:05.002 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailDeliveryFailedJobWorker Email Failed job worker started successfully
+2025-09-06 11:18:05.004 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-06 11:18:05.005 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-06 11:20:34.601 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Processing Kafka publish job 2251799813801787
+2025-09-06 11:20:34.664 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Message published to Kafka. Topic: account-opening-topic
+2025-09-06 11:20:34.668 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Received message from Kafka. Key: APP-5555, Topic: account-opening-topic, Partition: [0], Offset: 14
+2025-09-06 11:20:34.713 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Preparing email to shahd@example.com
+2025-09-06 11:20:34.768 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Connecting to SMTP server smtp.ethereal.email:587
+2025-09-06 11:20:36.591 +03:00 [ERR] CamundaProject.Application.Services.Email.EmailService Error occurred while sending email to shahd@example.com
+MailKit.Security.AuthenticationException: 535: Authentication failed
+ ---> MailKit.Net.Smtp.SmtpCommandException: Authentication failed
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at CamundaProject.Application.Services.Email.EmailService.SendEmailAsync(EmailModel request) in E:\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Email\EmailService.cs:line 41
+2025-09-06 11:20:37.048 +03:00 [WRN] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Failed to send email for request ID: APP-5555
+2025-09-06 11:20:37.514 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailDeliveryFailedJobWorker Processing error handler job 2251799813801812
+2025-09-06 11:20:37.516 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.EmailDeliveryFailedJobWorker Request APP-5555 failed with error: Unknown error occurred
+2025-09-06 11:20:38.293 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailDeliveryFailedJobWorker Error handler job 2251799813801812 completed
+2025-09-06 11:21:37.070 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Starting Send Email job worker...
+2025-09-06 11:21:37.115 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Send Email job worker started successfully
+2025-09-06 11:21:37.116 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Starting Email Success job worker...
+2025-09-06 11:21:37.117 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Email Success job worker started successfully
+2025-09-06 11:21:37.119 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailDeliveryFailedJobWorker Starting Email Failed job worker...
+2025-09-06 11:21:37.119 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailDeliveryFailedJobWorker Email Failed job worker started successfully
+2025-09-06 11:21:37.120 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-06 11:21:37.121 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-06 11:22:55.477 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Processing Kafka publish job 2251799813802311
+2025-09-06 11:22:55.525 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Message published to Kafka. Topic: account-opening-topic
+2025-09-06 11:22:55.525 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Received message from Kafka. Key: APP-454545, Topic: account-opening-topic, Partition: [0], Offset: 15
+2025-09-06 11:22:55.548 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Preparing email to shahd@example.com
+2025-09-06 11:22:55.592 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Connecting to SMTP server smtp.ethereal.email:587
+2025-09-06 11:22:56.755 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Sending email to shahd@example.com
+2025-09-06 11:22:57.341 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Email to shahd@example.com sent successfully
+2025-09-06 11:22:57.724 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Email sent for request ID: APP-454545
+2025-09-06 11:22:58.276 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Processing success handler job 2251799813802333
+2025-09-06 11:22:58.279 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Application APP-454545 completed successfully. Response: {"IsDelivered":true,"sentAt":"2025-09-06T08:22:57.3439354Z"}
+2025-09-06 11:22:58.695 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Success handler job 2251799813802333 completed
+2025-09-06 11:24:18.307 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Processing Kafka publish job 2251799813802627
+2025-09-06 11:24:18.397 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Message published to Kafka. Topic: account-opening-topic
+2025-09-06 11:24:18.397 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Received message from Kafka. Key: APP-454545, Topic: account-opening-topic, Partition: [0], Offset: 16
+2025-09-06 11:24:18.400 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Preparing email to shahd@example.com
+2025-09-06 11:24:18.401 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Connecting to SMTP server smtp.ethereal.email:587
+2025-09-06 11:24:19.334 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Sending email to shahd@example.com
+2025-09-06 11:24:19.886 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Email to shahd@example.com sent successfully
+2025-09-06 11:24:20.010 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Email sent for request ID: APP-454545
+2025-09-06 11:24:20.281 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Processing success handler job 2251799813802648
+2025-09-06 11:24:20.286 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Application APP-454545 completed successfully. Response: {"IsDelivered":true,"sentAt":"2025-09-06T08:24:19.892197Z"}
+2025-09-06 11:24:20.622 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Success handler job 2251799813802648 completed

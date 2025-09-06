@@ -111,7 +111,7 @@ namespace CamundaProject.Application.Services.Kafka
             {
                 var emailMessage = JsonSerializer.Deserialize<EmailMessage>(message.Value);
 
-                if (emailMessage == null || string.IsNullOrEmpty(emailMessage.RequestId))
+                if (emailMessage == null || string.IsNullOrEmpty(emailMessage.ApplicationId))
                 {
                     _logger.LogWarning("Invalid email message format");
                     return;

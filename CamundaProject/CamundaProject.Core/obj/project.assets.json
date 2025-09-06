@@ -5279,23 +5279,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\maria\\.nuget\\packages\\": {},
-    "D:\\Installed Programs\\Microsoft\\Shared\\NuGetPackages": {}
+    "C:\\Users\\HP.SXTO9\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj",
+      "projectUniqueName": "E:\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj",
       "projectName": "CamundaProject.Core",
-      "projectPath": "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj",
-      "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
-      "outputPath": "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\obj\\",
+      "projectPath": "E:\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj",
+      "packagesPath": "C:\\Users\\HP.SXTO9\\.nuget\\packages\\",
+      "outputPath": "E:\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\Installed Programs\\Microsoft\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HP.SXTO9\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5304,6 +5304,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

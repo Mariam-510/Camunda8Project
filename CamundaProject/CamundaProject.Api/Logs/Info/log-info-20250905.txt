@@ -1,0 +1,342 @@
+2025-09-05 20:42:47.199 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-05 20:42:47.401 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-05 20:42:47.402 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-05 20:42:47.403 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-05 20:42:47.748 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Processing Kafka publish job 2251799813743259
+2025-09-05 20:42:47.769 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Error processing Kafka job 2251799813743259
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Text.Json.JsonElement.GetProperty(String propertyName)
+   at CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker.HandleKafkaJobAsync(IJobClient client, IJob job, IProducer`2 kafkaProducer, String topic) in E:\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\SendEmailJobWorker.cs:line 49
+2025-09-05 20:42:47.981 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Processing Kafka publish job 2251799813743259
+2025-09-05 20:42:47.989 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Error processing Kafka job 2251799813743259
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Text.Json.JsonElement.GetProperty(String propertyName)
+   at CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker.HandleKafkaJobAsync(IJobClient client, IJob job, IProducer`2 kafkaProducer, String topic) in E:\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\SendEmailJobWorker.cs:line 49
+2025-09-05 20:42:48.501 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Processing Kafka publish job 2251799813743259
+2025-09-05 20:42:48.503 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Error processing Kafka job 2251799813743259
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Text.Json.JsonElement.GetProperty(String propertyName)
+   at CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker.HandleKafkaJobAsync(IJobClient client, IJob job, IProducer`2 kafkaProducer, String topic) in E:\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\SendEmailJobWorker.cs:line 49
+2025-09-05 20:42:49.211 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: localhost:9092/bootstrap: Connect to ipv4#127.0.0.1:9092 failed: Unknown error (after 2041ms in state CONNECT)
+2025-09-05 20:42:49.213 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: localhost:9092/bootstrap: Connect to ipv4#127.0.0.1:9092 failed: Unknown error (after 2032ms in state CONNECT)
+2025-09-05 20:42:49.213 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: 1/1 brokers are down
+2025-09-05 20:42:49.214 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: 1/1 brokers are down
+2025-09-05 20:42:51.284 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: localhost:9092/bootstrap: Connect to ipv6#[::1]:9092 failed: Unknown error (after 2030ms in state CONNECT)
+2025-09-05 20:42:51.289 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: 1/1 brokers are down
+2025-09-05 20:42:52.240 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: localhost:9092/bootstrap: Connect to ipv6#[::1]:9092 failed: Unknown error (after 2033ms in state CONNECT)
+2025-09-05 20:42:52.249 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: 1/1 brokers are down
+2025-09-05 20:42:53.352 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: localhost:9092/bootstrap: Connect to ipv6#[::1]:9092 failed: Unknown error (after 2037ms in state CONNECT, 1 identical error(s) suppressed)
+2025-09-05 20:42:53.355 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: 1/1 brokers are down
+2025-09-05 20:42:55.231 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: localhost:9092/bootstrap: Connect to ipv6#[::1]:9092 failed: Unknown error (after 2019ms in state CONNECT, 1 identical error(s) suppressed)
+2025-09-05 20:42:55.235 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: 1/1 brokers are down
+2025-09-05 20:42:55.403 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: localhost:9092/bootstrap: Connect to ipv4#127.0.0.1:9092 failed: Unknown error (after 2019ms in state CONNECT)
+2025-09-05 20:42:55.407 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: 1/1 brokers are down
+2025-09-05 20:43:00.420 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-05 20:43:00.485 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-05 20:43:00.486 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-05 20:43:00.487 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-05 20:43:02.450 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: localhost:9092/bootstrap: Connect to ipv4#127.0.0.1:9092 failed: Unknown error (after 2073ms in state CONNECT)
+2025-09-05 20:43:02.451 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: localhost:9092/bootstrap: Connect to ipv4#127.0.0.1:9092 failed: Unknown error (after 2058ms in state CONNECT)
+2025-09-05 20:43:02.469 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: 1/1 brokers are down
+2025-09-05 20:43:02.469 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: 1/1 brokers are down
+2025-09-05 20:43:04.509 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: localhost:9092/bootstrap: Connect to ipv6#[::1]:9092 failed: Unknown error (after 2044ms in state CONNECT)
+2025-09-05 20:43:04.512 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: 1/1 brokers are down
+2025-09-05 20:43:05.445 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: localhost:9092/bootstrap: Connect to ipv6#[::1]:9092 failed: Unknown error (after 2028ms in state CONNECT)
+2025-09-05 20:43:05.446 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: 1/1 brokers are down
+2025-09-05 20:43:06.552 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: localhost:9092/bootstrap: Connect to ipv6#[::1]:9092 failed: Unknown error (after 2027ms in state CONNECT, 1 identical error(s) suppressed)
+2025-09-05 20:43:06.554 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: 1/1 brokers are down
+2025-09-05 20:43:08.510 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: localhost:9092/bootstrap: Connect to ipv6#[::1]:9092 failed: Unknown error (after 2035ms in state CONNECT, 1 identical error(s) suppressed)
+2025-09-05 20:43:08.512 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: 1/1 brokers are down
+2025-09-05 20:43:08.629 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: localhost:9092/bootstrap: Connect to ipv4#127.0.0.1:9092 failed: Unknown error (after 2033ms in state CONNECT)
+2025-09-05 20:43:08.631 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: 1/1 brokers are down
+2025-09-05 20:43:10.683 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: 1/1 brokers are down
+2025-09-05 20:43:11.501 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: localhost:9092/bootstrap: Connect to ipv4#127.0.0.1:9092 failed: Unknown error (after 2015ms in state CONNECT)
+2025-09-05 20:43:11.504 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: 1/1 brokers are down
+2025-09-05 20:43:12.760 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: localhost:9092/bootstrap: Connect to ipv6#[::1]:9092 failed: Unknown error (after 2014ms in state CONNECT)
+2025-09-05 20:43:12.763 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: 1/1 brokers are down
+2025-09-05 20:43:14.524 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: 1/1 brokers are down
+2025-09-05 20:43:14.875 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: localhost:9092/bootstrap: Connect to ipv4#127.0.0.1:9092 failed: Unknown error (after 2026ms in state CONNECT)
+2025-09-05 20:43:14.879 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: 1/1 brokers are down
+2025-09-05 20:43:16.949 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: 1/1 brokers are down
+2025-09-05 20:43:17.557 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: localhost:9092/bootstrap: Connect to ipv6#[::1]:9092 failed: Unknown error (after 2032ms in state CONNECT)
+2025-09-05 20:43:17.560 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: 1/1 brokers are down
+2025-09-05 20:43:19.039 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: localhost:9092/bootstrap: Connect to ipv6#[::1]:9092 failed: Unknown error (after 2058ms in state CONNECT)
+2025-09-05 20:43:19.042 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: 1/1 brokers are down
+2025-09-05 20:43:20.592 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: localhost:9092/bootstrap: Connect to ipv4#127.0.0.1:9092 failed: Unknown error (after 2033ms in state CONNECT)
+2025-09-05 20:43:20.602 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: 1/1 brokers are down
+2025-09-05 20:43:21.146 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: localhost:9092/bootstrap: Connect to ipv4#127.0.0.1:9092 failed: Unknown error (after 2043ms in state CONNECT)
+2025-09-05 20:43:21.155 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: 1/1 brokers are down
+2025-09-05 20:43:23.255 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: 1/1 brokers are down
+2025-09-05 20:43:23.627 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: 1/1 brokers are down
+2025-09-05 20:43:25.372 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: localhost:9092/bootstrap: Connect to ipv6#[::1]:9092 failed: Unknown error (after 2053ms in state CONNECT)
+2025-09-05 20:43:25.383 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: 1/1 brokers are down
+2025-09-05 20:46:32.011 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-05 20:46:32.060 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-05 20:46:32.061 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-05 20:46:32.062 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-05 20:46:34.016 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: localhost:9092/bootstrap: Connect to ipv4#127.0.0.1:9092 failed: Unknown error (after 2020ms in state CONNECT)
+2025-09-05 20:46:34.016 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: localhost:9092/bootstrap: Connect to ipv4#127.0.0.1:9092 failed: Unknown error (after 2029ms in state CONNECT)
+2025-09-05 20:46:34.027 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: 1/1 brokers are down
+2025-09-05 20:46:34.027 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: 1/1 brokers are down
+2025-09-05 20:46:36.126 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: localhost:9092/bootstrap: Connect to ipv6#[::1]:9092 failed: Unknown error (after 2050ms in state CONNECT)
+2025-09-05 20:46:36.132 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: 1/1 brokers are down
+2025-09-05 20:46:37.055 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: localhost:9092/bootstrap: Connect to ipv6#[::1]:9092 failed: Unknown error (after 2045ms in state CONNECT)
+2025-09-05 20:46:37.062 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: 1/1 brokers are down
+2025-09-05 20:46:38.236 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: localhost:9092/bootstrap: Connect to ipv6#[::1]:9092 failed: Unknown error (after 2048ms in state CONNECT, 1 identical error(s) suppressed)
+2025-09-05 20:46:38.242 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: 1/1 brokers are down
+2025-09-05 20:55:39.403 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-05 20:55:39.561 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-05 20:55:39.563 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-05 20:55:39.564 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-05 20:55:41.423 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: localhost:9092/bootstrap: Connect to ipv4#127.0.0.1:9092 failed: Unknown error (after 2035ms in state CONNECT)
+2025-09-05 20:55:41.423 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: localhost:9092/bootstrap: Connect to ipv4#127.0.0.1:9092 failed: Unknown error (after 2028ms in state CONNECT)
+2025-09-05 20:55:41.491 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: 1/1 brokers are down
+2025-09-05 20:55:41.491 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: 1/1 brokers are down
+2025-09-05 20:55:43.511 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: localhost:9092/bootstrap: Connect to ipv6#[::1]:9092 failed: Unknown error (after 2047ms in state CONNECT)
+2025-09-05 20:55:43.518 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: 1/1 brokers are down
+2025-09-05 20:55:44.443 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: localhost:9092/bootstrap: Connect to ipv6#[::1]:9092 failed: Unknown error (after 2032ms in state CONNECT)
+2025-09-05 20:55:44.445 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: 1/1 brokers are down
+2025-09-05 20:55:45.622 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: localhost:9092/bootstrap: Connect to ipv6#[::1]:9092 failed: Unknown error (after 2048ms in state CONNECT, 1 identical error(s) suppressed)
+2025-09-05 20:55:45.628 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: 1/1 brokers are down
+2025-09-05 20:55:47.476 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: localhost:9092/bootstrap: Connect to ipv6#[::1]:9092 failed: Unknown error (after 2040ms in state CONNECT, 1 identical error(s) suppressed)
+2025-09-05 20:55:47.488 +03:00 [ERR] Confluent.Kafka.IProducer Kafka producer error: 1/1 brokers are down
+2025-09-05 20:55:47.724 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: localhost:9092/bootstrap: Connect to ipv4#127.0.0.1:9092 failed: Unknown error (after 2040ms in state CONNECT)
+2025-09-05 20:55:47.735 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: 1/1 brokers are down
+2025-09-05 20:55:49.838 +03:00 [ERR] Confluent.Kafka.IConsumer Kafka consumer error: 1/1 brokers are down
+2025-09-05 20:58:26.903 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-05 20:58:26.971 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-05 20:58:26.973 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-05 20:58:26.974 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-05 20:58:36.023 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Error consuming Kafka message: Subscribed topic not available: account-opening-topic: Broker: Unknown topic or partition
+Confluent.Kafka.ConsumeException: Subscribed topic not available: account-opening-topic: Broker: Unknown topic or partition
+   at Confluent.Kafka.Consumer`2.Consume(Int32 millisecondsTimeout)
+   at Confluent.Kafka.Consumer`2.Consume(CancellationToken cancellationToken)
+   at CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService.ConsumeMessages() in E:\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\SendEmailResponseConsumerService.cs:line 79
+2025-09-05 21:01:16.203 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-05 21:01:16.250 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-05 21:01:16.251 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-05 21:01:16.252 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-05 21:15:06.801 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Processing Kafka publish job 2251799813754679
+2025-09-05 21:15:06.813 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Error processing Kafka job 2251799813754679
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Text.Json.JsonElement.GetProperty(String propertyName)
+   at CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker.HandleKafkaJobAsync(IJobClient client, IJob job, IProducer`2 kafkaProducer, String topic) in E:\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\SendEmailJobWorker.cs:line 49
+2025-09-05 21:15:09.109 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Processing Kafka publish job 2251799813754679
+2025-09-05 21:15:09.114 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Error processing Kafka job 2251799813754679
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Text.Json.JsonElement.GetProperty(String propertyName)
+   at CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker.HandleKafkaJobAsync(IJobClient client, IJob job, IProducer`2 kafkaProducer, String topic) in E:\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\SendEmailJobWorker.cs:line 49
+2025-09-05 21:15:10.936 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Processing Kafka publish job 2251799813754679
+2025-09-05 21:15:10.937 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Error processing Kafka job 2251799813754679
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Text.Json.JsonElement.GetProperty(String propertyName)
+   at CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker.HandleKafkaJobAsync(IJobClient client, IJob job, IProducer`2 kafkaProducer, String topic) in E:\Camunda8Project\CamundaProject\CamundaProject.Application\Services\AccountOpening\SendEmailJobWorker.cs:line 49
+2025-09-05 21:15:49.198 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-05 21:15:49.246 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-05 21:15:49.247 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-05 21:15:49.248 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-05 21:19:05.615 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-05 21:19:05.665 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-05 21:19:05.666 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-05 21:19:05.667 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-05 21:26:51.741 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-05 21:26:51.786 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-05 21:26:51.788 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-05 21:26:51.789 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-05 21:26:51.963 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Processing Kafka publish job 2251799813756889
+2025-09-05 21:26:52.017 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Message published to Kafka. Topic: account-opening-topic
+2025-09-05 21:26:52.024 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Received message from Kafka. Key: 303030111, Topic: account-opening-topic, Partition: [0], Offset: 0
+2025-09-05 21:26:52.043 +03:00 [WRN] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Invalid email message format
+2025-09-05 21:34:24.242 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-05 21:34:24.286 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-05 21:34:24.288 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-05 21:34:24.289 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-05 21:43:56.251 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-05 21:43:56.297 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-05 21:43:56.298 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-05 21:43:56.299 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-05 22:24:55.910 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-05 22:24:56.032 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-05 22:24:56.034 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-05 22:24:56.036 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-05 22:26:39.292 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-05 22:26:39.394 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-05 22:26:51.412 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-05 22:27:00.252 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-05 22:32:39.751 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-05 22:32:39.796 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-05 22:32:39.798 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-05 22:32:39.798 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-05 22:33:10.327 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-05 22:33:10.628 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-05 22:33:17.617 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-05 22:33:29.961 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-05 22:36:58.853 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-05 22:36:58.899 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-05 22:36:58.900 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-05 22:36:58.901 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-05 22:37:54.199 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-05 22:38:19.027 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-05 22:38:25.851 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-05 22:39:16.229 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-05 22:41:02.306 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-05 22:41:02.389 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-05 22:41:02.391 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-05 22:41:02.392 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-05 22:43:11.443 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-05 22:43:11.536 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-05 22:43:11.545 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-05 22:43:11.552 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-05 22:47:03.745 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-05 22:47:03.798 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-05 22:47:26.008 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-05 22:47:26.060 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-05 22:47:26.061 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-05 22:47:26.062 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-05 22:50:55.897 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-05 22:50:55.941 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-05 22:50:55.943 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-05 22:50:55.943 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-05 22:52:05.325 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Processing Kafka publish job 2251799813773880
+2025-09-05 22:52:05.405 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Message published to Kafka. Topic: account-opening-topic
+2025-09-05 22:52:05.409 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Received message from Kafka. Key: 303030111, Topic: account-opening-topic, Partition: [0], Offset: 1
+2025-09-05 22:52:05.786 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Preparing email to woodrow.macgyver@ethereal.email
+2025-09-05 22:52:05.838 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Connecting to SMTP server smtp.ethereal.email:587
+2025-09-05 22:52:07.209 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Sending email to woodrow.macgyver@ethereal.email
+2025-09-05 22:52:07.805 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Email to woodrow.macgyver@ethereal.email sent successfully
+2025-09-05 22:52:07.972 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Email sent for request ID: 303030111
+2025-09-05 23:01:12.851 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-05 23:01:12.896 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-05 23:01:12.899 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-05 23:01:12.902 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-05 23:02:45.563 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Processing Kafka publish job 2251799813776045
+2025-09-05 23:02:45.635 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Message published to Kafka. Topic: account-opening-topic
+2025-09-05 23:02:45.636 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Received message from Kafka. Key: 777777, Topic: account-opening-topic, Partition: [0], Offset: 2
+2025-09-05 23:02:45.658 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Preparing email to woodrow.macgyver@ethereal.email
+2025-09-05 23:02:45.733 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Connecting to SMTP server smtp.ethereal.email:587
+2025-09-05 23:02:46.985 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Sending email to woodrow.macgyver@ethereal.email
+2025-09-05 23:02:47.620 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Email to woodrow.macgyver@ethereal.email sent successfully
+2025-09-05 23:02:48.784 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Email sent for request ID: 777777
+2025-09-05 23:06:04.565 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Processing Kafka publish job 2251799813776758
+2025-09-05 23:06:04.584 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Message published to Kafka. Topic: account-opening-topic
+2025-09-05 23:06:04.584 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Received message from Kafka. Key: 777, Topic: account-opening-topic, Partition: [0], Offset: 3
+2025-09-05 23:06:04.587 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Preparing email to woodrow.macgyver@ethereal.email
+2025-09-05 23:06:04.588 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Connecting to SMTP server smtp.ethereal.email:587
+2025-09-05 23:06:05.493 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Sending email to woodrow.macgyver@ethereal.email
+2025-09-05 23:06:06.022 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Email to woodrow.macgyver@ethereal.email sent successfully
+2025-09-05 23:06:06.740 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Email sent for request ID: 777
+2025-09-05 23:06:07.343 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Processing success handler job 2251799813776783
+2025-09-05 23:06:07.345 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Application 777 completed successfully. Response: {"IsDelivered":true,"sentAt":"2025-09-05T20:06:06.0258609Z"}
+2025-09-05 23:06:08.183 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Success handler job 2251799813776783 completed
+2025-09-05 23:07:25.108 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Processing Kafka publish job 2251799813777072
+2025-09-05 23:07:25.127 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Message published to Kafka. Topic: account-opening-topic
+2025-09-05 23:07:25.129 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Received message from Kafka. Key: 777, Topic: account-opening-topic, Partition: [0], Offset: 4
+2025-09-05 23:07:25.139 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Preparing email to woodrows.macgyver@ethereal.email
+2025-09-05 23:07:25.145 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Connecting to SMTP server smtp.ethereal.email:587
+2025-09-05 23:07:26.204 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Sending email to woodrows.macgyver@ethereal.email
+2025-09-05 23:07:26.748 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Email to woodrows.macgyver@ethereal.email sent successfully
+2025-09-05 23:07:27.231 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Email sent for request ID: 777
+2025-09-05 23:07:27.894 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Processing success handler job 2251799813777092
+2025-09-05 23:07:27.895 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Application 777 completed successfully. Response: {"IsDelivered":true,"sentAt":"2025-09-05T20:07:26.749904Z"}
+2025-09-05 23:07:28.881 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Success handler job 2251799813777092 completed
+2025-09-05 23:09:34.405 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Processing Kafka publish job 2251799813777536
+2025-09-05 23:09:34.416 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Message published to Kafka. Topic: account-opening-topic
+2025-09-05 23:09:34.417 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Received message from Kafka. Key: 777, Topic: account-opening-topic, Partition: [0], Offset: 5
+2025-09-05 23:09:34.424 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Preparing email to sdddddr@h.email
+2025-09-05 23:09:34.427 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Connecting to SMTP server smtp.ethereal.email:587
+2025-09-05 23:09:35.368 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Sending email to sdddddr@h.email
+2025-09-05 23:09:35.981 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Email to sdddddr@h.email sent successfully
+2025-09-05 23:09:36.182 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Email sent for request ID: 777
+2025-09-05 23:09:36.327 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Processing success handler job 2251799813777558
+2025-09-05 23:09:36.329 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Application 777 completed successfully. Response: {"IsDelivered":true,"sentAt":"2025-09-05T20:09:35.9827784Z"}
+2025-09-05 23:09:36.777 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Success handler job 2251799813777558 completed
+2025-09-05 23:11:08.295 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-05 23:11:08.339 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-05 23:11:08.340 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-05 23:11:08.341 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-05 23:11:45.132 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Processing Kafka publish job 2251799813778018
+2025-09-05 23:11:45.184 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Message published to Kafka. Topic: account-opening-topic
+2025-09-05 23:11:51.147 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Received message from Kafka. Key: 777, Topic: account-opening-topic, Partition: [0], Offset: 6
+2025-09-05 23:11:51.169 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Preparing email to shahd@gmail.com
+2025-09-05 23:11:51.270 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Connecting to SMTP server smtp.ethereal.email:587
+2025-09-05 23:11:52.541 +03:00 [ERR] CamundaProject.Application.Services.Email.EmailService Error occurred while sending email to shahd@gmail.com
+MailKit.Security.AuthenticationException: 535: Authentication failed
+ ---> MailKit.Net.Smtp.SmtpCommandException: Authentication failed
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at CamundaProject.Application.Services.Email.EmailService.SendEmailAsync(EmailModel request) in E:\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Email\EmailService.cs:line 41
+2025-09-05 23:11:52.901 +03:00 [WRN] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Failed to send email for request ID: 777
+2025-09-05 23:11:53.107 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailDeliveryFailedJobWorker Processing error handler job 2251799813778058
+2025-09-05 23:11:53.109 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.EmailDeliveryFailedJobWorker Request 777 failed with error: Unknown error occurred
+2025-09-05 23:11:53.798 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailDeliveryFailedJobWorker Error handler job 2251799813778058 completed
+2025-09-05 23:21:59.387 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-05 23:21:59.432 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-05 23:21:59.434 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-05 23:21:59.435 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-05 23:23:39.309 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Processing Kafka publish job 2251799813780374
+2025-09-05 23:23:39.353 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Message published to Kafka. Topic: account-opening-topic
+2025-09-05 23:23:39.353 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Received message from Kafka. Key: APP-12345, Topic: account-opening-topic, Partition: [0], Offset: 7
+2025-09-05 23:23:39.376 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Preparing email to customer@example.com
+2025-09-05 23:23:39.422 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Connecting to SMTP server smtp.ethereal.email:587
+2025-09-05 23:23:40.434 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Sending email to customer@example.com
+2025-09-05 23:23:41.054 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Email to customer@example.com sent successfully
+2025-09-05 23:23:41.507 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Email sent for request ID: APP-12345
+2025-09-05 23:23:41.644 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Processing success handler job 2251799813780398
+2025-09-05 23:23:41.645 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Application APP-12345 completed successfully. Response: {"IsDelivered":true,"sentAt":"2025-09-05T20:23:41.0560712Z"}
+2025-09-05 23:23:42.047 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Success handler job 2251799813780398 completed
+2025-09-05 23:25:48.565 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Processing Kafka publish job 2251799813780842
+2025-09-05 23:25:48.581 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Message published to Kafka. Topic: account-opening-topic
+2025-09-05 23:25:48.581 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Received message from Kafka. Key: APP-67890, Topic: account-opening-topic, Partition: [0], Offset: 8
+2025-09-05 23:25:48.584 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Preparing email to customer@example.com
+2025-09-05 23:25:48.585 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Connecting to SMTP server smtp.ethereal.email:587
+2025-09-05 23:25:50.520 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Sending email to customer@example.com
+2025-09-05 23:25:52.031 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Email to customer@example.com sent successfully
+2025-09-05 23:25:52.092 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Email sent for request ID: APP-67890
+2025-09-05 23:25:52.241 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Processing success handler job 2251799813780873
+2025-09-05 23:25:52.242 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Application APP-67890 completed successfully. Response: {"IsDelivered":true,"sentAt":"2025-09-05T20:25:52.0329998Z"}
+2025-09-05 23:25:52.710 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Success handler job 2251799813780873 completed
+2025-09-05 23:27:51.922 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-05 23:27:51.966 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-05 23:27:51.967 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-05 23:27:51.968 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-05 23:28:29.013 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Processing Kafka publish job 2251799813781433
+2025-09-05 23:28:29.076 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Message published to Kafka. Topic: account-opening-topic
+2025-09-05 23:28:30.409 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Received message from Kafka. Key: APP-67890, Topic: account-opening-topic, Partition: [0], Offset: 9
+2025-09-05 23:28:30.434 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Preparing email to customer@example.com
+2025-09-05 23:28:30.491 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Connecting to SMTP server smtp.ethereal.email:587
+2025-09-05 23:28:31.833 +03:00 [ERR] CamundaProject.Application.Services.Email.EmailService Error occurred while sending email to customer@example.com
+MailKit.Security.AuthenticationException: 535: Authentication failed
+ ---> MailKit.Net.Smtp.SmtpCommandException: Authentication failed
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at CamundaProject.Application.Services.Email.EmailService.SendEmailAsync(EmailModel request) in E:\Camunda8Project\CamundaProject\CamundaProject.Application\Services\Email\EmailService.cs:line 41
+2025-09-05 23:28:31.948 +03:00 [WRN] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Failed to send email for request ID: APP-67890
+2025-09-05 23:28:32.086 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailDeliveryFailedJobWorker Processing error handler job 2251799813781461
+2025-09-05 23:28:32.090 +03:00 [ERR] CamundaProject.Application.Services.AccountOpening.EmailDeliveryFailedJobWorker Request APP-67890 failed with error: Unknown error occurred
+2025-09-05 23:28:32.604 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailDeliveryFailedJobWorker Error handler job 2251799813781461 completed
+2025-09-05 23:34:35.786 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Starting Zeebe job workers...
+2025-09-05 23:34:35.830 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorkerService Zeebe job workers started successfully
+2025-09-05 23:34:35.832 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Starting Kafka response consumer...
+2025-09-05 23:34:35.832 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Kafka response consumer started
+2025-09-05 23:35:21.728 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Processing Kafka publish job 2251799813782792
+2025-09-05 23:35:21.773 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Message published to Kafka. Topic: account-opening-topic
+2025-09-05 23:35:21.774 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Received message from Kafka. Key: APP-6666, Topic: account-opening-topic, Partition: [0], Offset: 10
+2025-09-05 23:35:21.796 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Preparing email to shahd@example.com
+2025-09-05 23:35:21.841 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Connecting to SMTP server smtp.ethereal.email:587
+2025-09-05 23:35:22.947 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Sending email to shahd@example.com
+2025-09-05 23:35:23.537 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Email to shahd@example.com sent successfully
+2025-09-05 23:35:24.001 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Email sent for request ID: APP-6666
+2025-09-05 23:35:24.211 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Processing success handler job 2251799813782816
+2025-09-05 23:35:24.216 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Application APP-6666 completed successfully. Response: {"IsDelivered":true,"sentAt":"2025-09-05T20:35:23.5396057Z"}
+2025-09-05 23:35:24.480 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Success handler job 2251799813782816 completed
+2025-09-05 23:46:08.322 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Processing Kafka publish job 2251799813785020
+2025-09-05 23:46:08.332 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailJobWorker Message published to Kafka. Topic: account-opening-topic
+2025-09-05 23:46:08.333 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Received message from Kafka. Key: APP-6666, Topic: account-opening-topic, Partition: [0], Offset: 11
+2025-09-05 23:46:08.336 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Preparing email to shahd@example.com
+2025-09-05 23:46:08.337 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Connecting to SMTP server smtp.ethereal.email:587
+2025-09-05 23:46:09.343 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Sending email to shahd@example.com
+2025-09-05 23:46:09.872 +03:00 [INF] CamundaProject.Application.Services.Email.EmailService Email to shahd@example.com sent successfully
+2025-09-05 23:46:09.948 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.SendEmailResponseConsumerService Email sent for request ID: APP-6666
+2025-09-05 23:46:10.087 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Processing success handler job 2251799813785037
+2025-09-05 23:46:10.089 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Application APP-6666 completed successfully. Response: {"IsDelivered":true,"sentAt":"2025-09-05T20:46:09.8738868Z"}
+2025-09-05 23:46:10.448 +03:00 [INF] CamundaProject.Application.Services.AccountOpening.EmailSentSuccessfullyJobWorker Success handler job 2251799813785037 completed
