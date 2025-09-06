@@ -86,6 +86,44 @@
       "id": "Field_0832yix"
     },
     {
+      "label": "Phone Number",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_15wovqr",
+        "columns": null
+      },
+      "id": "Field_14fdb96",
+      "key": "PhoneNo",
+      "defaultValue": "01144456820"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_02vhr5b",
+        "columns": null
+      },
+      "id": "Field_1l8gnkf"
+    },
+    {
+      "label": "Email",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0kakpwp",
+        "columns": null
+      },
+      "id": "Field_0nbhcu0",
+      "key": "Email",
+      "defaultValue": "mariamashraf2892@gmail.com"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0cti1ii",
+        "columns": null
+      },
+      "id": "Field_05woquq"
+    },
+    {
       "label": "Initial Deposit Amount",
       "type": "number",
       "layout": {

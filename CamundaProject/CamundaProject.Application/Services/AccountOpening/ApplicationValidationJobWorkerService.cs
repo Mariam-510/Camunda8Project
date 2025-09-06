@@ -1,4 +1,5 @@
-﻿using CamundaProject.Core.Models.ClientModels;
+﻿using CamundaProject.Application.Services.AccountOpening;
+using CamundaProject.Core.Models.ClientModels;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -66,8 +67,9 @@ namespace CamundaProject.Application.Services.AccountOpening
                     ClientAddress = variables.GetProperty("ClientAddress").GetString() ?? "",
                     DateOfBirth = DateTime.Parse(variables.GetProperty("DateOfBirth").GetString() ?? ""),
                     DepositAmount = variables.GetProperty("DepositAmount").GetDecimal(),
-                    //NationalIdImage = variables.GetProperty("NationalIdImage")[0].ToString() ?? ""
-                    NationalIdImage = variables.GetProperty("NationalIdImage")[0].GetRawText()
+                    NationalIdImage = variables.GetProperty("NationalIdImage")[0].GetRawText(),
+                    Email = variables.GetProperty("Email").GetString() ?? "",
+                    PhoneNo = variables.GetProperty("PhoneNo").GetString() ?? ""
                 };
 
                 // Perform comprehensive validation
@@ -101,7 +103,6 @@ namespace CamundaProject.Application.Services.AccountOpening
         private EnhancedValidationResult ValidateApplication(ApplicationForm application)
         {
             var result = new EnhancedValidationResult();
-            var now = DateTime.Now;
 
             // Validate FullName
             result.FullNameResult = ValidateFullName(application.FullName);
@@ -121,17 +122,25 @@ namespace CamundaProject.Application.Services.AccountOpening
             // Validate NationalIdImage
             result.NationalIdImageResult = ValidateNationalIdImage(application.NationalIdImage);
 
+            // Validate Email
+            result.EmailResult = ValidateEmail(application.Email);
+
+            // Validate PhoneNo
+            result.PhoneNoResult = ValidatePhoneNo(application.PhoneNo);
+
             // Check if all validations passed
             result.IsValid = result.FullNameResult.IsValid &&
-                            result.NationalIdResult.IsValid &&
-                            result.ClientAddressResult.IsValid &&
-                            result.DateOfBirthResult.IsValid &&
-                            result.DepositAmountResult.IsValid &&
-                            result.NationalIdImageResult.IsValid;
+                             result.NationalIdResult.IsValid &&
+                             result.ClientAddressResult.IsValid &&
+                             result.DateOfBirthResult.IsValid &&
+                             result.DepositAmountResult.IsValid &&
+                             result.NationalIdImageResult.IsValid &&
+                             result.EmailResult.IsValid &&
+                             result.PhoneNoResult.IsValid;
 
             return result;
         }
-
+        
         private AttributeValidationResult ValidateFullName(string fullName)
         {
             var result = new AttributeValidationResult { AttributeName = "FullName" };
@@ -330,6 +339,46 @@ namespace CamundaProject.Application.Services.AccountOpening
             return result;
         }
 
+        private AttributeValidationResult ValidateEmail(string email)
+        {
+            var result = new AttributeValidationResult { AttributeName = "Email" };
+
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                result.AddError("Email is required");
+                return result;
+            }
+
+            // Simple regex for email validation
+            if (!Regex.IsMatch(email, @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"))
+            {
+                result.AddError("Invalid email format");
+            }
+
+            result.IsValid = result.Errors.Length == 0;
+            return result;
+        }
+
+        private AttributeValidationResult ValidatePhoneNo(string phoneNo)
+        {
+            var result = new AttributeValidationResult { AttributeName = "PhoneNo" };
+
+            if (string.IsNullOrWhiteSpace(phoneNo))
+            {
+                result.AddError("Phone number is required");
+                return result;
+            }
+
+            // Allow only digits, must be 10–15 digits long (customize as needed)
+            if (!Regex.IsMatch(phoneNo, @"^\+?[0-9]{10,15}$"))
+            {
+                result.AddError("Invalid phone number format (must be 10–15 digits, optional leading +)");
+            }
+
+            result.IsValid = result.Errors.Length == 0;
+            return result;
+        }
+
         public Task StopAsync(CancellationToken cancellationToken)
         {
             _applicationValidationWorker?.Dispose();
@@ -339,7 +388,6 @@ namespace CamundaProject.Application.Services.AccountOpening
     }
 
 
- 
 
     public class EnhancedValidationResult
     {
@@ -350,17 +398,20 @@ namespace CamundaProject.Application.Services.AccountOpening
         public AttributeValidationResult DateOfBirthResult { get; set; }
         public AttributeValidationResult DepositAmountResult { get; set; }
         public AttributeValidationResult NationalIdImageResult { get; set; }
+        public AttributeValidationResult EmailResult { get; set; }
+        public AttributeValidationResult PhoneNoResult { get; set; }
 
-        // Helper property to get all attribute results
         public Dictionary<string, AttributeValidationResult> AttributeResults => new()
-        {
-            { "FullName", FullNameResult },
-            { "NationalId", NationalIdResult },
-            { "ClientAddress", ClientAddressResult },
-            { "DateOfBirth", DateOfBirthResult },
-            { "DepositAmount", DepositAmountResult },
-            { "NationalIdImage", NationalIdImageResult }
-        };
+    {
+        { "FullName", FullNameResult },
+        { "NationalId", NationalIdResult },
+        { "ClientAddress", ClientAddressResult },
+        { "DateOfBirth", DateOfBirthResult },
+        { "DepositAmount", DepositAmountResult },
+        { "NationalIdImage", NationalIdImageResult },
+        { "Email", EmailResult },
+        { "PhoneNo", PhoneNoResult }
+    };
     }
 
     public class AttributeValidationResult
@@ -388,3 +439,4 @@ namespace CamundaProject.Application.Services.AccountOpening
     }
 
 }
+
