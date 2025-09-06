@@ -139,6 +139,70 @@
       "id": "Field_1juzrs6"
     },
     {
+      "label": "Phone Number",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1tgo9kl",
+        "columns": null
+      },
+      "id": "Field_1x14dor",
+      "key": "PhoneNo"
+    },
+    {
+      "label": "Phone Number Errors",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_14nts0h",
+        "columns": null
+      },
+      "id": "Field_182tjkj",
+      "key": "AttributeResults.PhoneNo.Errors",
+      "conditional": {
+        "hide": "=AttributeResults.PhoneNo.IsValid"
+      },
+      "readonly": true
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0uu0vwx",
+        "columns": null
+      },
+      "id": "Field_11dzpe4"
+    },
+    {
+      "label": "Email",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0b83zhc",
+        "columns": null
+      },
+      "id": "Field_0ohxcqg",
+      "key": "Email"
+    },
+    {
+      "label": "Email Errors",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0nsd5sg",
+        "columns": null
+      },
+      "id": "Field_0q57q1m",
+      "key": "AttributeResults.Email.Errors",
+      "conditional": {
+        "hide": "=AttributeResults.Email.IsValid"
+      },
+      "readonly": "on"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_03ukhdu",
+        "columns": null
+      },
+      "id": "Field_1ja18yu"
+    },
+    {
       "label": "Initial Deposit Amount",
       "type": "number",
       "layout": {

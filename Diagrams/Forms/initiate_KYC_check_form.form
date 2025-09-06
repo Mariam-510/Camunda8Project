@@ -89,6 +89,44 @@
       "id": "Field_1juzrs6"
     },
     {
+      "label": "Phone Number",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0d7e4oa",
+        "columns": null
+      },
+      "id": "Field_10a5rpn",
+      "key": "PhoneNo",
+      "readonly": true
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0aicjt4",
+        "columns": null
+      },
+      "id": "Field_02g70j1"
+    },
+    {
+      "label": "Email",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0rdoxuq",
+        "columns": null
+      },
+      "id": "Field_08fhpd6",
+      "key": "Email",
+      "readonly": "on"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1jb6a29",
+        "columns": null
+      },
+      "id": "Field_17bwzh3"
+    },
+    {
       "label": "Initial Deposit Amount",
       "type": "number",
       "layout": {
