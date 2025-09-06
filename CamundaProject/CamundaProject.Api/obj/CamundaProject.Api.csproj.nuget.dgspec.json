@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Api\\CamundaProject.Api.csproj": {}
+    "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Api\\CamundaProject.Api.csproj": {}
   },
   "projects": {
-    "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Api\\CamundaProject.Api.csproj": {
+    "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Api\\CamundaProject.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Api\\CamundaProject.Api.csproj",
+        "projectUniqueName": "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Api\\CamundaProject.Api.csproj",
         "projectName": "CamundaProject.Api",
-        "projectPath": "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Api\\CamundaProject.Api.csproj",
-        "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
-        "outputPath": "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Api\\obj\\",
+        "projectPath": "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Api\\CamundaProject.Api.csproj",
+        "packagesPath": "C:\\Users\\mostafa samir\\.nuget\\packages\\",
+        "outputPath": "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Installed Programs\\Microsoft\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mostafa samir\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,14 +32,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Application\\CamundaProject.Application.csproj": {
-                "projectPath": "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Application\\CamundaProject.Application.csproj"
+              "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Application\\CamundaProject.Application.csproj": {
+                "projectPath": "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Application\\CamundaProject.Application.csproj"
               },
-              "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj": {
-                "projectPath": "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj"
+              "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj": {
+                "projectPath": "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj"
               },
-              "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Infrastructure\\CamundaProject.Infrastructure.csproj": {
-                "projectPath": "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Infrastructure\\CamundaProject.Infrastructure.csproj"
+              "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Infrastructure\\CamundaProject.Infrastructure.csproj": {
+                "projectPath": "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Infrastructure\\CamundaProject.Infrastructure.csproj"
               }
             }
           }
@@ -54,7 +54,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -152,24 +152,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Application\\CamundaProject.Application.csproj": {
+    "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Application\\CamundaProject.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Application\\CamundaProject.Application.csproj",
+        "projectUniqueName": "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Application\\CamundaProject.Application.csproj",
         "projectName": "CamundaProject.Application",
-        "projectPath": "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Application\\CamundaProject.Application.csproj",
-        "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
-        "outputPath": "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Application\\obj\\",
+        "projectPath": "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Application\\CamundaProject.Application.csproj",
+        "packagesPath": "C:\\Users\\mostafa samir\\.nuget\\packages\\",
+        "outputPath": "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Installed Programs\\Microsoft\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mostafa samir\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -184,11 +184,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj": {
-                "projectPath": "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj"
+              "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj": {
+                "projectPath": "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj"
               },
-              "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Infrastructure\\CamundaProject.Infrastructure.csproj": {
-                "projectPath": "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Infrastructure\\CamundaProject.Infrastructure.csproj"
+              "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Infrastructure\\CamundaProject.Infrastructure.csproj": {
+                "projectPath": "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Infrastructure\\CamundaProject.Infrastructure.csproj"
               }
             }
           }
@@ -203,7 +203,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -290,24 +290,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj": {
+    "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj",
+        "projectUniqueName": "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj",
         "projectName": "CamundaProject.Core",
-        "projectPath": "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj",
-        "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
-        "outputPath": "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\obj\\",
+        "projectPath": "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj",
+        "packagesPath": "C:\\Users\\mostafa samir\\.nuget\\packages\\",
+        "outputPath": "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Installed Programs\\Microsoft\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mostafa samir\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -334,7 +334,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -421,24 +421,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Infrastructure\\CamundaProject.Infrastructure.csproj": {
+    "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Infrastructure\\CamundaProject.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Infrastructure\\CamundaProject.Infrastructure.csproj",
+        "projectUniqueName": "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Infrastructure\\CamundaProject.Infrastructure.csproj",
         "projectName": "CamundaProject.Infrastructure",
-        "projectPath": "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Infrastructure\\CamundaProject.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
-        "outputPath": "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Infrastructure\\obj\\",
+        "projectPath": "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Infrastructure\\CamundaProject.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\mostafa samir\\.nuget\\packages\\",
+        "outputPath": "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Installed Programs\\Microsoft\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mostafa samir\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -453,8 +453,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj": {
-                "projectPath": "E:\\BankMisr\\Camunda\\Projects\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj"
+              "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj": {
+                "projectPath": "E:\\BM\\Camunda8Project\\CamundaProject\\CamundaProject.Core\\CamundaProject.Core.csproj"
               }
             }
           }
@@ -469,7 +469,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -556,7 +556,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

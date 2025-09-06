@@ -61,41 +61,41 @@ namespace CamundaProject.Application.Services.AccountOpening
                 {
                     var accountRepository = scope.ServiceProvider.GetRequiredService<IAccountRepository>();
 
-                    var clientInfo = JsonSerializer.Deserialize<ApplicationForm>(job.Variables);
+                    var variables = JsonSerializer.Deserialize<JsonElement>(job.Variables);
 
-                    var account = _mapper.Map<BankAccount>(clientInfo);
+                    var applicationData = new ApplicationForm
+                    {
+                        ApplicationId = variables.GetProperty("applicationId").GetString() ?? "",
+                        FullName = variables.GetProperty("FullName").GetString() ?? "",
+                        NationalId = variables.GetProperty("NationalId").GetString() ?? "",
+                        ClientAddress = variables.GetProperty("ClientAddress").GetString() ?? "",
+                        DateOfBirth = DateTime.Parse(variables.GetProperty("DateOfBirth").GetString() ?? ""),
+                        DepositAmount = variables.GetProperty("DepositAmount").GetDecimal(),
+                        NationalIdImage = variables.GetProperty("NationalIdImage")[0].GetRawText(),
+                        Email = variables.GetProperty("Email").GetString() ?? "",
+                        PhoneNo = variables.GetProperty("PhoneNo").GetString() ?? ""
+                    };
 
-                    var createdAccount = await accountRepository.CreateAccountAsync(account);
+                    var account = _mapper.Map<BankAccount>(applicationData);
+
+                    //var createdAccount = await accountRepository.CreateAccountAsync(account);
                     //createdAccount is null || createdAccount.Id == 0
                     if (true)
                     {
-                        _logger.LogError("Error creating bank account. Retries left: {Retries}", job.Retries);
-                        if (job.Retries > 1)
-                        {
-                            await client.NewFailCommand(job.Key)
-                                .Retries(job.Retries - 1)
-                                .ErrorMessage("CreateAccount failed.")
-                                .Send();
-                        }
-                        else
-                        {
-                            _logger.LogError("Core Banking system failed");
-                            await client.NewThrowErrorCommand(job.Key)
-                                .ErrorCode("ACCOUNT_ERROR")
-                                .ErrorMessage("Core Banking system failed")
-                                .Send();
+                        _logger.LogInformation(job.Variables);
+                        _logger.LogError("Core Banking system failed");
+                        await client.NewThrowErrorCommand(job.Key)
+                            .ErrorCode("ACCOUNT_ERROR")
+                            .ErrorMessage("Core Banking system failed")
+                            .Send();
 
-
-                        }
-                            return;
-
-
+                        return;
                     }
 
                     var vars = new
                     {
                         isCreated = true,
-                        AccountId = createdAccount.AccountNumber,
+                        //AccountId = createdAccount.AccountNumber,
 
                     };
 
@@ -109,7 +109,7 @@ namespace CamundaProject.Application.Services.AccountOpening
 
 
                     _logger.LogInformation("--------------------------------------------------------------------------------------------------------");
-                    _logger.LogInformation("Bank account created successfully: {AccountNumber} for Client: {clientName}", createdAccount?.AccountNumber, createdAccount?.AccountHolderName);
+                    //_logger.LogInformation("Bank account created successfully: {AccountNumber} for Client: {clientName}", createdAccount?.AccountNumber, createdAccount?.AccountHolderName);
                     _logger.LogInformation("--------------------------------------------------------------------------------------------------------");
 
 
