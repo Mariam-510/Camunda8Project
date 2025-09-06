@@ -111,5 +111,15 @@
     "C:\\Users\\HP.SXTO9\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\HP.SXTO9\\.nuget\\packages\\zb-client\\2.9.0\\zb-client.2.9.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Problem reading the cache file E:\\Camunda8Project\\CamundaProject\\CamundaProject.Application\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "E:\\Camunda8Project\\CamundaProject\\CamundaProject.Application\\CamundaProject.Application.csproj",
+      "warningLevel": 1,
+      "filePath": "E:\\Camunda8Project\\CamundaProject\\CamundaProject.Application\\CamundaProject.Application.csproj",
+      "targetGraphs": []
+    }
+  ]
 }

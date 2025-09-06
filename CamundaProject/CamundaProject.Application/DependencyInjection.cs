@@ -113,6 +113,7 @@ namespace CamundaProject.Application
 
             //services.AddHostedService<KafkaResponseConsumerService>();
 
+
             // In your DependencyInjection.cs file
             //services.AddSingleton<SendEmailJobWorker>();
             //services.AddSingleton<EmailSentSuccessfullyJobWorker>();
@@ -122,6 +123,11 @@ namespace CamundaProject.Application
             services.AddHostedService<EmailSentSuccessfullyJobWorker>();
             services.AddHostedService<EmailDeliveryFailedJobWorker>();
             services.AddHostedService<SendEmailResponseConsumerService>();
+
+            services.AddHostedService<GenerateApplicationIdJobWorkerService>();
+
+            services.AddHostedService<ApplicationValidationJobWorkerService>();
+
 
             return services;
         }

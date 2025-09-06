@@ -1,7 +1,7 @@
 {
   "components": [
     {
-      "content": "<h1>Application Form</h1>",
+      "content": "<h1>Initiate KYC Check Form</h1>",
       "type": "html",
       "layout": {
         "row": "Row_0z0xiob",
@@ -18,15 +18,15 @@
       },
       "id": "Field_0s4pmvk",
       "key": "FullName",
-      "defaultValue": "Mariam Ashraf"
+      "readonly": true
     },
     {
       "type": "separator",
       "layout": {
-        "row": "Row_0xlksho",
+        "row": "Row_03fhsra",
         "columns": null
       },
-      "id": "Field_0xdlkp7"
+      "id": "Field_197l63j"
     },
     {
       "label": "Client National ID",
@@ -37,15 +37,15 @@
       },
       "id": "Field_0n45khh",
       "key": "NationalId",
-      "defaultValue": "30209280107124"
+      "readonly": true
     },
     {
       "type": "separator",
       "layout": {
-        "row": "Row_1mvqxo4",
+        "row": "Row_0auvg57",
         "columns": null
       },
-      "id": "Field_1ivkwzh"
+      "id": "Field_0wngkfz"
     },
     {
       "label": "Client Address",
@@ -56,72 +56,75 @@
       },
       "id": "Field_1q5x87u",
       "key": "ClientAddress",
-      "defaultValue": "Maadi Cairo"
+      "readonly": true
     },
     {
       "type": "separator",
       "layout": {
-        "row": "Row_11go5pi",
+        "row": "Row_1p82g35",
         "columns": null
       },
-      "id": "Field_131dxvu"
+      "id": "Field_1byfdbg"
     },
     {
-      "subtype": "date",
-      "dateLabel": "Client Date of birth",
-      "type": "datetime",
+      "label": "Client DateOfBirth",
+      "type": "textfield",
       "layout": {
-        "row": "Row_0xdals2",
+        "row": "Row_0qaxdy9",
         "columns": null
       },
-      "id": "Field_0d158wf",
-      "key": "DateOfBirth"
+      "id": "Field_02feiep",
+      "key": "DateOfBirth",
+      "conditional": {
+        "hide": "=AttributeResults.DateOfBirth.IsValid"
+      },
+      "readonly": "on"
     },
     {
       "type": "separator",
       "layout": {
-        "row": "Row_022kmkj",
+        "row": "Row_0i082vs",
         "columns": null
       },
-      "id": "Field_0832yix"
+      "id": "Field_1juzrs6"
     },
     {
       "label": "Phone Number",
       "type": "textfield",
       "layout": {
-        "row": "Row_15wovqr",
+        "row": "Row_0d7e4oa",
         "columns": null
       },
-      "id": "Field_14fdb96",
+      "id": "Field_10a5rpn",
       "key": "PhoneNo",
-      "defaultValue": "01144456820"
+      "readonly": true
     },
     {
       "type": "separator",
       "layout": {
-        "row": "Row_02vhr5b",
+        "row": "Row_0aicjt4",
         "columns": null
       },
-      "id": "Field_1l8gnkf"
+      "id": "Field_02g70j1"
     },
     {
       "label": "Email",
       "type": "textfield",
       "layout": {
-        "row": "Row_0kakpwp",
+        "row": "Row_0rdoxuq",
         "columns": null
       },
-      "id": "Field_0nbhcu0",
+      "id": "Field_08fhpd6",
       "key": "Email",
-      "defaultValue": "mariamashraf2892@gmail.com"
+      "readonly": "on"
     },
     {
       "type": "separator",
       "layout": {
-        "row": "Row_0cti1ii",
+        "row": "Row_1jb6a29",
         "columns": null
       },
-      "id": "Field_05woquq"
+      "id": "Field_17bwzh3"
     },
     {
       "label": "Initial Deposit Amount",
@@ -132,41 +135,72 @@
       },
       "id": "Field_0jjsuak",
       "key": "DepositAmount",
-      "defaultValue": 3000,
       "validate": {
         "min": "3000"
-      }
+      },
+      "disabled": false,
+      "readonly": true
     },
     {
       "type": "separator",
       "layout": {
-        "row": "Row_0c9w12z",
+        "row": "Row_0md5hjc",
         "columns": null
       },
-      "id": "Field_10viz3l"
+      "id": "Field_0cf0zgh"
     },
     {
-      "label": "National Id Image",
-      "type": "filepicker",
+      "text": "National ID",
+      "type": "text",
       "layout": {
-        "row": "Row_1b45goa",
+        "row": "Row_1kv2li3",
         "columns": null
       },
-      "id": "Field_0c4f349",
-      "key": "NationalIdImage",
-      "properties": {}
+      "id": "Field_0ffledk"
     },
     {
-      "type": "separator",
+      "type": "image",
       "layout": {
-        "row": "Row_0inl0la",
+        "row": "Row_03qsygu",
         "columns": null
       },
-      "id": "Field_008fofz"
+      "id": "Field_1cw8iwt",
+      "source": "=\"http://localhost:8080/v2/documents/\" \n+ NationalIdImage[1].documentId \n+ \"?storeId=\" \n+ NationalIdImage[1].storeId \n+ \"&contentHash=\" \n+ NationalIdImage[1].contentHash",
+      "alt": "National ID Image"
+    },
+    {
+      "label": "Approve",
+      "values": [
+        {
+          "label": "True",
+          "value": "true"
+        },
+        {
+          "label": "False",
+          "value": "false"
+        }
+      ],
+      "type": "radio",
+      "layout": {
+        "row": "Row_0tsktvc",
+        "columns": null
+      },
+      "id": "Field_0qo1h3r",
+      "key": "IsApproved"
+    },
+    {
+      "label": "Notes",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1lsqyrn",
+        "columns": null
+      },
+      "id": "Field_1hrqmjw",
+      "key": "notes"
     }
   ],
   "type": "default",
-  "id": "Application_Form",
+  "id": "Initiate_KYC_Check_Form",
   "executionPlatform": "Camunda Cloud",
   "executionPlatformVersion": "8.7.0",
   "exporter": {

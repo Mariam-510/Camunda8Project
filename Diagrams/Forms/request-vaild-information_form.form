@@ -1,0 +1,286 @@
+{
+  "components": [
+    {
+      "content": "<h1>Request Vaild Information Form</h1>",
+      "type": "html",
+      "layout": {
+        "row": "Row_0z0xiob",
+        "columns": null
+      },
+      "id": "Field_0e651l1"
+    },
+    {
+      "label": "Client Full Name",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0q0gebh",
+        "columns": null
+      },
+      "id": "Field_0s4pmvk",
+      "key": "FullName"
+    },
+    {
+      "label": "FullName Errors",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_140qj7p",
+        "columns": null
+      },
+      "id": "Field_0kzg17u",
+      "key": "AttributeResults.FullName.Errors",
+      "conditional": {
+        "hide": "=AttributeResults.FullName.IsValid"
+      },
+      "readonly": "on"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_03fhsra",
+        "columns": null
+      },
+      "id": "Field_197l63j"
+    },
+    {
+      "label": "Client National ID",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_00llqqe",
+        "columns": null
+      },
+      "id": "Field_0n45khh",
+      "key": "NationalId"
+    },
+    {
+      "label": "NationalId Errors",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1pai31k",
+        "columns": null
+      },
+      "id": "Field_07prdac",
+      "key": "AttributeResults.NationalId.Errors",
+      "conditional": {
+        "hide": "=AttributeResults.NationalId.IsValid"
+      },
+      "readonly": "on"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0auvg57",
+        "columns": null
+      },
+      "id": "Field_0wngkfz"
+    },
+    {
+      "label": "Client Address",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1y524sv",
+        "columns": null
+      },
+      "id": "Field_1q5x87u",
+      "key": "ClientAddress"
+    },
+    {
+      "label": "ClientAddress Errors",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1k3vj7n",
+        "columns": null
+      },
+      "id": "Field_0pqo1jg",
+      "key": "AttributeResults.ClientAddress.Errors",
+      "conditional": {
+        "hide": "=AttributeResults.ClientAddress.IsValid"
+      },
+      "readonly": "on"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1p82g35",
+        "columns": null
+      },
+      "id": "Field_1byfdbg"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Client Date of birth",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0xdals2",
+        "columns": null
+      },
+      "id": "Field_0d158wf",
+      "key": "DateOfBirth"
+    },
+    {
+      "label": "DateOfBirth Errors",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0qaxdy9",
+        "columns": null
+      },
+      "id": "Field_02feiep",
+      "key": "AttributeResults.DateOfBirth.Errors",
+      "conditional": {
+        "hide": "=AttributeResults.DateOfBirth.IsValid"
+      },
+      "readonly": "on"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0i082vs",
+        "columns": null
+      },
+      "id": "Field_1juzrs6"
+    },
+    {
+      "label": "Phone Number",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1tgo9kl",
+        "columns": null
+      },
+      "id": "Field_1x14dor",
+      "key": "PhoneNo"
+    },
+    {
+      "label": "Phone Number Errors",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_14nts0h",
+        "columns": null
+      },
+      "id": "Field_182tjkj",
+      "key": "AttributeResults.PhoneNo.Errors",
+      "conditional": {
+        "hide": "=AttributeResults.PhoneNo.IsValid"
+      },
+      "readonly": true
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0uu0vwx",
+        "columns": null
+      },
+      "id": "Field_11dzpe4"
+    },
+    {
+      "label": "Email",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0b83zhc",
+        "columns": null
+      },
+      "id": "Field_0ohxcqg",
+      "key": "Email"
+    },
+    {
+      "label": "Email Errors",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0nsd5sg",
+        "columns": null
+      },
+      "id": "Field_0q57q1m",
+      "key": "AttributeResults.Email.Errors",
+      "conditional": {
+        "hide": "=AttributeResults.Email.IsValid"
+      },
+      "readonly": "on"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_03ukhdu",
+        "columns": null
+      },
+      "id": "Field_1ja18yu"
+    },
+    {
+      "label": "Initial Deposit Amount",
+      "type": "number",
+      "layout": {
+        "row": "Row_0fw3zn7",
+        "columns": null
+      },
+      "id": "Field_0jjsuak",
+      "key": "DepositAmount",
+      "validate": {
+        "min": "3000"
+      }
+    },
+    {
+      "label": "DepositAmount Errors",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1fgwcwy",
+        "columns": null
+      },
+      "id": "Field_1nwj9nw",
+      "key": "AttributeResults.DepositAmount.Errors",
+      "conditional": {
+        "hide": "=AttributeResults.DepositAmount.IsValid"
+      },
+      "readonly": true
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0md5hjc",
+        "columns": null
+      },
+      "id": "Field_0cf0zgh"
+    },
+    {
+      "label": "National Id Image",
+      "type": "filepicker",
+      "layout": {
+        "row": "Row_1o737mv",
+        "columns": null
+      },
+      "id": "Field_0c4f349",
+      "key": "NationalIdImage",
+      "properties": {}
+    },
+    {
+      "type": "image",
+      "layout": {
+        "row": "Row_1infsgs",
+        "columns": null
+      },
+      "id": "Field_1cw8iwt",
+      "source": "=\"http://localhost:8080/v2/documents/\" \n+ NationalIdImage[1].documentId \n+ \"?storeId=\" \n+ NationalIdImage[1].storeId \n+ \"&contentHash=\" \n+ NationalIdImage[1].contentHash",
+      "conditional": {
+        "hide": "=not (exists(NationalIdImage[1].documentId) and NationalIdImage[1].documentId != null and NationalIdImage[1].documentId != \"\")"
+      }
+    },
+    {
+      "label": "NationalIdImage Errors",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0dyiqyf",
+        "columns": null
+      },
+      "id": "Field_0zijgjx",
+      "key": "AttributeResults.NationalIdImage.Errors",
+      "conditional": {
+        "hide": "=AttributeResults.NationalIdImage.IsValid"
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Request_Vaild_Information_Form",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.7.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.36.1"
+  },
+  "schemaVersion": 18
+}
