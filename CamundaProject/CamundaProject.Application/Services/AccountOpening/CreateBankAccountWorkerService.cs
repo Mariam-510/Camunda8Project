@@ -78,15 +78,15 @@ namespace CamundaProject.Application.Services.AccountOpening
 
                     var account = _mapper.Map<BankAccount>(applicationData);
 
-                    //var createdAccount = await accountRepository.CreateAccountAsync(account);
+                    var createdAccount = await accountRepository.CreateAccountAsync(account);
                     //createdAccount is null || createdAccount.Id == 0
-                    if (true)
+                    if (createdAccount is null || createdAccount.Id == 0)
                     {
-                        _logger.LogInformation(job.Variables);
+                        //_logger.LogInformation(job.Variables);
                         _logger.LogError("Core Banking system failed");
                         await client.NewThrowErrorCommand(job.Key)
                             .ErrorCode("ACCOUNT_ERROR")
-                            .ErrorMessage("Core Banking system failed")
+                            .ErrorMessage("Core Banking system failed").Variables(JsonSerializer.Serialize(new { error = "Core Banking system failed"}))
                             .Send();
 
                         return;
@@ -95,7 +95,7 @@ namespace CamundaProject.Application.Services.AccountOpening
                     var vars = new
                     {
                         isCreated = true,
-                        //AccountId = createdAccount.AccountNumber,
+                        AccountId = createdAccount.AccountNumber,
 
                     };
 
@@ -109,7 +109,7 @@ namespace CamundaProject.Application.Services.AccountOpening
 
 
                     _logger.LogInformation("--------------------------------------------------------------------------------------------------------");
-                    //_logger.LogInformation("Bank account created successfully: {AccountNumber} for Client: {clientName}", createdAccount?.AccountNumber, createdAccount?.AccountHolderName);
+                    _logger.LogInformation("Bank account created successfully: {AccountNumber} for Client: {clientName}", createdAccount?.AccountNumber, createdAccount?.AccountHolderName);
                     _logger.LogInformation("--------------------------------------------------------------------------------------------------------");
 
 
