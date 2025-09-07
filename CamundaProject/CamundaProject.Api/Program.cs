@@ -14,6 +14,7 @@ using CamundaProject.Application.Mapping;
 using CamundaProject.Core.Interfaces.Repositories.ClientRepositories;
 using CamundaProject.Infrastructure.Repositories.ClientRepositories;
 using CamundaProject.Application.Services.AccountOpening;
+using CamundaProject.Infrastructure;
 
 namespace CamundaProject.Api
 {
@@ -23,26 +24,10 @@ namespace CamundaProject.Api
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            //DbContext
-            builder.Services.AddDbContext<AppDbContext>(options =>
-            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-            // Add services to the container.
-
             builder.Services.AddControllers();
+            
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
-
-            //AutoMapper
-            builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
-
-            //Repositories
-            builder.Services.AddScoped<IAccountRepository, AccountRepository>();
-
-
-            // Add background worker
-            builder.Services.AddHostedService<CreateBankAccountWorkerService>();
-
-
 
             //Swagger
             builder.Services.AddSwaggerGen(options =>
@@ -95,6 +80,7 @@ namespace CamundaProject.Api
 
             //Service Collection
             builder.Services.AddApplication(builder.Configuration);
+            builder.Services.AddInfrastructure(builder.Configuration);
 
             var app = builder.Build();
 

@@ -115,9 +115,6 @@ namespace CamundaProject.Application
 
 
             // In your DependencyInjection.cs file
-            //services.AddSingleton<SendEmailJobWorker>();
-            //services.AddSingleton<EmailSentSuccessfullyJobWorker>();
-            //services.AddSingleton<EmailDeliveryFailedJobWorker>();
 
             services.AddHostedService<SendEmailJobWorker>();
             services.AddHostedService<EmailSentSuccessfullyJobWorker>();
@@ -127,6 +124,9 @@ namespace CamundaProject.Application
             services.AddHostedService<GenerateApplicationIdJobWorkerService>();
 
             services.AddHostedService<ApplicationValidationJobWorkerService>();
+
+            // Add background worker
+            services.AddHostedService<CreateBankAccountWorkerService>();
 
 
             return services;

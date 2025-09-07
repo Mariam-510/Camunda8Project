@@ -97,15 +97,18 @@ namespace CamundaProject.Application.Services.AccountOpening
                 }
                 else
                 {
-                    // Throw an error with error code DataInvalid and include variable IsValid = false
-                    await client.NewThrowErrorCommand(job.Key)
-                        .ErrorCode("DataInvalid")
-                        .ErrorMessage("Validation failed. One or more attributes are invalid.")
+                    // Assuming you have IZeebeClient injected as _zeebeClient
+                    await _zeebeClient.NewSetVariablesCommand(job.ElementInstanceKey)
                         .Variables(JsonSerializer.Serialize(new
                         {
                             IsValid = false,
                             validationResult.AttributeResults
                         }))
+                        .Send();
+
+                    await client.NewThrowErrorCommand(job.Key)
+                        .ErrorCode("DataInvalid")
+                        .ErrorMessage("Validation failed. One or more attributes are invalid.")
                         .Send();
                 }
 
@@ -166,7 +169,7 @@ namespace CamundaProject.Application.Services.AccountOpening
 
             return result;
         }
-        
+
         private AttributeValidationResult ValidateFullName(string fullName)
         {
             var result = new AttributeValidationResult { AttributeName = "FullName" };
@@ -410,57 +413,6 @@ namespace CamundaProject.Application.Services.AccountOpening
             _applicationValidationWorker?.Dispose();
             _logger.LogInformation("Application Validation Job Worker stopped");
             return Task.CompletedTask;
-        }
-    }
-
-
-
-    public class EnhancedValidationResult
-    {
-        public bool IsValid { get; set; }
-        public AttributeValidationResult FullNameResult { get; set; }
-        public AttributeValidationResult NationalIdResult { get; set; }
-        public AttributeValidationResult ClientAddressResult { get; set; }
-        public AttributeValidationResult DateOfBirthResult { get; set; }
-        public AttributeValidationResult DepositAmountResult { get; set; }
-        public AttributeValidationResult NationalIdImageResult { get; set; }
-        public AttributeValidationResult EmailResult { get; set; }
-        public AttributeValidationResult PhoneNoResult { get; set; }
-
-        public Dictionary<string, AttributeValidationResult> AttributeResults => new()
-    {
-        { "FullName", FullNameResult },
-        { "NationalId", NationalIdResult },
-        { "ClientAddress", ClientAddressResult },
-        { "DateOfBirth", DateOfBirthResult },
-        { "DepositAmount", DepositAmountResult },
-        { "NationalIdImage", NationalIdImageResult },
-        { "Email", EmailResult },
-        { "PhoneNo", PhoneNoResult }
-    };
-    }
-
-    public class AttributeValidationResult
-    {
-        public string AttributeName { get; set; }
-        public bool IsValid { get; set; }
-        public string Errors { get; set; } = string.Empty;
-        public string Warnings { get; set; } = string.Empty;
-
-        // Helper method to add errors
-        public void AddError(string error)
-        {
-            if (!string.IsNullOrEmpty(Errors))
-                Errors += "; ";
-            Errors += error;
-        }
-
-        // Helper method to add warnings
-        public void AddWarning(string warning)
-        {
-            if (!string.IsNullOrEmpty(Warnings))
-                Warnings += "; ";
-            Warnings += warning;
         }
     }
 
