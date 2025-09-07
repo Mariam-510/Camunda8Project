@@ -60,7 +60,7 @@ namespace CamundaProject.Application.Services.AccountOpening
                 var variables = job.Variables;
                 var jsonElement = JsonSerializer.Deserialize<JsonElement>(variables);
 
-                var applicationId = jsonElement.TryGetProperty("ApplicationId", out var applicationIdProp)
+                var applicationId = jsonElement.TryGetProperty("applicationId", out var applicationIdProp)
                     ? applicationIdProp.GetString()
                     : "unknown";
 
