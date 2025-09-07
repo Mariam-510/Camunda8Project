@@ -3,6 +3,7 @@ using Confluent.Kafka;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Identity.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ using Zeebe.Client.Api.Worker;
 
 namespace CamundaProject.Application.Services.AccountOpening
 {
-    public class SendEmailJobWorker :IHostedService
+    public class SendEmailJobWorker : IHostedService
     {
         private readonly ILogger<SendEmailJobWorker> _logger;
         private readonly IZeebeClient _zeebeClient;
@@ -23,16 +24,19 @@ namespace CamundaProject.Application.Services.AccountOpening
         private readonly SendEmailJobWorker _sendEmailWorker;
         private readonly string _topic;
         private IJobWorker? _sendEmailJobWorker;
+        private readonly IConfiguration _configuration;
 
 
         public SendEmailJobWorker(IZeebeClient zeebeClient,
             ILogger<SendEmailJobWorker> logger,
             IProducer<string, string> kafkaProducer,
-            IConfiguration configuration ) {
+            IConfiguration configuration)
+        {
             _zeebeClient = zeebeClient;
             _logger = logger;
             _kafkaProducer = kafkaProducer;
             _topic = configuration["Kafka:Topic"];
+            _configuration = configuration;
 
         }
 
@@ -71,23 +75,33 @@ namespace CamundaProject.Application.Services.AccountOpening
                 var variables = job.Variables;
                 var jsonElement = JsonSerializer.Deserialize<JsonElement>(variables);
 
-                var applicationId = jsonElement.GetProperty("ApplicationId").GetString();
-                var accountId= jsonElement.GetProperty("AccountId").GetString();
+                var applicationId = jsonElement.GetProperty("applicationId").GetString();
                 var isApproved = jsonElement.GetProperty("IsApproved").GetString();
-                var to = jsonElement.GetProperty("to").GetString();
+                var isCreated = jsonElement.GetProperty("IsCreated").GetBoolean();
+                var to = jsonElement.GetProperty("Email").GetString();
+                var coreBankingEmail = _configuration["CoreBankingEmail"]; // Inject IConfiguration
 
                 // Determine subject and body based on approval status
-                string subject, body;
+                string subject, body, coreBankingEmailsubject, coreBankingEmailbody;
 
-                if (isApproved.Equals("true"))
+                if (isApproved.Equals("true") && isCreated)
                 {
+                    var accountId = jsonElement.GetProperty("AccountId").GetString();
+
                     subject = "Your Account Has Been Successfully Created!";
                     body = $"Dear Customer,\n\nWe are pleased to inform you that your account {accountId} has been approved and your account has been successfully created.\n\nThank you for choosing our bank.\n\nBest regards,\nBank Team";
                 }
-                else
+                else if (isApproved.Equals("true") && !isCreated)
+                {
+
+                    subject = $"Account Creation Failed for Application {applicationId}";
+                    body = $"Account creation failed for approved application {applicationId} . Please investigate immediately.";
+  
+                }
+                else 
                 {
                     subject = "Update on Your Account Application";
-                    body = $"Dear Customer,\n\nWe regret to inform you that your account {accountId} could not be approved at this time.\n\nPlease contact our customer service for more information.\n\nBest regards,\nBank Team";
+                    body = $"Dear Customer,\n\nWe regret to inform you that your account {applicationId} could not be approved at this time.\n\nPlease contact our customer service for more information.\n\nBest regards,\nBank Team";
                 }
 
                 if (string.IsNullOrEmpty(applicationId))
