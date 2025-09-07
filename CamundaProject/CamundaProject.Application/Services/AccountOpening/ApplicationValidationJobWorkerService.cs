@@ -75,14 +75,40 @@ namespace CamundaProject.Application.Services.AccountOpening
                 // Perform comprehensive validation
                 var validationResult = ValidateApplication(applicationData);
 
-                // Complete the job with validation results
-                await client.NewCompleteJobCommand(job.Key)
-                    .Variables(JsonSerializer.Serialize(new
-                    {
-                        IsValid = validationResult.IsValid,
-                        validationResult.AttributeResults
-                    }))
-                    .Send();
+                //// Complete the job with validation results
+                //await client.NewCompleteJobCommand(job.Key)
+                //    .Variables(JsonSerializer.Serialize(new
+                //    {
+                //        IsValid = validationResult.IsValid,
+                //        validationResult.AttributeResults
+                //    }))
+                //    .Send();
+
+                if (validationResult.IsValid)
+                {
+                    // Complete the job with validation results
+                    await client.NewCompleteJobCommand(job.Key)
+                        .Variables(JsonSerializer.Serialize(new
+                        {
+                            IsValid = validationResult.IsValid,
+                            validationResult.AttributeResults
+                        }))
+                        .Send();
+                }
+                else
+                {
+                    // Throw an error with error code DataInvalid and include variable IsValid = false
+                    await client.NewThrowErrorCommand(job.Key)
+                        .ErrorCode("DataInvalid")
+                        .ErrorMessage("Validation failed. One or more attributes are invalid.")
+                        .Variables(JsonSerializer.Serialize(new
+                        {
+                            IsValid = false,
+                            validationResult.AttributeResults
+                        }))
+                        .Send();
+                }
+
 
                 _logger.LogInformation($"Validation completed for application {applicationData.ApplicationId}. " +
                                       $"IsValid: {validationResult.IsValid}");
