@@ -67,7 +67,7 @@ namespace CamundaProject.Application.Services.AccountOpening
                     ClientAddress = variables.GetProperty("ClientAddress").GetString() ?? "",
                     DateOfBirth = DateTime.Parse(variables.GetProperty("DateOfBirth").GetString() ?? ""),
                     DepositAmount = variables.GetProperty("DepositAmount").GetDecimal(),
-                    NationalIdImage = variables.GetProperty("NationalIdImage")[0].GetRawText(),
+                    NationalIdImage = variables.GetProperty("NationalIdImage")[0].GetRawText() ?? "",
                     Email = variables.GetProperty("Email").GetString() ?? "",
                     PhoneNo = variables.GetProperty("PhoneNo").GetString() ?? ""
                 };
