@@ -77,7 +77,8 @@ namespace CamundaProject.Application.Services.AccountOpening
 
                 var applicationId = jsonElement.GetProperty("applicationId").GetString();
                 var isApproved = jsonElement.GetProperty("IsApproved").GetString();
-                var isCreated = jsonElement.GetProperty("IsCreated").GetBoolean();
+
+                var isCreated = (isApproved == "true" ? jsonElement.GetProperty("IsCreated").GetBoolean() : false);
                 var to = jsonElement.GetProperty("Email").GetString();
                 var coreBankingEmail = _configuration["CoreBankingEmail"]; // Inject IConfiguration
 
@@ -93,7 +94,7 @@ namespace CamundaProject.Application.Services.AccountOpening
                 }
                 else if (isApproved.Equals("true") && !isCreated)
                 {
-
+                    to = coreBankingEmail;
                     subject = $"Account Creation Failed for Application {applicationId}";
                     body = $"Account creation failed for approved application {applicationId} . Please investigate immediately.";
   
